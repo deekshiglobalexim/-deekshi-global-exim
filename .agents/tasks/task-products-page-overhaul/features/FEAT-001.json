@@ -1,0 +1,35 @@
+{
+  "id": "FEAT-001",
+  "type": "fix",
+  "description": "Complete overhaul of src/app/products/page.tsx - fix all product images, reorder categories, redesign cards for premium international export company look",
+  "status": "in_progress",
+  "steps": [
+    "Rewrite the product data in src/app/products/page.tsx with the correct category order: 1) Rice (Sona Masoori, Basmati, Non-Basmati), 2) Fresh Fruits (Mango featured), 3) Fresh Vegetables (Onion featured), 4) Spices (Red Chilli, Turmeric, Black Pepper, Garlic Powder, Coriander)",
+    "Replace ALL product image URLs with accurate, high-quality Unsplash images that correctly match each product name. Specifically: Pomegranate must show pomegranates (not broccoli), Tomato must show tomatoes, Green Chilli must show green chillies, Black Pepper must show black peppercorns, Coriander must show coriander seeds/powder, Rice products must show premium rice, Mango must show export-quality mangoes, Onion must show onions, Turmeric must show turmeric, Red Chilli must show red chillies, Garlic Powder must show garlic powder. Use high-resolution Unsplash URLs with w=800&q=90 parameters.",
+    "Redesign the product card component to have: equal/consistent card heights using flex layout, large sharp images with aspect-[4/3], image zoom on hover (scale-110 with transition), gradient overlay on images, gold 'Export Grade' badge, 'Bulk Supply Available' badge, larger product titles (text-xl font-bold), cleaner descriptions with line-clamp-3, premium shadows (shadow-premium-lg), smooth hover animations (translate-y and shadow transitions), navy and gold color scheme",
+    "Fix the responsive grid to use: grid-cols-1 on mobile, md:grid-cols-2 on tablet, lg:grid-cols-3 on desktop, with gap-8 spacing, no overlapping or cropped content",
+    "Add international buyer trust signals to each card: 'Export Quality' badge, 'Bulk Supply Available' tag, 'Global Export Ready' indicator. For rice products add 'AP & Telangana Sourcing' badge. Add 'Reliable Sourcing' trust indicator in the card footer area.",
+    "Make the page use 'use client' directive and add Framer Motion animations: staggered card entrance animations, smooth hover effects on cards, animated section headers",
+    "Ensure the sticky category navigation bar works correctly with the new category order (Rice first)",
+    "Add a premium CTA section at the bottom maintaining the navy/gold theme"
+  ],
+  "acceptance_criteria": [
+    "npm run build succeeds without errors",
+    "Product categories appear in order: Rice, Fresh Fruits, Fresh Vegetables, Spices",
+    "Every product image URL is a valid Unsplash URL that matches the product name (no mismatched images)",
+    "Cards have equal heights with consistent aspect ratios for images",
+    "Grid shows 3 columns on desktop, 2 on tablet, 1 on mobile",
+    "Each card shows Export Quality badge and Bulk Supply Available indicator",
+    "Rice products show AP & Telangana sourcing badge",
+    "Cards have hover animations (translate-y, shadow change, image zoom)",
+    "Page uses Framer Motion for entrance animations",
+    "No text is cut off - descriptions use line-clamp properly",
+    "Premium navy and gold color scheme is consistent throughout"
+  ],
+  "verification": [
+    "Run `cd /projects/sandbox/deekshi-global-exim && npm run build` and confirm it passes with no errors",
+    "Verify the products page route builds successfully as part of the static generation"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

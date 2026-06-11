@@ -1,0 +1,22 @@
+{
+  "id": "FEAT-002",
+  "type": "chore",
+  "description": "Update next.config.ts if any new image domains are needed, and commit all changes on main branch",
+  "status": "pending",
+  "steps": [
+    "Check if any image URLs in the updated products page use domains not already in next.config.ts remotePatterns. If so, add them.",
+    "Run npm run build to verify everything works",
+    "Git add and commit all changed files on the main branch with a descriptive commit message"
+  ],
+  "acceptance_criteria": [
+    "npm run build succeeds with no image domain errors",
+    "All changes are committed on main branch",
+    "No uncommitted changes remain (except .agents/ task files which are untracked)"
+  ],
+  "verification": [
+    "Run `cd /projects/sandbox/deekshi-global-exim && npm run build` and confirm success",
+    "Run `git status` and confirm working tree is clean (aside from .agents/ files)"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

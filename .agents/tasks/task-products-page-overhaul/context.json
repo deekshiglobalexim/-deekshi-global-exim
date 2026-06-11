@@ -1,0 +1,21 @@
+{
+  "project_type": "Next.js 16 website with App Router, TypeScript, Tailwind CSS, Framer Motion",
+  "language": "TypeScript/TSX",
+  "build_system": "npm with Next.js build",
+  "test_framework": "No test framework configured - only build verification",
+  "build_command": "npm run build",
+  "test_command": "npm run build (no separate test suite)",
+  "verification_instructions": "Run npm run build in /projects/sandbox/deekshi-global-exim and confirm it succeeds with no errors",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "cd /projects/sandbox/deekshi-global-exim && npm install",
+  "environment_constraints": "OPEN_INTERNET network mode. Images use Unsplash URLs - next.config.ts already allows images.unsplash.com, plus.unsplash.com, source.unsplash.com. Can also add pixabay.com or pexels.com if needed.",
+  "contribution_requirements": "Commit on main branch. Do NOT push.",
+  "key_patterns": "Uses Next.js Image component with remote Unsplash URLs. Tailwind CSS with custom navy/gold color scheme defined in tailwind.config.ts. CSS variables and utilities in globals.css. Framer Motion for animations. Lucide React for icons. Premium export company branding with navy (#0B2E4F) and gold (#D4AF37) theme.",
+  "relevant_files": [
+    "src/app/products/page.tsx",
+    "next.config.ts",
+    "tailwind.config.ts",
+    "src/app/globals.css"
+  ],
+  "directory_structure": "src/app/ contains page routes (products/page.tsx is the target). src/components/ has shared components. public/ has logo files. next.config.ts configures allowed image domains."
+}
