@@ -6,27 +6,27 @@ const categories = [
   {
     name: 'Rice',
     desc: 'Premium Basmati and Non-Basmati varieties for international markets',
-    img: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=90',
+    img: '/products/sona-masoori.jpg',
   },
   {
     name: 'Fruits',
     desc: 'Fresh seasonal fruits including mangoes, grapes, and pomegranates',
-    img: 'https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&q=90',
+    img: '/products/mango.jpg',
   },
   {
     name: 'Vegetables',
     desc: 'Export-grade onions, potatoes, and other fresh vegetables',
-    img: 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=600&q=90',
+    img: '/products/onion.jpg',
   },
   {
     name: 'Spices',
     desc: 'Red chilli, turmeric, black pepper, and cardamom',
-    img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=90',
+    img: '/products/coriander.jpg',
   },
   {
     name: 'Dehydrated Products',
     desc: 'Garlic powder, onion powder, and other dehydrated ingredients',
-    img: 'https://images.unsplash.com/photo-1540148426945-6cf22a6b2571?w=600&q=90',
+    img: '/products/garlic-powder.jpg',
   },
 ]
 
