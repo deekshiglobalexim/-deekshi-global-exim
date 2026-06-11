@@ -10,23 +10,23 @@ const categories = [
     id: 'rice',
     name: 'Rice',
     emoji: '🌾',
-    desc: 'Our #1 export product. Premium Indian rice varieties sourced from Andhra Pradesh, Telangana, and Punjab. Available in bulk supply with custom packaging for international buyers.',
+    desc: 'Our flagship export category. Premium Indian rice varieties cultivated across Andhra Pradesh, Telangana, and Punjab, processed in state-of-the-art facilities and shipped in bulk to over 30 countries worldwide.',
     products: [
       {
         name: 'Sona Masoori Rice',
-        desc: 'Premium Sona Masoori rice sourced directly from the fertile fields of Andhra Pradesh and Telangana. Light, aromatic, and low in starch. Ideal for daily consumption markets. Available in 5kg to 50kg export packing.',
+        desc: 'Lightweight, aromatic Sona Masoori rice cultivated in the fertile river basins of Andhra Pradesh and Telangana. Low glycemic index with excellent cooking yield, making it ideal for global retail and institutional buyers. Supplied in 5kg to 50MT bulk shipments with custom branding options.',
         img: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=90',
         badges: ['Export Quality', 'AP & Telangana Sourcing'],
       },
       {
         name: 'Basmati Rice',
-        desc: 'Long-grain aromatic Basmati rice aged to perfection. Superior cooking quality with excellent elongation. Meets all international food safety standards. Bulk supply available for wholesale importers.',
+        desc: 'Aged long-grain Basmati rice with exceptional aroma and 2x elongation after cooking. Sourced from the Indo-Gangetic plains of Punjab and Haryana, meeting stringent EU and FDA residue standards. Available in 1121, PUSA, and Traditional varieties for wholesale importers globally.',
         img: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=800&q=90',
         badges: ['Export Quality', 'Punjab & Haryana Sourcing'],
       },
       {
         name: 'Non-Basmati Rice',
-        desc: 'High-quality Non-Basmati varieties including IR-64, Parboiled, and Broken rice. Competitively priced for bulk international orders. Consistent quality with every shipment.',
+        desc: 'Versatile Non-Basmati varieties including IR-64, Parboiled, Broken, and Swarna rice. Competitively priced for bulk procurement by food manufacturers and government tenders worldwide. Consistent grain quality with sortex-cleaned processing and phytosanitary certification for every shipment.',
         img: 'https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=90',
         badges: ['Export Quality', 'Multi-State Sourcing'],
       },
@@ -36,37 +36,31 @@ const categories = [
     id: 'fruits',
     name: 'Fresh Fruits',
     emoji: '🥭',
-    desc: "Premium tropical and seasonal fruits sourced from India's finest orchards. Export-quality with cold chain management for reliable international delivery.",
+    desc: "India's premium tropical and seasonal fruits, sourced from certified orchards with integrated cold chain logistics. Export-ready packaging ensures freshness from farm to destination port.",
     products: [
       {
         name: 'Mango',
-        desc: 'Alphonso, Kesar, Banganapalli, and Totapuri varieties from certified orchards. Packed at peak ripeness with hot water treatment for phytosanitary compliance. Bulk supply available for international fruit importers.',
+        desc: 'Premium Alphonso, Kesar, Banganapalli, and Totapuri mangoes from GI-certified growing regions. Each lot undergoes hot water treatment and vapour heat treatment for phytosanitary compliance. Supplied in bulk to supermarket chains, juice processors, and wholesale fruit importers across the Middle East, Europe, and Asia.',
         img: 'https://images.unsplash.com/photo-1553279768-865429fa0078?w=800&q=90',
-        badges: ['Export Quality'],
-      },
-      {
-        name: 'Banana',
-        desc: 'Premium Cavendish and Robusta bananas harvested at optimal ripeness stage for long-distance export. Consistent sizing and quality. Available year-round in bulk quantities.',
-        img: 'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=800&q=90',
-        badges: ['Export Quality'],
+        badges: ['Export Quality', 'Maharashtra & AP Sourcing'],
       },
       {
         name: 'Pomegranate',
-        desc: 'Premium Bhagwa pomegranates with deep red arils and high juice content. Sorted by size and quality grade. Bulk export supply with consistent availability from Maharashtra.',
+        desc: 'Premium Bhagwa and Ganesh pomegranates with deep ruby-red arils and exceptionally high juice content. Graded by size and Brix level to meet international supermarket specifications. Reliable bulk supply from Maharashtra orchards with year-round availability and cold chain packaging.',
         img: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=800&q=90',
-        badges: ['Export Quality'],
+        badges: ['Export Quality', 'Maharashtra Sourcing'],
       },
       {
         name: 'Grapes',
-        desc: 'Premium Thompson Seedless and Sharad Seedless grapes from Nashik vineyards. Pre-cooled and packed for maximum freshness during international transit.',
+        desc: 'Thompson Seedless, Sharad Seedless, and Flame Seedless grapes from the premier vineyards of Nashik and Sangli. Pre-cooled within hours of harvest, SO2-treated, and packed in ventilated cartons for maximum shelf life during intercontinental shipping. Bulk orders welcomed from European and Asian retailers.',
         img: 'https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=800&q=90',
-        badges: ['Export Quality'],
+        badges: ['Export Quality', 'Nashik Sourcing'],
       },
       {
-        name: 'Papaya',
-        desc: 'Sweet and nutritious Red Lady papayas with vibrant orange flesh. Export-quality with extended shelf life. Available in customized packaging for retail and wholesale markets.',
-        img: 'https://images.unsplash.com/photo-1517282009859-f000ec3b26fe?w=800&q=90',
-        badges: ['Export Quality'],
+        name: 'Banana',
+        desc: 'Export-grade Cavendish and Grand Naine bananas harvested at precise maturity for optimal ripening during transit. Uniform bunch sizing, ethylene-controlled ripening protocols, and year-round availability make us a reliable bulk supplier for international fruit distributors and retail chains.',
+        img: 'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=800&q=90',
+        badges: ['Export Quality', 'Tamil Nadu Sourcing'],
       },
     ],
   },
@@ -74,37 +68,31 @@ const categories = [
     id: 'vegetables',
     name: 'Fresh Vegetables',
     emoji: '🥬',
-    desc: 'Farm-fresh vegetables selected for export quality. Rigorous quality control at every stage from harvest to delivery. Bulk supply for international markets.',
+    desc: 'Farm-fresh vegetables sourced from leading agricultural belts of India. Every shipment undergoes rigorous grading, sorting, and quality inspection to meet international food safety and residue standards.',
     products: [
       {
         name: 'Onion',
-        desc: 'Premium red and white onions with extended shelf life and consistent sizing. Sourced from Maharashtra and Karnataka. Bulk supply available in mesh bags, jute bags, or customized packaging.',
+        desc: 'Premium Nashik red onions and Bangalore rose onions with extended 90-day shelf life and consistent 45-80mm sizing. Sourced from Maharashtra and Karnataka with reliable year-round supply. Available in mesh bags, jute bags, or customized packaging for wholesale importers and institutional buyers globally.',
         img: 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&q=90',
-        badges: ['Export Quality'],
+        badges: ['Export Quality', 'Maharashtra & Karnataka Sourcing'],
       },
       {
         name: 'Tomato',
-        desc: 'Firm export-quality tomatoes with excellent color and shelf life. Sorted and graded to international standards. Available in bulk supply with proper temperature-controlled logistics.',
+        desc: 'Firm, vine-ripened export tomatoes with vibrant red color, excellent Brix levels, and superior shelf life for long-distance shipping. Sorted and graded to international size specifications with temperature-controlled logistics from farm to port. Bulk supply for food processors, retailers, and wholesale markets.',
         img: 'https://images.unsplash.com/photo-1546470427-0d62b9f43ce8?w=800&q=90',
-        badges: ['Export Quality'],
-      },
-      {
-        name: 'Green Chilli',
-        desc: 'Fresh Indian green chillies with consistent pungency levels. Export-quality with proper cold chain handling. Available in bulk for food processing and retail markets.',
-        img: 'https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?w=800&q=90',
-        badges: ['Export Quality'],
+        badges: ['Export Quality', 'Multi-State Sourcing'],
       },
       {
         name: 'Potato',
-        desc: 'Export-grade potatoes with uniform size and minimal defects. Cold stored for year-round availability. Available in bulk quantities with competitive pricing for international buyers.',
+        desc: 'Export-grade potatoes including Jyoti, Kufri Pukhraj, and processing varieties with uniform sizing and minimal defects. Cold-stored for year-round supply consistency. Competitively priced bulk quantities with phytosanitary certification for international procurement teams and food service distributors.',
         img: 'https://images.unsplash.com/photo-1508313880080-c5e2e5c0bbbd?w=800&q=90',
-        badges: ['Export Quality'],
+        badges: ['Export Quality', 'UP & Gujarat Sourcing'],
       },
       {
-        name: 'Okra (Lady Finger)',
-        desc: 'Tender export-grade okra with uniform size and vibrant green color. Sorted and packed for international markets with maximum freshness retention.',
-        img: 'https://images.unsplash.com/photo-1425543103986-22abb7d7e8d2?w=800&q=90',
-        badges: ['Export Quality'],
+        name: 'Green Chilli',
+        desc: 'Fresh Indian green chillies with consistent Scoville heat levels, vibrant color, and firm texture. Harvested at peak freshness with immediate cold chain handling to preserve quality during export transit. Available in bulk for food processing companies, spice manufacturers, and retail distribution worldwide.',
+        img: 'https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?w=800&q=90',
+        badges: ['Export Quality', 'Andhra Pradesh Sourcing'],
       },
     ],
   },
@@ -112,37 +100,37 @@ const categories = [
     id: 'spices',
     name: 'Spices',
     emoji: '🌶️',
-    desc: 'Authentic Indian spices trusted worldwide. Processed in FSSAI-certified facilities meeting international food safety standards. Bulk supply with certificates of analysis.',
+    desc: 'Authentic Indian spices processed in FSSAI, ISO, and HACCP-certified facilities. Every batch is lab-tested with a complete certificate of analysis, meeting EU, FDA, and global food safety standards for bulk export.',
     products: [
       {
         name: 'Red Chilli',
-        desc: 'Premium Teja, Byadagi, and Kashmiri red chillies with intense color and high ASTA values. Available in whole, crushed, and powder forms. Bulk supply for spice importers worldwide.',
+        desc: 'Premium Teja, Byadagi, and Kashmiri red chillies with intense natural color and high ASTA values (80-300). Available in whole dried, crushed flakes, and fine powder forms. Steam-sterilized and tested for aflatoxin compliance. Bulk supply for spice importers, food manufacturers, and oleoresin extractors worldwide.',
         img: 'https://images.unsplash.com/photo-1596547609652-9cf5d8c10616?w=800&q=90',
-        badges: ['Export Quality'],
+        badges: ['Export Quality', 'Andhra Pradesh Sourcing'],
       },
       {
         name: 'Turmeric',
-        desc: 'High-curcumin Erode and Sangli turmeric. Available in finger, polished, and powder forms. Lab-tested with certificate of analysis for curcumin content. Bulk export supply available.',
+        desc: 'High-curcumin turmeric from Erode, Sangli, and Nizamabad with curcumin content ranging 3-7%. Available in polished fingers, unpolished, and fine powder forms. Each shipment includes a certificate of analysis for curcumin percentage, moisture, and pesticide residues. Trusted by global health food brands and spice distributors.',
         img: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=800&q=90',
-        badges: ['Export Quality'],
+        badges: ['Export Quality', 'Tamil Nadu & Maharashtra Sourcing'],
       },
       {
         name: 'Black Pepper',
-        desc: 'Premium Malabar and Tellicherry black pepper from Kerala. Bold grade with high piperine content. Sorted, graded, and steam-sterilized for international food safety compliance.',
+        desc: 'Premium Malabar and Tellicherry grade black pepper from the Western Ghats of Kerala with high piperine content (4-9%). Bold, uniform berries sorted and graded to FAQ/ASTA standards. Steam-sterilized for food safety compliance. Reliable bulk supply for international spice traders, food processors, and pharmaceutical companies.',
         img: 'https://images.unsplash.com/photo-1599909533601-aa539e4e2a7e?w=800&q=90',
-        badges: ['Export Quality'],
+        badges: ['Export Quality', 'Kerala Sourcing'],
       },
       {
         name: 'Garlic Powder',
-        desc: 'Premium dehydrated garlic powder processed from select Indian garlic varieties. Consistent flavor and aroma. Available in bulk quantities meeting international food processing standards.',
+        desc: 'Premium dehydrated garlic powder manufactured from select Indian garlic varieties using advanced spray-drying technology. Consistent pungency, aroma, and mesh size specifications. Meets international food processing standards with full traceability. Available in 25kg bulk bags for seasoning manufacturers, food processors, and private label brands globally.',
         img: 'https://images.unsplash.com/photo-1540148426945-6cf22a6b2571?w=800&q=90',
-        badges: ['Export Quality'],
+        badges: ['Export Quality', 'Madhya Pradesh Sourcing'],
       },
       {
         name: 'Coriander',
-        desc: 'Premium coriander seeds and powder from Rajasthan and Madhya Pradesh. Clean, well-dried, and sorted. Bulk supply available with consistent quality for international spice blenders.',
+        desc: 'Premium eagle and badami grade coriander seeds from Rajasthan and Madhya Pradesh. Clean, sun-dried, and machine-sorted with low moisture content for extended shelf life. Also available as freshly ground powder. Bulk supply for international spice blenders, seasoning companies, and curry paste manufacturers with consistent quality year-round.',
         img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=90',
-        badges: ['Export Quality'],
+        badges: ['Export Quality', 'Rajasthan Sourcing'],
       },
     ],
   },
@@ -311,7 +299,7 @@ export default function ProductsPage() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-50px' }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
             >
               {cat.products.map((product) => (
                 <motion.div
@@ -360,7 +348,7 @@ export default function ProductsPage() {
                   </div>
 
                   {/* Card Content */}
-                  <div className="p-6 flex flex-col flex-grow">
+                  <div className="p-7 flex flex-col flex-grow">
                     <h3 className="text-xl font-bold text-navy-950 mb-2 font-display">
                       {product.name}
                     </h3>
@@ -375,7 +363,7 @@ export default function ProductsPage() {
                       </div>
                     )}
 
-                    <p className="text-gray-600 mb-5 text-sm leading-relaxed line-clamp-3 flex-grow">
+                    <p className="text-gray-600 mb-5 text-sm leading-relaxed flex-grow">
                       {product.desc}
                     </p>
 
