@@ -1,0 +1,7 @@
+{
+  "task_id": "task-export-enhancements",
+  "task_description": "Enhance the Deekshi Global Exim website with missing export-business elements that improve buyer trust and international appeal. Upgrade existing sections (Hero, Stats, WhyChooseUs, Products page, Footer) and add new sections (Export Process, International Markets) while keeping existing structure, branding, and colors intact.",
+  "status": "in_progress",
+  "feature_order": ["FEAT-001", "FEAT-002"],
+  "blocked_reason": null
+}

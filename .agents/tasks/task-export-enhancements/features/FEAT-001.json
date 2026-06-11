@@ -1,0 +1,29 @@
+{
+  "id": "FEAT-001",
+  "type": "feat",
+  "description": "Enhance existing homepage sections and add new export-business sections (Export Process, International Markets). Upgrade the Hero section with stronger export messaging, enhance the Stats section with better values and premium icons, enhance the WhyChooseUs section with 6 trust points, add new ExportProcess section with timeline/process cards, and add new InternationalMarkets section showing global reach.",
+  "status": "in_progress",
+  "steps": [
+    "Upgrade src/components/sections/HeroSection.tsx: Change headline to 'Trusted Global Export Partner' with subtitle 'Premium Indian Agricultural Products for International Markets'. Change CTA buttons to 'Request Quotation' and 'Contact Export Team'. Keep existing layout structure (2-column with image on right). Ensure hero background uses the premium export/shipping image. Make headline larger (text-6xl/7xl) with better visual hierarchy.",
+    "Enhance src/components/sections/StatsSection.tsx: Update stats to match requirements: '15+' Countries Served, '500+' Supply Capacity (Tons Monthly), '25+' Products, '100%' Quality Commitment. Add premium Lucide icons to each stat card. Add subtle background gradient or pattern for premium feel.",
+    "Enhance src/components/sections/WhyChooseUs.tsx: Update to 6 cards matching requirements: Quality Products, Reliable Supply, Timely Delivery, Export Documentation Support, International Standards, Long-Term Partnerships. Use appropriate Lucide icons. Keep existing card styling pattern (card-premium with hover effects).",
+    "Create new src/components/sections/ExportProcess.tsx: Professional export process section with 6 steps: 1. Inquiry, 2. Product Sourcing, 3. Quality Inspection, 4. Documentation, 5. Global Shipping, 6. Delivery Support. Use timeline-style or numbered process cards. Include Framer Motion stagger animations. Use navy background with gold accents following existing pattern.",
+    "Create new src/components/sections/InternationalMarkets.tsx: Section showing global business capability. Display target markets: UAE, Saudi Arabia, Qatar, Oman, Kuwait, Bahrain, Singapore, Malaysia, Europe. Use market cards or a visual grid showing reach. Include icons/flags representation. Use Framer Motion animations. Focus on export reach and buyer confidence.",
+    "Update src/app/page.tsx: Add ExportProcess and InternationalMarkets imports and place them in the page. New section order should be: HeroSection, AboutPreview, StatsSection, FeaturedProducts, ExportProcess, WhyChooseUs, InternationalMarkets, CertificationsPreview, CtaBanner."
+  ],
+  "acceptance_criteria": [
+    "Hero section displays 'Trusted Global Export Partner' headline with 'Premium Indian Agricultural Products for International Markets' subtitle",
+    "Hero has 'Request Quotation' and 'Contact Export Team' CTA buttons",
+    "Stats section shows 15+ Countries, 500+ Supply Capacity, 25+ Products, 100% Quality Commitment with icons",
+    "WhyChooseUs section has 6 cards: Quality Products, Reliable Supply, Timely Delivery, Export Documentation Support, International Standards, Long-Term Partnerships",
+    "ExportProcess section displays 6 steps in timeline/process card format with animations",
+    "InternationalMarkets section shows 9 target markets (UAE, Saudi Arabia, Qatar, Oman, Kuwait, Bahrain, Singapore, Malaysia, Europe)",
+    "All new sections use existing color scheme (navy + gold), Framer Motion animations, and Lucide icons",
+    "npm run build completes without errors"
+  ],
+  "verification": [
+    "Run npm run build in /projects/sandbox/deekshi-global-exim and confirm it completes successfully with no errors"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

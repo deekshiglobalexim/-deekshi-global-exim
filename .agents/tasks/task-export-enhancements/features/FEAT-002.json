@@ -1,0 +1,24 @@
+{
+  "id": "FEAT-002",
+  "type": "feat",
+  "description": "Enhance the Products page with better category banners, larger images, equal card heights, Export Grade/Bulk Supply badges, improved spacing, and ensure Rice appears first with largest visual emphasis. Also enhance the Footer with premium export-company styling, company description tagline, and better section organization.",
+  "status": "pending",
+  "steps": [
+    "Enhance src/app/products/page.tsx: Add 'Export Grade' and 'Bulk Supply' badge overlays on product cards (positioned in top-right corner of image). Ensure Rice category appears first (already does) and give it larger visual emphasis - make the Rice section header more prominent with a special banner/highlight. Improve card heights to be equal using flex-grow pattern (already partially done, ensure consistency). Add better spacing between sections. Improve category section headers with premium banner styling. Make product images slightly larger or use a better aspect ratio for visual impact.",
+    "Enhance src/components/Footer.tsx: Add the company description tagline 'Connecting Quality Indian Agricultural Products with Global Markets' prominently. Keep existing structure but enhance: ensure Quick Links, Product Categories, Certifications, Contact Info, and Social Media are all present and well-organized. Add a 'Request Quotation' CTA button in footer. Improve visual hierarchy with better heading styles. Keep existing StaffArc credit section.",
+    "Run npm run build to verify all changes compile correctly"
+  ],
+  "acceptance_criteria": [
+    "Products page shows 'Export Grade' and 'Bulk Supply' badges on product cards",
+    "Rice category appears first with largest visual emphasis (bigger header/banner)",
+    "Product cards have equal heights within each category grid",
+    "Footer includes tagline 'Connecting Quality Indian Agricultural Products with Global Markets'",
+    "Footer has Quick Links, Product Categories, Certifications section, Contact Info, and Social Media links",
+    "npm run build completes without errors"
+  ],
+  "verification": [
+    "Run npm run build in /projects/sandbox/deekshi-global-exim and confirm it completes successfully with no errors"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

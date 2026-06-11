@@ -21,12 +21,15 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
         <div>
-          <h1 className="font-display font-bold text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-6">
-            Premium{' '}
-            <span className="gold-text">Indian Agricultural</span>{' '}
-            Products for{' '}
-            <span className="gold-text">Global Markets</span>
+          <h1 className="font-display font-bold text-6xl lg:text-7xl xl:text-8xl text-white leading-tight mb-4">
+            Trusted{' '}
+            <span className="gold-text">Global Export</span>{' '}
+            Partner
           </h1>
+
+          <p className="text-gold-300 text-xl lg:text-2xl font-display font-medium mb-6 max-w-xl">
+            Premium Indian Agricultural Products for International Markets
+          </p>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-xl">
             Deekshi Global Exim exports premium rice, fresh fruits, vegetables, spices, and dehydrated products to buyers worldwide with full compliance and reliable logistics.
@@ -38,9 +41,9 @@ export default function HeroSection() {
               Request Quotation
               <ArrowRight size={18} />
             </Link>
-            <Link href="/products"
+            <Link href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 border-2 border-gold-500/60 text-gold-300 font-semibold text-base rounded-xl hover:bg-gold-500/15 hover:border-gold-400 transition-all duration-300 hover:shadow-gold-glow">
-              View Products
+              Contact Export Team
               <ArrowRight size={18} />
             </Link>
           </div>

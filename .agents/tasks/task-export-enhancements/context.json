@@ -1,0 +1,30 @@
+{
+  "project_type": "Next.js 16 with TypeScript, Tailwind CSS v3.4, Framer Motion v11.3",
+  "language": "TypeScript/TSX",
+  "build_system": "npm with next build",
+  "test_framework": "No test framework configured",
+  "build_command": "npm run build",
+  "test_command": "npm run build (no tests, build verification only)",
+  "verification_instructions": "Run npm run build to verify no TypeScript or build errors",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "cd /projects/sandbox/deekshi-global-exim && npm install",
+  "environment_constraints": "OPEN_INTERNET - full network access available. Node.js available.",
+  "contribution_requirements": "Keep existing branding (navy #091E33 to #1B3A5C + gold #C68A2E to #E8C66A), use existing Tailwind config colors, use Playfair Display for headings and Inter for body text, use lucide-react for icons, use framer-motion for animations, keep existing CSS utility classes from globals.css",
+  "key_patterns": "Components in src/components/sections/ for homepage sections. Use 'use client' directive for components with hooks/animations. Card styling uses card-premium, shadow-premium, shadow-premium-lg CSS classes. Buttons use btn-premium and shimmer-btn classes. Gold text uses gold-text class. Section headers use inline badge + h2 + gold-divider pattern. All images use Next.js Image component. Products page uses framer-motion variants for staggered animations.",
+  "relevant_files": [
+    "src/app/page.tsx",
+    "src/app/products/page.tsx",
+    "src/app/globals.css",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/sections/HeroSection.tsx",
+    "src/components/sections/FeaturedProducts.tsx",
+    "src/components/sections/WhyChooseUs.tsx",
+    "src/components/sections/StatsSection.tsx",
+    "src/components/sections/CertificationsPreview.tsx",
+    "src/components/sections/AboutPreview.tsx",
+    "src/components/sections/CtaBanner.tsx",
+    "tailwind.config.ts"
+  ],
+  "directory_structure": "src/app/ - pages (page.tsx files). src/components/sections/ - homepage section components. src/components/ - shared components (Navbar, Footer, etc). public/products/ - local product images (17 jpg files). public/ - logo.png, logo-mark.png."
+}

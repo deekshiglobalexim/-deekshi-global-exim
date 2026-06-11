@@ -3,8 +3,10 @@ import HeroSection from '@/components/sections/HeroSection'
 import AboutPreview from '@/components/sections/AboutPreview'
 import StatsSection from '@/components/sections/StatsSection'
 import FeaturedProducts from '@/components/sections/FeaturedProducts'
+import ExportProcess from '@/components/sections/ExportProcess'
 import CertificationsPreview from '@/components/sections/CertificationsPreview'
 import WhyChooseUs from '@/components/sections/WhyChooseUs'
+import InternationalMarkets from '@/components/sections/InternationalMarkets'
 import CtaBanner from '@/components/sections/CtaBanner'
 
 export const metadata: Metadata = {
@@ -19,8 +21,10 @@ export default function HomePage() {
       <AboutPreview />
       <StatsSection />
       <FeaturedProducts />
-      <CertificationsPreview />
+      <ExportProcess />
       <WhyChooseUs />
+      <InternationalMarkets />
+      <CertificationsPreview />
       <CtaBanner />
     </>
   )

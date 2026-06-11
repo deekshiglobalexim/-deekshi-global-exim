@@ -1,25 +1,35 @@
-import { Wheat, Shield, Truck, FileText } from 'lucide-react'
+import { Award, Truck, Clock, FileText, ShieldCheck, Handshake } from 'lucide-react'
 
 const cards = [
   {
-    icon: Wheat,
-    title: 'Direct Farm Sourcing',
-    desc: 'Established partnerships with farmers and cooperatives ensure consistent quality and competitive pricing for all products.',
-  },
-  {
-    icon: Shield,
-    title: 'Quality Compliance',
-    desc: 'All exports meet international food safety standards with FSSAI certification and phytosanitary compliance.',
+    icon: Award,
+    title: 'Quality Products',
+    desc: 'Stringent quality checks at every stage ensure only premium agricultural products reach international buyers.',
   },
   {
     icon: Truck,
-    title: 'Reliable Logistics',
-    desc: 'Efficient supply chain for both FCL and LCL shipments with consistent monthly dispatch schedules.',
+    title: 'Reliable Supply',
+    desc: 'Established partnerships with farmers and cooperatives ensure consistent availability and competitive pricing.',
+  },
+  {
+    icon: Clock,
+    title: 'Timely Delivery',
+    desc: 'Efficient logistics and supply chain management guarantee on-time delivery to ports and destinations worldwide.',
   },
   {
     icon: FileText,
-    title: 'Complete Documentation',
-    desc: 'Full export documentation support including Bill of Lading, Certificate of Origin, and phytosanitary certificates.',
+    title: 'Export Documentation Support',
+    desc: 'Complete documentation assistance including Bill of Lading, Certificate of Origin, and phytosanitary certificates.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'International Standards',
+    desc: 'All products comply with international food safety standards, FSSAI norms, and destination country regulations.',
+  },
+  {
+    icon: Handshake,
+    title: 'Long-Term Partnerships',
+    desc: 'We build lasting relationships with buyers through transparency, fair trade, and consistent product excellence.',
   },
 ]
 
@@ -37,7 +47,7 @@ export default function WhyChooseUs() {
           <div className="gold-divider mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((card) => (
             <div key={card.title}
               className="relative card-premium shadow-premium-lg p-8 rounded-2xl border border-gray-200 group overflow-hidden transition-premium hover:shadow-gold-glow hover:border-gold-500/30">
