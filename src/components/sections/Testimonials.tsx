@@ -4,25 +4,25 @@ const testimonials = [
   {
     name: 'Mohammed Al-Rashid',
     country: 'UAE',
-    flag: '🇦🇪',
+    flag: '\u{1F1E6}\u{1F1EA}',
     role: 'Food Import Manager',
-    text: 'Deekshi Global Exim has been our preferred Indian spice supplier for over a year now. Their red chilli and turmeric quality is consistently superior, and the documentation is always spot-on.',
+    text: 'The Sona Masoori Rice from Deekshi Global Exim is exceptional - consistent grain quality, perfect moisture content, and the aroma is outstanding. Our customers specifically request this brand now. Bulk supply reliability has been flawless across 12 monthly shipments.',
     rating: 5,
   },
   {
     name: 'Zhang Wei',
     country: 'China',
-    flag: '🇨🇳',
-    role: 'Agricultural Buyer',
-    text: 'We are deeply satisfied with the Basmati rice quality and packaging. Shipments arrive on time and the team responds quickly to any queries. Truly a reliable export partner from India.',
+    flag: '\u{1F1E8}\u{1F1F3}',
+    role: 'Agricultural Commodities Buyer',
+    text: 'We import both Basmati and non-Basmati rice varieties in container loads. Documentation is always complete and accurate, customs clearance is seamless every time. Their APEDA and FSSAI certifications give us full confidence in food safety compliance.',
     rating: 5,
   },
   {
     name: 'Priya Naidoo',
     country: 'South Africa',
-    flag: '🇿🇦',
-    role: 'Restaurant Chain Owner',
-    text: 'The mangoes and fresh vegetables we import from Deekshi Global Exim are the freshest we have received. Their quality inspection process is clearly very thorough.',
+    flag: '\u{1F1FF}\u{1F1E6}',
+    role: 'Wholesale Distribution Director',
+    text: 'From spices to fresh produce, every shipment meets international quality standards. Their phytosanitary documentation is thorough and delivery timelines are consistently met. A truly professional export partner for African markets.',
     rating: 5,
   },
 ]
@@ -46,7 +46,7 @@ export default function Testimonials() {
             <div key={t.name} className="card-premium shadow-premium p-8 rounded-2xl border border-gray-200 group overflow-hidden relative transition-premium hover:shadow-premium-lg hover:border-gold-500/30">
               {/* Gradient background on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-gold-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
               {/* Quote mark */}
               <Quote size={48} className="absolute top-3 right-3 text-gold-500/15 group-hover:text-gold-500/25 transition-colors duration-300" />
 

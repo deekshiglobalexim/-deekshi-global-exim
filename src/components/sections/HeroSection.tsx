@@ -30,26 +30,26 @@ export default function HeroSection() {
           </div>
 
           <h1 className="font-display font-bold text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-6">
-            Connecting{' '}
-            <span className="gold-text">Indian</span>{' '}
-            Agricultural{' '}
-            <span className="gold-text">Excellence</span>{' '}
-            to Global Markets
+            Premium{' '}
+            <span className="gold-text">Indian Rice</span>{' '}
+            &amp; Agricultural{' '}
+            <span className="gold-text">Exports</span>{' '}
+            Worldwide
           </h1>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-xl">
-            Trusted export partner for premium fruits, vegetables, rice, and spices worldwide. Certified, compliant, and committed to quality.
+            India&apos;s trusted export partner for Sona Masoori Rice (AP &amp; Telangana), Basmati Rice, and Non-Basmati Rice. Also exporting premium fruits, vegetables, and spices to global markets.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
             <Link href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 btn-premium shimmer-btn text-navy-950 font-bold text-base rounded-xl shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1">
-              Get Export Quote
+              Request Quotation
               <ArrowRight size={18} />
             </Link>
             <Link href="/products"
               className="inline-flex items-center gap-2 px-8 py-4 border-2 border-gold-500/60 text-gold-300 font-semibold text-base rounded-xl hover:bg-gold-500/15 hover:border-gold-400 transition-all duration-300 hover:shadow-gold-glow">
-              View Products
+              View Export Products
               <ArrowRight size={18} />
             </Link>
           </div>
@@ -57,7 +57,8 @@ export default function HeroSection() {
           {/* Trust badges */}
           <div className="flex flex-wrap gap-6">
             {[
-              { icon: Shield, label: 'IEC Registered' },
+              { icon: Shield, label: 'APEDA Registered' },
+              { icon: Shield, label: 'FSSAI Licensed' },
               { icon: Globe, label: 'Global Reach' },
               { icon: Truck, label: 'Reliable Delivery' },
             ].map(({ icon: Icon, label }) => (
@@ -72,8 +73,8 @@ export default function HeroSection() {
         {/* Right — Visual Cards */}
         <div className="hidden lg:grid grid-cols-2 gap-4">
           {[
+            { emoji: '🌾', label: 'Premium Rice', desc: 'Sona Masoori, Basmati & Non-Basmati', color: 'from-amber-900/60' },
             { emoji: '🥭', label: 'Fresh Fruits', desc: 'Mango, Grapes, Pomegranate & more', color: 'from-orange-900/60' },
-            { emoji: '🌾', label: 'Premium Rice', desc: 'Basmati & Non-Basmati varieties', color: 'from-amber-900/60' },
             { emoji: '🌶️', label: 'Indian Spices', desc: 'Red Chilli, Turmeric, Cardamom', color: 'from-red-900/60' },
             { emoji: '🥦', label: 'Fresh Vegetables', desc: 'Onion, Potato, Tomato & more', color: 'from-green-900/60' },
           ].map((item, i) => (

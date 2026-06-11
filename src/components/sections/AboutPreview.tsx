@@ -4,7 +4,9 @@ import { CheckCircle2, ArrowRight } from 'lucide-react'
 
 const highlights = [
   'APEDA & IEC Certified export business',
-  'Specializing in Indian agricultural products',
+  'Sona Masoori Rice sourced directly from AP & Telangana farmers',
+  'Strong sourcing networks across Andhra Pradesh and Telangana',
+  'Specializing in premium Indian rice, fruits, vegetables & spices',
   'Supplying to global markets across continents',
   'Strict quality control at every stage',
   'Full export documentation support',
@@ -49,10 +51,10 @@ export default function AboutPreview() {
             </h2>
 
             <p className="text-gray-600 leading-relaxed mb-4">
-              Deekshi Global Exim is a certified Import & Export company headquartered in Warangal, Telangana, India. We specialize in supplying the finest Indian agricultural products — fresh fruits, vegetables, rice, and spices — to international buyers across the globe.
+              Deekshi Global Exim is a certified Import &amp; Export company headquartered in Warangal, Telangana, India. We specialize in supplying the finest Indian agricultural products -- premium Sona Masoori Rice, Basmati Rice, Non-Basmati Rice, fresh fruits, vegetables, and spices -- to international buyers across the globe.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Our foundation is built on trust, transparency, and an unwavering commitment to quality. With all mandatory certifications in place and deep agricultural expertise, we ensure every shipment meets international standards.
+              Our strong sourcing networks across Andhra Pradesh and Telangana give us direct access to the finest rice-producing regions in India. We work closely with farmers and millers to ensure every grain of Sona Masoori Rice meets the highest quality standards. Our foundation is built on trust, transparency, and an unwavering commitment to quality.
             </p>
 
             <ul className="space-y-3 mb-10">
