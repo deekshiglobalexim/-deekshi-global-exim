@@ -5,6 +5,7 @@ import AboutPreview from '@/components/sections/AboutPreview'
 import StatsSection from '@/components/sections/StatsSection'
 import FeaturedProducts from '@/components/sections/FeaturedProducts'
 import ExportProcess from '@/components/sections/ExportProcess'
+import ExportValues from '@/components/sections/ExportValues'
 import CertificationsPreview from '@/components/sections/CertificationsPreview'
 import WhyChooseUs from '@/components/sections/WhyChooseUs'
 import InternationalMarkets from '@/components/sections/InternationalMarkets'
@@ -25,6 +26,7 @@ export default function HomePage() {
       <StatsSection />
       <FeaturedProducts />
       <ExportProcess />
+      <ExportValues />
       <WhyChooseUs />
       <InternationalMarkets />
       <CertificationsPreview />
