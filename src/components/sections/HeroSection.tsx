@@ -41,9 +41,9 @@ export default function HeroSection() {
               Request Quotation
               <ArrowRight size={18} />
             </Link>
-            <Link href="/contact"
+            <Link href="/products"
               className="inline-flex items-center gap-2 px-8 py-4 border-2 border-gold-500/60 text-gold-300 font-semibold text-base rounded-xl hover:bg-gold-500/15 hover:border-gold-400 transition-all duration-300 hover:shadow-gold-glow">
-              Contact Export Team
+              Explore Products
               <ArrowRight size={18} />
             </Link>
           </div>

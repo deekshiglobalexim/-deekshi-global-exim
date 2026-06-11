@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-bold text-gold-500 mb-5 text-lg tracking-wide uppercase text-sm">Quick Links</h4>
+            <h4 className="font-display font-bold text-gold-500 mb-5 text-lg tracking-wide uppercase">Quick Links</h4>
             <ul className="space-y-2">
               {[
                 { href: '/', label: 'Home' },
@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="font-display font-bold text-gold-500 mb-5 text-lg tracking-wide uppercase text-sm">Our Products</h4>
+            <h4 className="font-display font-bold text-gold-500 mb-5 text-lg tracking-wide uppercase">Our Products</h4>
             <ul className="space-y-2">
               {['Sona Masoori Rice', 'Basmati Rice', 'Non-Basmati Rice', 'Fresh Fruits', 'Fresh Vegetables', 'Spices', 'Dehydrated Products'].map(p => (
                 <li key={p}>
@@ -92,7 +92,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display font-bold text-gold-500 mb-5 text-lg tracking-wide uppercase text-sm">Contact Us</h4>
+            <h4 className="font-display font-bold text-gold-500 mb-5 text-lg tracking-wide uppercase">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-gold-500 mt-0.5 flex-shrink-0" />
