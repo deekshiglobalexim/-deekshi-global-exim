@@ -8,6 +8,7 @@ import TradeProcess from '@/components/sections/TradeProcess'
 import Testimonials from '@/components/sections/Testimonials'
 import CtaBanner from '@/components/sections/CtaBanner'
 import StatsSection from '@/components/sections/StatsSection'
+import PriorityExportProducts from '@/components/sections/PriorityExportProducts'
 
 export const metadata: Metadata = {
   title: 'Deekshi Global Exim | Trusted Agricultural Exporter from India',
@@ -20,6 +21,7 @@ export default function HomePage() {
       <HeroSection />
       <AboutPreview />
       <StatsSection />
+      <PriorityExportProducts />
       <WhyChooseUs />
       <FeaturedProducts />
       <CertificationsPreview />
