@@ -29,7 +29,7 @@ const categories = [
       {
         name: 'Non-Basmati Rice (IR-64, Parboiled)',
         desc: 'High-quality Non-Basmati varieties including IR-64, Parboiled, and Broken rice. Competitively priced for bulk international orders. Consistent quality with every shipment.',
-        img: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=90',
+        img: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=800&q=90',
       },
     ],
   },
@@ -85,7 +85,7 @@ const categories = [
       {
         name: 'Potato',
         desc: 'Export-grade potatoes with uniform size and minimal defects. Cold stored for year-round availability. Available in bulk quantities with competitive pricing for international buyers.',
-        img: 'https://images.unsplash.com/photo-1518977676601-b53f82ber40?w=600&q=90',
+        img: 'https://images.unsplash.com/photo-1508313880080-c5e2e5c0bbbd?w=600&q=90',
       },
       {
         name: 'Tomato',
@@ -133,7 +133,7 @@ const categories = [
       {
         name: 'Garlic Powder',
         desc: 'Premium dehydrated garlic powder processed from select Indian garlic varieties. Consistent flavor and aroma. Available in bulk quantities meeting international food processing standards.',
-        img: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=90',
+        img: 'https://images.unsplash.com/photo-1540148426945-6cf22a6b2571?w=800&q=90',
       },
       {
         name: 'Coriander',
@@ -143,12 +143,12 @@ const categories = [
       {
         name: 'Cumin',
         desc: 'Premium Indian cumin seeds from Gujarat and Rajasthan. High volatile oil content with intense aroma. Sorted and cleaned to international standards. Bulk export supply available.',
-        img: 'https://images.unsplash.com/photo-1599909533601-aa539e4e2a7e?w=600&q=90',
+        img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=90',
       },
       {
         name: 'Cardamom',
         desc: 'Premium green cardamom from Kerala and Karnataka. Bold grade with intense aroma and flavor. Hand-picked and sorted for export quality. Available in bulk for international buyers.',
-        img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=90',
+        img: 'https://images.unsplash.com/photo-1701174694537-0e4968098a08?w=800&q=90',
       },
     ],
   },

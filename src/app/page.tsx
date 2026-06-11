@@ -12,7 +12,7 @@ import PriorityExportProducts from '@/components/sections/PriorityExportProducts
 
 export const metadata: Metadata = {
   title: 'Deekshi Global Exim | Trusted Agricultural Exporter from India',
-  description: 'Premium exporter of fruits, vegetables, rice & spices from India. IEC registered and APEDA certified for international trade. Contact us for export enquiries.',
+  description: 'India\'s leading rice exporter specializing in Sona Masoori, Basmati & Non-Basmati rice, along with premium fruits, vegetables & spices. IEC registered, APEDA certified for international trade.',
 }
 
 export default function HomePage() {

@@ -4,28 +4,28 @@ import { ArrowRight, FileText, Phone, Users, Package } from 'lucide-react'
 const ctaItems = [
   {
     label: 'Request Quotation',
-    href: '/contact',
+    href: '/contact?intent=quotation',
     icon: ArrowRight,
     description: 'Get competitive pricing for bulk orders',
     primary: true,
   },
   {
     label: 'Request Product Catalog',
-    href: '/contact',
+    href: '/contact?intent=catalog',
     icon: FileText,
     description: 'Download our full export product catalog',
     primary: false,
   },
   {
     label: 'Contact Export Team',
-    href: '/contact',
+    href: '/contact?intent=export-team',
     icon: Users,
     description: 'Speak with our export specialists',
     primary: false,
   },
   {
     label: 'Bulk Order Inquiry',
-    href: '/contact',
+    href: '/contact?intent=bulk-order',
     icon: Package,
     description: 'Custom solutions for large volume buyers',
     primary: false,
