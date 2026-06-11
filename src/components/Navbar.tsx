@@ -15,10 +15,13 @@ const navLinks = [
 
 const productCategories = [
   { href: '/products#rice', label: 'Rice' },
-  { href: '/products#fruits', label: 'Fruits' },
+  { href: '/products#fruits', label: 'Mango Exports' },
   { href: '/products#vegetables', label: 'Vegetables' },
+  { href: '/products#fruits', label: 'Fruits' },
   { href: '/products#spices', label: 'Spices' },
   { href: '/products#dehydrated', label: 'Dehydrated Products' },
+  { href: '/products#rice', label: 'Basmati Rice' },
+  { href: '/products#rice', label: 'Non-Basmati Rice' },
 ]
 
 export default function Navbar() {
