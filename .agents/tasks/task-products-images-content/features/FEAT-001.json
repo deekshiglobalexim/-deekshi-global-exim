@@ -1,0 +1,29 @@
+{
+  "id": "FEAT-001",
+  "type": "feat",
+  "description": "Complete overhaul of the products page: replace all product images with correct high-quality Unsplash photos, rewrite descriptions to be premium export-focused, reorder products per priority list, remove Papaya and Okra, and improve UI with larger cards, consistent heights, premium shadows, and better spacing.",
+  "status": "completed",
+  "steps": [
+    "Step 1 - Update next.config.ts to add any additional image domains if needed (currently allows images.unsplash.com, plus.unsplash.com, source.unsplash.com)",
+    "Step 2 - In src/app/products/page.tsx, replace the entire 'categories' array with the correct product data following this priority order:\n\n1. Rice (Main Category):\n   - Sona Masoori Rice (use: https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=90)\n   - Basmati Rice (use: https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=800&q=90)\n   - Non-Basmati Rice (use: https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=90 with different crop, or https://plus.unsplash.com/premium_photo-1723869067492-f2b3c38e15c1?w=800&q=90 for parboiled rice)\n\n2. Fresh Fruits:\n   - Mango (Featured) (use: https://images.unsplash.com/photo-1553279768-865429fa0078?w=800&q=90)\n   - Pomegranate (use: https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=800&q=90)\n   - Grapes (use: https://images.unsplash.com/photo-1537640538966-79f369143f8f?w=800&q=90)\n   - Banana (use: https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=800&q=90)\n\n3. Fresh Vegetables:\n   - Onion (Featured) (use: https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&q=90)\n   - Tomato (use: https://images.unsplash.com/photo-1546470427-0d62b9f43ce8?w=800&q=90 - this shows actual red tomatoes)\n   - Potato (use: https://images.unsplash.com/photo-1518977676601-b53f82ber630?w=800&q=90 or https://images.unsplash.com/photo-1508313880080-c5e2e5c0bbbd?w=800&q=90)\n   - Green Chilli (use: https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?w=800&q=90 - shows green chillies)\n\n4. Spices:\n   - Red Chilli (use: https://images.unsplash.com/photo-1596547609652-9cf5d8c10616?w=800&q=90 for dried red chillies)\n   - Turmeric (use: https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=800&q=90 for turmeric powder/roots)\n   - Black Pepper (use: https://images.unsplash.com/photo-1599909533601-aa539e4e2a7e?w=800&q=90 - shows black peppercorns)\n   - Garlic Powder (use: https://images.unsplash.com/photo-1540148426945-6cf22a6b2571?w=800&q=90 - shows garlic)\n   - Coriander (use: https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=90 - shows coriander seeds)\n\nIMPORTANT: Remove Papaya from fruits. Remove Okra from vegetables. Only include the products listed above.",
+    "Step 3 - Rewrite ALL product descriptions to be premium, export-focused content suitable for international buyers. Focus on: bulk supply capabilities, export quality certifications, global market readiness, reliable sourcing networks, international standards compliance. Each description should be 2-3 sentences emphasizing export value.",
+    "Step 4 - Improve the UI styling of the product cards:\n   - Make cards slightly larger with more generous padding (p-6 to p-7 or p-8)\n   - Ensure consistent card height using flex-col and flex-grow patterns (already partially done)\n   - Add premium shadows: use shadow-xl or custom shadow classes\n   - Better spacing between cards: increase gap from gap-8 to gap-10\n   - Keep the existing 'Export Quality' badge (gold)\n   - Keep the existing 'Bulk Supply Available' badge\n   - Image aspect ratio: keep aspect-[4/3] for consistent ratio without stretching\n   - Smooth image zoom: keep the existing scale-110 on hover with transition-transform duration-700\n   - Ensure no image stretching by keeping object-cover\n   - Remove line-clamp-3 to prevent cropped product content (or increase to line-clamp-4)\n   - Add a subtle gradient border effect or elevated premium feel to cards",
+    "Step 5 - Commit all changes on main branch with message: 'feat: overhaul products page with correct images, export descriptions, and premium UI'"
+  ],
+  "acceptance_criteria": [
+    "Products page contains exactly 15 products: 3 rice, 4 fruits, 4 vegetables, 5 spices",
+    "Papaya and Okra are removed from the products list",
+    "Product order matches the priority list (Rice first, then Fruits, Vegetables, Spices)",
+    "All product images use Unsplash URLs that correctly depict the named product",
+    "All descriptions are export-focused with references to bulk supply, international standards, etc.",
+    "Cards have premium styling with larger padding, better shadows, and consistent heights",
+    "npm run build completes without errors",
+    "Changes are committed on main branch"
+  ],
+  "verification": [
+    "Run 'npm run build' from /projects/sandbox/deekshi-global-exim and confirm it passes without errors",
+    "Run 'git log --oneline -1' to confirm the commit was made"
+  ],
+  "blocked_reason": null,
+  "findings": "All changes implemented successfully. Papaya and Okra removed, products reordered per priority list (Rice: 3, Fruits: 4, Vegetables: 4, Spices: 5 = 16 total). Descriptions rewritten with premium export-focused content including bulk supply, international standards, sourcing details, and certifications. UI improved with p-7 padding, shadow-premium/hover:shadow-premium-lg (brand-consistent navy-tinted shadows from tailwind.config.ts), gap-10 spacing, line-clamp removed for full descriptions. Build passes cleanly with only pre-existing metadata warnings."
+}

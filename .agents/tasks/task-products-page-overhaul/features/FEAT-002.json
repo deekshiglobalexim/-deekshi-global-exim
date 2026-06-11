@@ -2,7 +2,7 @@
   "id": "FEAT-002",
   "type": "chore",
   "description": "Update next.config.ts if any new image domains are needed, and commit all changes on main branch",
-  "status": "pending",
+  "status": "completed",
   "steps": [
     "Check if any image URLs in the updated products page use domains not already in next.config.ts remotePatterns. If so, add them.",
     "Run npm run build to verify everything works",
@@ -18,5 +18,5 @@
     "Run `git status` and confirm working tree is clean (aside from .agents/ files)"
   ],
   "blocked_reason": null,
-  "findings": ""
+  "findings": "No new image domains needed - all URLs use images.unsplash.com which is already whitelisted in next.config.ts. Build passes cleanly. Coder already committed changes in FEAT-001 (2 commits on main: feat commit and chore commit)."
 }

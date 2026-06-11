@@ -1,0 +1,19 @@
+{
+  "project_type": "Next.js 16 with TypeScript, Tailwind CSS, Framer Motion",
+  "language": "TypeScript/React",
+  "build_system": "npm with Next.js build",
+  "test_framework": "No test framework - validation via build",
+  "build_command": "npm run build",
+  "test_command": "npm run build (no test suite)",
+  "verification_instructions": "Run npm run build from project root. Build should complete without errors.",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "cd /projects/sandbox/deekshi-global-exim && npm install",
+  "environment_constraints": "OPEN_INTERNET network mode. Image domains allowed: images.unsplash.com, plus.unsplash.com, source.unsplash.com (in next.config.ts). If using non-Unsplash images, next.config.ts must be updated.",
+  "contribution_requirements": "Commit on main branch, do not push.",
+  "key_patterns": "Products page uses a 'categories' array with id, name, emoji, desc, products[]. Each product has name, desc, img (URL string), badges[]. Framer Motion animations with containerVariants, cardVariants, headerVariants. Responsive grid layout with Tailwind. Images use Next.js Image component with fill and object-cover.",
+  "relevant_files": [
+    "src/app/products/page.tsx",
+    "next.config.ts"
+  ],
+  "directory_structure": "src/app/products/page.tsx is the primary file to modify. next.config.ts controls allowed image domains."
+}

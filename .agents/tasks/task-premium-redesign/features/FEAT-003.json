@@ -1,0 +1,29 @@
+{
+  "id": "FEAT-003",
+  "type": "feat",
+  "description": "Enhance trust-building content with expanded certifications section, update WhyChooseUs for international buyers, improve StatsSection, and update the About page to emphasize AP/Telangana rice sourcing strengths. Final styling polish across the site.",
+  "status": "completed",
+  "steps": [
+    "Update src/components/sections/CertificationsPreview.tsx: Make certifications more prominent as trust-building content. Expand descriptions to clearly explain what each certification means for international buyers. Add visual emphasis with larger icons/badges. Highlight: GST Registered, IEC Certified, APEDA Registered, FSSAI Central License, ICEGATE Registered. Make it clear these certifications ensure safe, compliant international trade.",
+    "Update src/components/sections/WhyChooseUs.tsx: Reframe content for international buyers/importers. Add points about: rice expertise with AP/Telangana sourcing networks, bulk supply capability for container loads (FCL/LCL), international food safety compliance (HACCP awareness, phytosanitary), competitive pricing with direct farm sourcing, reliable documentation for customs clearance. Use more premium card styling with better shadows and gold accents.",
+    "Update src/components/sections/StatsSection.tsx: Update stats to be more impressive and buyer-focused. Consider stats like: 'Countries Served', 'Tons Exported Monthly', 'Product Varieties', 'Certifications'. Make the numbers more impactful for international buyers.",
+    "Update src/app/about/page.tsx: Add content about strong sourcing networks across Andhra Pradesh and Telangana for rice. Mention Sona Masoori Rice specifically. Add a section or paragraph about the company's deep expertise in rice export. Update the timeline to reflect rice export focus. Make sure the about page positions the company as a premium rice-first agricultural exporter.",
+    "Update src/components/sections/Testimonials.tsx: Update testimonial content to mention rice more prominently. At least one testimonial should specifically praise the rice quality (Sona Masoori or Basmati). Ensure testimonials mention bulk supply reliability and international standards.",
+    "Update src/app/certifications/page.tsx: Enhance the certifications page to be a stronger trust-building page. Make each certification card more detailed with what it means for importers. Add a section explaining how these certifications protect international buyers."
+  ],
+  "acceptance_criteria": [
+    "CertificationsPreview highlights all 5 certifications with clear buyer-focused explanations",
+    "WhyChooseUs mentions rice expertise, AP/Telangana sourcing, bulk supply, and international compliance",
+    "StatsSection shows impressive buyer-focused metrics",
+    "About page mentions Andhra Pradesh and Telangana sourcing networks for rice",
+    "At least one testimonial specifically mentions rice quality",
+    "Certifications page provides detailed trust-building content for importers",
+    "All sections maintain the premium navy+gold design language",
+    "npm run build completes without errors"
+  ],
+  "verification": [
+    "Run cd /projects/sandbox/deekshi-global-exim && npm run build to confirm no TypeScript or build errors"
+  ],
+  "blocked_reason": null,
+  "findings": "All 6 files updated successfully. Build passes cleanly. Warnings about viewport metadata export and metadataBase are pre-existing (not related to this change). Used Wheat icon from lucide-react for the Rice Export Excellence section. Removed unused Heart import from about page, added CheckCircle2 and Wheat."
+}

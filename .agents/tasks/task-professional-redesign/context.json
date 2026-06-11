@@ -1,0 +1,33 @@
+{
+  "project_type": "Next.js 16 website with TypeScript, Tailwind CSS, Framer Motion",
+  "language": "TypeScript/TSX",
+  "build_system": "npm with Next.js build",
+  "test_framework": "None - no test files present, validation via build success",
+  "build_command": "npm run build",
+  "test_command": "npm run build",
+  "verification_instructions": "Run npm run build in /projects/sandbox/deekshi-global-exim. All pages should compile without errors.",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "cd /projects/sandbox/deekshi-global-exim && npm install",
+  "environment_constraints": "OPEN_INTERNET - full network access available. Node modules already installed.",
+  "contribution_requirements": "Commit all changes on main branch. Do not push.",
+  "key_patterns": "App Router (src/app/), component sections in src/components/sections/, Tailwind CSS with custom theme (navy/gold colors), framer-motion for animations, lucide-react for icons, Next.js Image component for images, unsplash for product images",
+  "relevant_files": [
+    "src/app/page.tsx",
+    "src/app/products/page.tsx",
+    "src/app/about/page.tsx",
+    "src/app/certifications/page.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/Footer.tsx",
+    "src/components/sections/HeroSection.tsx",
+    "src/components/sections/FeaturedProducts.tsx",
+    "src/components/sections/PriorityExportProducts.tsx",
+    "src/components/sections/CertificationsPreview.tsx",
+    "src/components/sections/AboutPreview.tsx",
+    "src/components/sections/WhyChooseUs.tsx",
+    "src/components/sections/StatsSection.tsx",
+    "src/components/sections/CtaBanner.tsx",
+    "src/app/globals.css",
+    "tailwind.config.ts"
+  ],
+  "directory_structure": "src/app/ contains route pages (page.tsx per folder), src/components/ contains Navbar, Footer, and sections/ subfolder has homepage section components. public/ has logo files. Tailwind config uses custom navy/gold color palette."
+}

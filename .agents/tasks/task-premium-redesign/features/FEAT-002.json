@@ -1,0 +1,29 @@
+{
+  "id": "FEAT-002",
+  "type": "feat",
+  "description": "Create new Priority Export Products section, completely redesign FeaturedProducts with rice first and accurate Unsplash images, and overhaul the Products page with proper product priority, enhanced descriptions, and correct images.",
+  "status": "completed",
+  "steps": [
+    "Create new component src/components/sections/PriorityExportProducts.tsx: A premium section showcasing the company's priority export products in order: (1) Rice - Sona Masoori Rice (AP & Telangana), Basmati Rice, Non-Basmati Rice; (2) Fresh Fruits - especially Mangoes; (3) Fresh Vegetables - especially Onions; (4) Spices - Red Chilli, Turmeric, Black Pepper, Garlic Powder, Other Indian Spices. Use rich product cards with premium shadows, gold accents, hover effects. Each product should have a high-quality Unsplash image URL that ACCURATELY matches the product (e.g., for rice use a rice image, for mangoes use a mango image). Include export quality badges, bulk supply indicators, and international standards compliance. Use proper Unsplash URLs from images.unsplash.com with specific photo IDs for accurate product matching: Rice - https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=90, Mango - https://images.unsplash.com/photo-1553279768-865429fa0078?w=600&q=90, Onion - https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=600&q=90, Red Chilli - https://images.unsplash.com/photo-1588252303782-cb80119abd6d?w=600&q=90, Turmeric - https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&q=90, Black Pepper - https://images.unsplash.com/photo-1599909533601-aa539e4e2a7e?w=600&q=90",
+    "Completely rewrite src/components/sections/FeaturedProducts.tsx: Reorder products with Rice first (Sona Masoori Rice, Basmati Rice), then Mangoes, then Onions, then Red Chilli, then Turmeric, then Black Pepper. Replace ALL image URLs with accurate Unsplash image URLs using specific photo IDs that match the product names. Improve product descriptions to focus on: export quality, bulk supply capability, international standards compliance, reliable sourcing from AP/Telangana for rice. Use richer product cards with better shadows, gold border accents, and premium hover effects. Add 'Bulk Supply Available' and 'International Standards' badges on cards.",
+    "Completely rewrite src/app/products/page.tsx: Reorder categories so Rice is FIRST, then Fruits, then Vegetables, then Spices. For the Rice category: add Sona Masoori Rice (AP & Telangana) as a product with a proper description about Andhra Pradesh and Telangana sourcing. Add Garlic Powder to the Spices section. Update ALL image URLs to use specific Unsplash photo IDs that accurately match each product name (no source.unsplash.com - use images.unsplash.com/photo-XXXXX format). Improve all product descriptions to be buyer-focused: mention export quality, bulk availability, international food safety standards, packaging options. Make the page header emphasize rice as the primary export product.",
+    "Update src/app/page.tsx: Import and add PriorityExportProducts section to the homepage. Place it after the StatsSection and before WhyChooseUs, so the section order becomes: HeroSection, AboutPreview, StatsSection, PriorityExportProducts, WhyChooseUs, FeaturedProducts, CertificationsPreview, TradeProcess, Testimonials, CtaBanner."
+  ],
+  "acceptance_criteria": [
+    "PriorityExportProducts.tsx exists and renders a section with rice as the #1 priority",
+    "Rice varieties (Sona Masoori, Basmati, Non-Basmati) are prominently featured",
+    "All product images use images.unsplash.com URLs with specific photo IDs (not source.unsplash.com random URLs)",
+    "Product images accurately match their product names (rice image for rice, mango for mango, etc.)",
+    "Products page has Rice category listed FIRST before Fruits, Vegetables, and Spices",
+    "Garlic Powder is included in the Spices section",
+    "Product descriptions mention export quality, bulk supply, and international standards",
+    "Homepage includes the new PriorityExportProducts section",
+    "Spices section highlights: Red Chilli, Turmeric, Black Pepper, Garlic Powder, and Other Indian Spices",
+    "npm run build completes without errors"
+  ],
+  "verification": [
+    "Run cd /projects/sandbox/deekshi-global-exim && npm run build to confirm no TypeScript or build errors"
+  ],
+  "blocked_reason": null,
+  "findings": "Build succeeds. Used Next.js Image component with fill prop for all product images in FeaturedProducts and PriorityExportProducts. Products page uses standard img tag pattern matching original code but upgraded to Image component. All source.unsplash.com URLs replaced with images.unsplash.com/photo-XXXX format. Viewport metadata warnings are pre-existing and unrelated to this feature."
+}

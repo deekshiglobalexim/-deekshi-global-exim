@@ -1,0 +1,32 @@
+{
+  "id": "FEAT-002",
+  "type": "refactor",
+  "description": "Redesign the Products page (src/app/products/page.tsx) to display products in a clean, category-wise format. Remove all state-specific sourcing badges. Add new Dehydrated Products category with Garlic Powder and Onion Powder. Move Garlic Powder out of Spices. Remove excessive badges, overlays, and promotional clutter from product cards. Keep product descriptions short and export-focused.",
+  "status": "completed",
+  "steps": [
+    "Rewrite src/app/products/page.tsx with the following structure: 5 categories (Rice, Fruits, Vegetables, Spices, Dehydrated Products). Rice: Sona Masoori Rice, Basmati Rice, Non-Basmati Rice. Fruits: Mango, Pomegranate, Grapes, Banana. Vegetables: Onion, Tomato, Potato, Green Chilli. Spices: Red Chilli, Turmeric, Black Pepper, Coriander. Dehydrated Products: Garlic Powder, Onion Powder.",
+    "Remove ALL sourcing badges (e.g. 'AP & Telangana Sourcing', 'Maharashtra Sourcing', 'Kerala Sourcing', etc.) from every product card.",
+    "Remove the 'Global Export', 'Bulk Supply Available' overlay badges from product card images. Keep only a simple category tag if needed.",
+    "Shorten product descriptions to 2-3 sentences max focused on: product quality, export standards, packaging. Remove long paragraphs about specific sourcing regions or varieties.",
+    "Keep the hero section of the products page clean - title, short subtitle, no excessive trust indicators row.",
+    "Keep the category sticky navigation bar but simplify it.",
+    "Keep the bottom CTA section but simplify it (remove globe badge, just heading + description + 1-2 buttons).",
+    "Product cards should have: image, product name, short description (2-3 lines), and a 'Request Quote' button. No overlapping badges, no sourcing badges, no trust footer inside cards.",
+    "Update the category description text to remove state-specific references. Keep descriptions short (1-2 sentences)."
+  ],
+  "acceptance_criteria": [
+    "Products page has 5 categories: Rice, Fruits, Vegetables, Spices, Dehydrated Products",
+    "Dehydrated Products category contains Garlic Powder and Onion Powder",
+    "Garlic Powder is NOT in the Spices category",
+    "No sourcing badges mentioning any Indian state on any product card",
+    "Product descriptions are short (2-3 sentences max)",
+    "No 'Global Export', 'Bulk Supply Available', or 'Export Quality' overlay badges on product images",
+    "npm run build succeeds without errors"
+  ],
+  "verification": [
+    "Run npm run build in /projects/sandbox/deekshi-global-exim and confirm it compiles successfully",
+    "Run grep -r 'Sourcing\\|Andhra Pradesh\\|Telangana\\|Maharashtra\\|Kerala\\|Tamil Nadu\\|Rajasthan\\|Gujarat\\|Punjab\\|Karnataka' src/app/products/ to confirm no state references"
+  ],
+  "blocked_reason": null,
+  "findings": "Complete rewrite of products page. Added Dehydrated Products category with Garlic Powder and Onion Powder. Removed all sourcing badges, overlay badges, trust footer, and state references. Simplified hero section and CTA. Build passes cleanly."
+}

@@ -1,0 +1,30 @@
+{
+  "id": "FEAT-004",
+  "type": "feat",
+  "description": "Perfect logo integration across the entire website - larger navbar/footer logos with gold glow hover, prominent hero section logo, favicon setup, and sharp rendering on all backgrounds.",
+  "status": "completed",
+  "steps": [
+    "Update src/components/Navbar.tsx: Increase logo from w-16 h-16 to w-[84px] h-[84px] (approx 30% larger), add gold glow hover effect and scale(1.03-1.05) animation",
+    "Update src/components/sections/HeroSection.tsx: Add prominent logo above the main heading with larger size and gold glow",
+    "Update src/components/Footer.tsx: Increase logo size to w-20 h-20, add premium hover effect",
+    "Update src/app/layout.tsx: Add favicon/icons metadata using the logo",
+    "Update src/app/globals.css: Add logo-glow hover animation class",
+    "Ensure logo visibility on dark navy backgrounds with white bg circle"
+  ],
+  "acceptance_criteria": [
+    "Navbar logo is 25-40% larger than current 64px",
+    "Logo has subtle premium gold glow on hover",
+    "Hero section displays logo prominently above the heading",
+    "Footer logo is larger with professional branding",
+    "Logo is set as favicon",
+    "Sharp quality maintained on desktop and mobile",
+    "Smooth hover animation with scale 1.03-1.05",
+    "Logo visible on dark navy backgrounds",
+    "npm run build completes without errors"
+  ],
+  "verification": [
+    "Run cd /projects/sandbox/deekshi-global-exim && npm run build to confirm no TypeScript or build errors"
+  ],
+  "blocked_reason": null,
+  "findings": "Build passes cleanly. All 5 files modified: Navbar logo increased from 64px to 84px (31% larger), Footer logo increased from 64px to 80px (25% larger), Hero section now has a prominent 112-128px logo with animated gold pulse glow, favicon configured using logo.png with apple-touch-icon support, and CSS adds logo-glow hover (scale 1.04 with gold box-shadow) and logo-hero-glow (pulsing gold animation). White bg circle behind logo ensures visibility on dark navy backgrounds. Pre-existing viewport metadata warnings remain unchanged."
+}

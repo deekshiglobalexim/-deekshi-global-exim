@@ -1,0 +1,33 @@
+{
+  "project_type": "Next.js 16 with TypeScript, App Router, Tailwind CSS 3.4, Framer Motion 11.3",
+  "language": "TypeScript/React (TSX)",
+  "build_system": "npm with Next.js CLI",
+  "test_framework": "No test framework configured - this is a static marketing website",
+  "build_command": "npm run build",
+  "test_command": "npm run build (no test suite - build verification only)",
+  "verification_instructions": "Run npm run build in the project directory to verify all pages compile without errors",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "cd /projects/sandbox/deekshi-global-exim && npm install",
+  "environment_constraints": "Network available for npm install and fetching external resources. Unsplash URLs configured in next.config.ts for remote images (images.unsplash.com, plus.unsplash.com, source.unsplash.com).",
+  "contribution_requirements": "Branch premium-redesign is already checked out. All changes go on this branch. Do NOT push.",
+  "key_patterns": "Components use lucide-react icons, Next.js Image component for optimized images, Tailwind utility classes with custom design tokens (navy-950, gold-500, etc.), custom CSS classes in globals.css (gold-text, shimmer-btn, card-premium, btn-premium, dots-bg, section-pad). Font families: Playfair Display (display/headings) and Inter (body). Color scheme: navy (#0B2E4F) and gold (#D4AF37). Framer Motion available but currently only used implicitly. Components are in src/components/ with page sections in src/components/sections/. Pages use Next.js App Router in src/app/.",
+  "relevant_files": [
+    "src/components/Navbar.tsx",
+    "src/components/Footer.tsx",
+    "src/components/sections/HeroSection.tsx",
+    "src/components/sections/FeaturedProducts.tsx",
+    "src/components/sections/CertificationsPreview.tsx",
+    "src/components/sections/AboutPreview.tsx",
+    "src/components/sections/CtaBanner.tsx",
+    "src/components/sections/WhyChooseUs.tsx",
+    "src/components/sections/StatsSection.tsx",
+    "src/components/sections/Testimonials.tsx",
+    "src/app/page.tsx",
+    "src/app/products/page.tsx",
+    "src/app/about/page.tsx",
+    "src/app/globals.css",
+    "tailwind.config.ts",
+    "next.config.ts"
+  ],
+  "directory_structure": "src/app/ - pages (page.tsx, about/page.tsx, products/page.tsx, contact/page.tsx, certifications/page.tsx); src/components/ - shared components (Navbar, Footer, ContactForm, ScrollToTop); src/components/sections/ - homepage sections; public/ - static assets (logo.png only); tailwind.config.ts - Tailwind theme with navy/gold colors"
+}
