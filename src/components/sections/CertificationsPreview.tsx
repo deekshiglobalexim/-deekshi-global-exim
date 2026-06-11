@@ -45,15 +45,15 @@ export default function CertificationsPreview() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-10">
           {certs.map(cert => (
-            <div key={cert.name} className="relative card-premium shadow-premium-lg p-7 border border-gold-500/25 bg-gradient-to-br from-white/10 to-white/5 text-center group hover:border-gold-500/50 hover:shadow-gold-glow transition-all duration-300">
-              <div className="w-20 h-20 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-gold-500/20 to-gold-500/10 border border-gold-500/40 flex items-center justify-center group-hover:from-gold-500/30 group-hover:to-gold-500/20 transition-all duration-300 shadow-lg shadow-gold-500/10">
-                <span className="text-gold-300 font-display font-bold text-base tracking-widest">{cert.code}</span>
+            <div key={cert.name} className="relative rounded-2xl p-7 border border-gold-500/30 bg-navy-900/80 backdrop-blur-sm text-center group hover:border-gold-500/60 hover:bg-navy-800/90 transition-all duration-300 shadow-lg">
+              <div className="w-20 h-20 mx-auto mb-5 rounded-2xl bg-gold-500/15 border-2 border-gold-500/50 flex items-center justify-center group-hover:bg-gold-500/25 group-hover:border-gold-500/70 transition-all duration-300 shadow-lg shadow-gold-500/20">
+                <span className="text-gold-300 font-display font-bold text-lg tracking-widest">{cert.code}</span>
               </div>
-              <h3 className="text-white font-semibold text-sm mb-3 leading-tight tracking-wide">{cert.name}</h3>
-              <p className="text-gray-300 text-xs leading-relaxed">{cert.desc}</p>
+              <h3 className="text-white font-display font-bold text-base mb-3">{cert.name}</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">{cert.desc}</p>
 
               {/* Bottom glow */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-gold-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-0.5 bg-gradient-to-r from-transparent via-gold-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
         </div>
