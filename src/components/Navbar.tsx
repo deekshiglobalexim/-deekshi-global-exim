@@ -54,8 +54,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-4 group">
-            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-gold-500 group-hover:border-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/30 group-hover:shadow-gold-500/50 group-hover:scale-105">
-              <Image src="/logo.png" alt="Deekshi Global Exim" fill className="object-cover premium-image" priority quality={95} />
+            <div className="relative w-16 h-16 rounded-full overflow-hidden bg-white ring-2 ring-gold-500 group-hover:ring-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/30 group-hover:shadow-gold-500/50 group-hover:scale-105">
+              <Image src="/logo-mark.png" alt="Deekshi Global Exim" fill sizes="64px" className="object-contain p-1 logo-mark" priority quality={100} />
             </div>
             <div className="hidden sm:block">
               <div className="text-white font-display font-bold text-xl leading-tight group-hover:text-gold-300 transition-colors duration-300">

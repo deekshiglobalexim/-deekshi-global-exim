@@ -101,8 +101,15 @@ body {
 
 /* Premium Image Styling */
 img {
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
+  image-rendering: auto;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+}
+
+/* Logo mark: keep it crisp and unfiltered */
+.logo-mark {
+  image-rendering: auto;
+  image-rendering: high-quality;
 }
 
 .premium-image {
