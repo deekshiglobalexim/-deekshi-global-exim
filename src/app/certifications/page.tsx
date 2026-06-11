@@ -61,7 +61,7 @@ const certifications = [
 ]
 
 const exportSteps = [
-  { num: '01', icon: Search, title: 'Product Sourcing', desc: 'We source directly from certified farms and trusted agricultural cooperatives across Andhra Pradesh and Telangana, ensuring premium rice and produce quality from the very origin.' },
+  { num: '01', icon: Search, title: 'Product Sourcing', desc: 'We source directly from certified farms and trusted agricultural cooperatives across India, ensuring premium rice and produce quality from the very origin.' },
   { num: '02', icon: Shield, title: 'Quality Inspection', desc: 'Multi-stage quality checks including visual grading, lab testing for pesticide residue, moisture content, broken grain percentage, and foreign matter analysis.' },
   { num: '03', icon: Package, title: 'Grading & Packaging', desc: 'Products are graded by size, colour, and weight, then packed in export-grade materials - jute bags, PP woven bags, or custom packaging as per buyer requirements.' },
   { num: '04', icon: FileText, title: 'Documentation', desc: 'All export documents prepared: Commercial Invoice, Packing List, Bill of Lading, Phytosanitary Certificate, Certificate of Origin, Fumigation Certificate, and more.' },

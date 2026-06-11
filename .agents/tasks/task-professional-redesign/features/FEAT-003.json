@@ -1,0 +1,25 @@
+{
+  "id": "FEAT-003",
+  "type": "refactor",
+  "description": "Redesign the About page, Certifications page, Navbar, and Footer. Remove all state-specific references (AP, Telangana, etc.). Clean up excessive promotional content. Update Footer product list to include Dehydrated Products. Ensure Navbar is clean and professional with larger logo.",
+  "status": "in_progress",
+  "steps": [
+    "Rewrite src/app/about/page.tsx: Remove all mentions of 'Andhra Pradesh', 'Telangana', 'AP' from hero, company intro, rice export section, mission/vision, and timeline. Replace state-specific language with generic 'India' or 'Indian farms'. Simplify the rice export excellence section - remove direct state references, keep it about quality and expertise. Shorten the timeline descriptions. Remove 'Rice-First' branding from the hero - replace with 'Premium Agricultural Exporter'. Keep the about page structure (hero, intro, rice section, mission/vision, values, timeline, CTA) but with cleaner, shorter text.",
+    "Update src/app/certifications/page.tsx: Remove 'Andhra Pradesh and Telangana' references from the export process step 1. Keep the rest of the certifications page mostly as-is since it is informative and professional. Just remove state-specific sourcing mentions.",
+    "Update src/components/Navbar.tsx: Ensure the logo is displayed at a good size (the current 84px is already decent). Keep the top bar clean. The navbar is already fairly clean - just verify no state references.",
+    "Update src/components/Footer.tsx: Update the 'Our Products' list to include 'Dehydrated Products' or 'Garlic Powder' and 'Onion Powder'. Remove any state-specific references if present. The footer looks clean already - just verify content accuracy with new product structure."
+  ],
+  "acceptance_criteria": [
+    "About page has no mentions of 'Andhra Pradesh', 'Telangana', or 'AP'",
+    "Certifications page has no state-specific references",
+    "Footer product list is updated to reflect new category structure",
+    "No state-specific sourcing claims anywhere on the site",
+    "npm run build succeeds without errors"
+  ],
+  "verification": [
+    "Run npm run build in /projects/sandbox/deekshi-global-exim and confirm it compiles successfully",
+    "Run grep -r 'Andhra Pradesh\\|Telangana\\|AP &\\|AP/' src/ to confirm no state references remain anywhere on the site"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

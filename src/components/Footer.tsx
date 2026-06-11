@@ -63,7 +63,7 @@ export default function Footer() {
           <div>
             <h4 className="font-display font-semibold text-gold-500 mb-4 text-lg">Our Products</h4>
             <ul className="space-y-2">
-              {['Sona Masoori Rice', 'Basmati Rice', 'Non-Basmati Rice', 'Fresh Fruits', 'Fresh Vegetables', 'Red Chilli', 'Turmeric', 'Black Pepper', 'Garlic Powder'].map(p => (
+              {['Sona Masoori Rice', 'Basmati Rice', 'Non-Basmati Rice', 'Fresh Fruits', 'Fresh Vegetables', 'Spices', 'Dehydrated Products'].map(p => (
                 <li key={p}>
                   <Link href="/products" className="text-gray-400 hover:text-gold-400 text-sm flex items-center gap-2 group transition-colors">
                     <ArrowRight size={12} className="text-gold-500 group-hover:translate-x-1 transition-transform" />

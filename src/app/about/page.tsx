@@ -5,7 +5,7 @@ import { CheckCircle2, ArrowRight, Target, Eye, Wheat } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Deekshi Global Exim — India\'s premium rice-first agricultural exporter with deep sourcing networks across Andhra Pradesh and Telangana.',
+  description: 'Learn about Deekshi Global Exim — India\'s premium agricultural exporter connecting the finest Indian produce to international markets.',
 }
 
 const values = [
@@ -17,9 +17,9 @@ const values = [
 ]
 
 const timeline = [
-  { year: '2022', title: 'Company Founded', desc: 'Deekshi Global Exim was established in Warangal, Telangana with a vision to export premium Indian rice and agricultural products to the world.' },
+  { year: '2022', title: 'Company Founded', desc: 'Deekshi Global Exim was established with a vision to export premium Indian rice and agricultural products to the world.' },
   { year: '2023', title: 'Export Certifications Secured', desc: 'Obtained IEC, APEDA, GST, FSSAI Central License, and ICEGATE registrations - establishing full export compliance for rice and food products.' },
-  { year: '2024', title: 'Rice Export Operations Launched', desc: 'Began exporting Sona Masoori Rice and Basmati varieties to the Middle East and Asia, with direct sourcing from AP and Telangana farmers.' },
+  { year: '2024', title: 'Rice Export Operations Launched', desc: 'Began exporting Sona Masoori Rice and Basmati varieties to the Middle East and Asia, with direct sourcing from trusted Indian farmers.' },
   { year: '2025', title: 'Bulk Supply Capability Achieved', desc: 'Scaled to 500+ tons monthly capacity with established FCL shipping to 15+ countries. Expanded to include spices, fruits, and vegetables.' },
   { year: '2026', title: 'Growing as India\'s Trusted Rice Exporter', desc: 'Strengthening buyer partnerships across the Middle East, Southeast Asia, and Africa with a reputation for premium rice quality and reliable supply.' },
 ]
@@ -35,10 +35,10 @@ export default function AboutPage() {
           <div className="max-w-2xl">
             <p className="text-gold-500 text-sm font-medium tracking-widest uppercase mb-4">About Us</p>
             <h1 className="font-display font-bold text-5xl text-white mb-6 leading-tight">
-              Premium Rice-First <span className="gold-text">Agricultural Exporter</span>
+              Premium <span className="gold-text">Agricultural Exporter</span>
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
-              Deekshi Global Exim connects India&apos;s finest rice and agricultural produce - sourced directly from the fertile fields of Andhra Pradesh and Telangana - to international markets with uncompromising quality.
+              Deekshi Global Exim connects India&apos;s finest agricultural produce to international markets with uncompromising quality.
             </p>
           </div>
         </div>
@@ -54,10 +54,10 @@ export default function AboutPage() {
               </h2>
               <div className="gold-divider mb-6" />
               <p className="text-gray-600 leading-relaxed mb-5">
-                Deekshi Global Exim is a certified Import &amp; Export company headquartered in Warangal, Telangana, India. We specialize in premium rice exports - particularly Sona Masoori Rice sourced from the heartland of Andhra Pradesh and Telangana - alongside spices, fresh fruits, and vegetables.
+                Deekshi Global Exim is a certified Import &amp; Export company based in India. We specialize in premium rice exports - particularly Sona Masoori Rice - alongside spices, fresh fruits, vegetables, and dehydrated products.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Our deep sourcing networks across Andhra Pradesh and Telangana give us direct access to India&apos;s finest rice-growing regions. We work closely with farmers and cooperatives to secure the best Sona Masoori, Basmati, and specialty rice varieties at competitive prices while maintaining strict quality standards.
+                Our strong sourcing networks across India give us direct access to the country&apos;s finest rice-growing regions. We work closely with farmers and cooperatives to secure the best Sona Masoori, Basmati, and specialty rice varieties at competitive prices while maintaining strict quality standards.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
                 With all mandatory certifications including APEDA, IEC, FSSAI Central License, GST, and ICEGATE registration, we ensure every export is fully compliant with Indian and international trade regulations - giving buyers complete confidence in their sourcing.
@@ -100,9 +100,9 @@ export default function AboutPage() {
             <div className="order-2 lg:order-1">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { title: 'Sona Masoori Rice', desc: 'Premium medium-grain rice from AP and Telangana, known for its lightweight texture and aromatic quality.' },
+                  { title: 'Sona Masoori Rice', desc: 'Premium medium-grain rice known for its lightweight texture and aromatic quality, sourced from India\'s finest growing regions.' },
                   { title: 'Basmati Rice', desc: 'Long-grain aromatic rice with exceptional flavor, sourced from India\'s finest growing regions.' },
-                  { title: 'Direct Farm Sourcing', desc: 'Established partnerships with rice farmers and cooperatives across Andhra Pradesh and Telangana.' },
+                  { title: 'Direct Farm Sourcing', desc: 'Established partnerships with rice farmers and cooperatives across India\'s top rice-producing regions.' },
                   { title: 'Quality Assurance', desc: 'Multi-stage inspection for grain length, moisture content, broken percentage, and foreign matter.' },
                 ].map(item => (
                   <div key={item.title} className="p-5 rounded-2xl border border-gray-100 bg-off-white shadow-sm group hover:border-gold-500/30 hover:shadow-premium transition-all">
@@ -124,7 +124,7 @@ export default function AboutPage() {
               </h2>
               <div className="gold-divider mb-6" />
               <p className="text-gray-600 leading-relaxed mb-5">
-                Rice is at the heart of our export business. With Andhra Pradesh and Telangana being two of India&apos;s largest rice-producing states, our location in Warangal gives us a strategic advantage in sourcing the finest Sona Masoori and other premium rice varieties.
+                Rice is at the heart of our export business. India is one of the world&apos;s largest rice producers, and our strong sourcing networks give us a strategic advantage in securing the finest Sona Masoori and other premium rice varieties.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
                 Our team has deep knowledge of rice grading, processing standards, and international packaging requirements. Whether you need 20-ton container loads of Sona Masoori for the Middle East or specialty Basmati for premium retail markets, we deliver consistent quality with full traceability.
@@ -148,7 +148,7 @@ export default function AboutPage() {
               <h3 className="font-display font-bold text-2xl text-white mb-4">Our Mission</h3>
               <div className="gold-divider mb-5" />
               <p className="text-gray-400 leading-relaxed">
-                To be India&apos;s most reliable rice and agricultural export partner - connecting the fertile farmlands of Andhra Pradesh and Telangana with international buyers through premium quality products, full regulatory compliance, and transparent business practices.
+                To be India&apos;s most reliable rice and agricultural export partner - connecting Indian farms with international buyers through premium quality products, full regulatory compliance, and transparent business practices.
               </p>
             </div>
             <div className="p-8 rounded-2xl bg-white border border-gold-500/20">
@@ -158,7 +158,7 @@ export default function AboutPage() {
               <h3 className="font-display font-bold text-2xl text-navy-950 mb-4">Our Vision</h3>
               <div className="gold-divider mb-5" />
               <p className="text-gray-600 leading-relaxed">
-                To become India&apos;s most trusted rice export brand - known globally for Sona Masoori quality, reliable bulk supply, and deep agricultural expertise - while contributing to farmer prosperity in Andhra Pradesh and Telangana.
+                To become India&apos;s most trusted rice export brand - known globally for Sona Masoori quality, reliable bulk supply, and deep agricultural expertise - while contributing to farmer prosperity across India.
               </p>
             </div>
           </div>
