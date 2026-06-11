@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone, Mail } from 'lucide-react'
+import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -13,9 +13,18 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ]
 
+const productCategories = [
+  { href: '/products#rice', label: 'Rice' },
+  { href: '/products#fruits', label: 'Fruits' },
+  { href: '/products#vegetables', label: 'Vegetables' },
+  { href: '/products#spices', label: 'Spices' },
+  { href: '/products#dehydrated', label: 'Dehydrated Products' },
+]
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -68,17 +77,49 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map(link => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`px-4 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 ${
-                  pathname === link.href
-                    ? 'text-gold-400 bg-gradient-to-r from-gold-500/10 to-gold-500/5 border border-gold-500/20 shadow-sm shadow-gold-500/10'
-                    : 'text-gray-300 hover:text-gold-300 hover:bg-white/5 hover:shadow-sm'
-                }`}
-              >
-                {link.label}
-              </Link>
+              link.href === '/products' ? (
+                <div key={link.href} className="relative group">
+                  <Link
+                    href={link.href}
+                    className={`px-4 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 flex items-center gap-1 ${
+                      pathname === link.href
+                        ? 'text-gold-400 bg-gradient-to-r from-gold-500/10 to-gold-500/5 border border-gold-500/20 shadow-sm shadow-gold-500/10'
+                        : 'text-gray-300 hover:text-gold-300 hover:bg-white/5 hover:shadow-sm'
+                    }`}
+                  >
+                    {link.label}
+                    <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
+                  </Link>
+                  {/* Dropdown */}
+                  <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out transform translate-y-1 group-hover:translate-y-0">
+                    <div className="bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden min-w-[200px]">
+                      <div className="border-l-4 border-gold-500 py-2">
+                        {productCategories.map(category => (
+                          <Link
+                            key={category.href}
+                            href={category.href}
+                            className="block px-5 py-2.5 text-sm text-navy-900 font-medium hover:bg-gold-50 hover:text-gold-700 transition-colors duration-150"
+                          >
+                            {category.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`px-4 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 ${
+                    pathname === link.href
+                      ? 'text-gold-400 bg-gradient-to-r from-gold-500/10 to-gold-500/5 border border-gold-500/20 shadow-sm shadow-gold-500/10'
+                      : 'text-gray-300 hover:text-gold-300 hover:bg-white/5 hover:shadow-sm'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             <Link
               href="/contact"
@@ -102,18 +143,48 @@ export default function Navbar() {
         <div className={`lg:hidden overflow-hidden transition-all duration-300 ${mobileOpen ? 'max-h-screen' : 'max-h-0'}`}>
           <div className="bg-gradient-to-b from-navy-900 to-navy-950 border-t border-gold-500/20 px-6 py-4 space-y-1">
             {navLinks.map(link => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  pathname === link.href
-                    ? 'text-gold-400 bg-gradient-to-r from-gold-500/10 to-gold-500/5 border border-gold-500/20'
-                    : 'text-gray-300 hover:text-gold-300 hover:bg-white/5'
-                }`}
-              >
-                {link.label}
-              </Link>
+              link.href === '/products' ? (
+                <div key={link.href}>
+                  <button
+                    onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
+                    className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      pathname === link.href
+                        ? 'text-gold-400 bg-gradient-to-r from-gold-500/10 to-gold-500/5 border border-gold-500/20'
+                        : 'text-gray-300 hover:text-gold-300 hover:bg-white/5'
+                    }`}
+                  >
+                    {link.label}
+                    <ChevronDown size={14} className={`transition-transform duration-200 ${mobileProductsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  <div className={`overflow-hidden transition-all duration-200 ${mobileProductsOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <div className="ml-4 mt-1 border-l-2 border-gold-500/40 space-y-0.5">
+                      {productCategories.map(category => (
+                        <Link
+                          key={category.href}
+                          href={category.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="block px-4 py-2.5 text-sm text-gray-400 hover:text-gold-300 transition-colors duration-150"
+                        >
+                          {category.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    pathname === link.href
+                      ? 'text-gold-400 bg-gradient-to-r from-gold-500/10 to-gold-500/5 border border-gold-500/20'
+                      : 'text-gray-300 hover:text-gold-300 hover:bg-white/5'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             <div className="pt-4 border-t border-gold-500/20 space-y-3">
               <a href="tel:+919493928088" className="flex items-center gap-2 text-gray-300 text-sm hover:text-gold-400 transition-colors duration-200 font-medium">
