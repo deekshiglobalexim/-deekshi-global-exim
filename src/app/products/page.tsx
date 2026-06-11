@@ -39,17 +39,17 @@ const categories: Category[] = [
     products: [
       {
         name: 'Sona Masoori Rice',
-        img: '/products/sona-masoori-rice.jpg',
+        img: '/products/sona-masoori.jpg',
         desc: 'Lightweight, aromatic Sona Masoori rice supplied in bulk with export quality selection, dependable sourcing, and packaging aligned for global markets.',
       },
       {
         name: 'Basmati Rice',
-        img: '/products/basmati-rice.jpg',
+        img: '/products/basmati.jpg',
         desc: 'Long-grain Basmati rice known for aroma, purity, and grain consistency, supplied to international buyers under strict export standards.',
       },
       {
         name: 'Non-Basmati Rice',
-        img: '/products/non-basmati-rice.jpg',
+        img: '/products/non-basmati.jpg',
         desc: 'Reliable non-Basmati rice supply for wholesale importers, distributors, and food service buyers seeking consistent Indian origin quality.',
       },
     ],
