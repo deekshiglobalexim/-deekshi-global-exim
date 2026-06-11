@@ -387,3 +387,12 @@ img {
   backdrop-filter: blur(12px) brightness(1.02);
   -webkit-backdrop-filter: blur(12px) brightness(1.02);
 }
+
+/* Scrollbar Hide Utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

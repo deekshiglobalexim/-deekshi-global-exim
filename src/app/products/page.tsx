@@ -22,13 +22,13 @@ const categories = [
         name: 'Basmati Rice',
         desc: 'Long-grain aromatic Basmati rice aged to perfection. Superior cooking quality with excellent elongation. Meets all international food safety standards. Bulk supply available for wholesale importers.',
         img: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=800&q=90',
-        badges: ['Export Quality', 'AP & Telangana Sourcing'],
+        badges: ['Export Quality', 'Punjab & Haryana Sourcing'],
       },
       {
         name: 'Non-Basmati Rice',
         desc: 'High-quality Non-Basmati varieties including IR-64, Parboiled, and Broken rice. Competitively priced for bulk international orders. Consistent quality with every shipment.',
-        img: 'https://images.unsplash.com/photo-1594054901127-1e0dbd434e72?w=800&q=90',
-        badges: ['Export Quality', 'AP & Telangana Sourcing'],
+        img: 'https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=90',
+        badges: ['Export Quality', 'Multi-State Sourcing'],
       },
     ],
   },
@@ -350,8 +350,8 @@ export default function ProductsPage() {
                       </span>
                     </div>
 
-                    {/* Global Export Ready indicator */}
-                    <div className="absolute top-4 left-4">
+                    {/* Global Export Ready indicator - hidden on mobile to reduce badge clutter */}
+                    <div className="absolute top-4 left-4 hidden md:flex">
                       <span className="flex items-center gap-1 px-2.5 py-1.5 bg-navy-950/80 backdrop-blur-sm text-white rounded-full text-xs font-medium">
                         <Globe size={10} className="text-gold-400" />
                         Global Export
@@ -366,11 +366,11 @@ export default function ProductsPage() {
                     </h3>
 
                     {/* Sourcing badges for Rice */}
-                    {product.badges && product.badges.includes('AP & Telangana Sourcing') && (
+                    {product.badges && product.badges.some(b => b.includes('Sourcing')) && (
                       <div className="flex items-center gap-1.5 mb-3">
                         <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-gold-500/10 text-gold-700 rounded-full text-xs font-semibold border border-gold-500/20">
                           <MapPin size={10} />
-                          AP & Telangana Sourcing
+                          {product.badges.find(b => b.includes('Sourcing'))}
                         </span>
                       </div>
                     )}
