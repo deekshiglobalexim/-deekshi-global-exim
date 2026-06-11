@@ -53,15 +53,15 @@ export default function Navbar() {
       }`}>
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-gold-500 group-hover:border-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/30 group-hover:shadow-gold-500/50 group-hover:scale-105">
+          <Link href="/" className="flex items-center gap-4 group">
+            <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-gold-500 group-hover:border-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/30 group-hover:shadow-gold-500/50 group-hover:scale-105">
               <Image src="/logo.png" alt="Deekshi Global Exim" fill className="object-cover premium-image" priority quality={95} />
             </div>
             <div className="hidden sm:block">
-              <div className="text-white font-display font-bold text-lg leading-tight group-hover:text-gold-300 transition-colors duration-300">
+              <div className="text-white font-display font-bold text-xl leading-tight group-hover:text-gold-300 transition-colors duration-300">
                 DEEKSHI <span className="gold-text">GLOBAL</span>
               </div>
-              <div className="text-gold-500 text-xs tracking-[0.2em] font-medium group-hover:text-gold-300 transition-colors duration-300">EXIM</div>
+              <div className="text-gold-500 text-xs tracking-[0.3em] font-semibold group-hover:text-gold-300 transition-colors duration-300">EXIM</div>
             </div>
           </Link>
 
@@ -84,7 +84,7 @@ export default function Navbar() {
               href="/contact"
               className="ml-4 px-6 py-2.5 btn-premium shimmer-btn text-navy-950 font-bold text-sm rounded-lg shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300"
             >
-              Get Quote
+              Request Quotation
             </Link>
           </div>
 

@@ -1,0 +1,28 @@
+{
+  "id": "FEAT-001",
+  "type": "feat",
+  "description": "Premium redesign of Navbar, Hero Section, and Footer with larger logo, rice-first positioning, luxury navy+gold styling, and strong CTAs. Also update the About Preview to emphasize AP/Telangana sourcing networks for rice.",
+  "status": "in_progress",
+  "steps": [
+    "Update src/components/Navbar.tsx: Make the logo significantly larger (w-16 h-16 or w-18 h-18 instead of w-14 h-14), increase the text size for the brand name, make the brand more visually prominent. Add premium branding feel. Change 'Get Quote' CTA button text to 'Request Quotation'.",
+    "Update src/components/sections/HeroSection.tsx: Make the logo/brand more prominent if shown. Change the hero headline to lead with Rice as the #1 export product. Update the description to mention 'Sona Masoori Rice (AP & Telangana), Basmati Rice, and Non-Basmati Rice as core export strengths'. Reorder the product cards on the right so Rice is first and most prominent. Update the trust badges to include 'APEDA Registered' and 'FSSAI Licensed'. Change CTAs to 'Request Quotation' and 'View Export Products'. Improve spacing and typography for a more premium look.",
+    "Update src/components/Footer.tsx: Make the logo larger (w-16 h-16 or bigger). Reorder the 'Our Products' list to put rice varieties first (Sona Masoori Rice, Basmati Rice, Non-Basmati Rice, then Fresh Fruits, Fresh Vegetables, Red Chilli, Turmeric, Black Pepper, Garlic Powder). Add 'Garlic Powder' to the list. Make footer branding more premium with better spacing. Update products section to reflect product priority (Rice first).",
+    "Update src/components/sections/AboutPreview.tsx: Add content about strong sourcing networks across Andhra Pradesh and Telangana. Mention Sona Masoori Rice sourced from AP and Telangana. Update highlights list to include rice-specific strengths and regional sourcing. Keep the existing premium styling but enhance spacing.",
+    "Update src/components/sections/CtaBanner.tsx: Change headline to emphasize rice and agricultural products. Add multiple strong CTAs: 'Request Quotation', 'Request Product Catalog', 'Contact Export Team', 'Bulk Order Inquiry'. Make them appear as a grid of CTA buttons rather than just two."
+  ],
+  "acceptance_criteria": [
+    "Navbar logo is visibly larger than the current 56px (w-14) size",
+    "Hero section leads with rice content - Rice is the first product card displayed",
+    "Hero mentions Sona Masoori Rice, Basmati Rice, and Non-Basmati Rice",
+    "Footer product list starts with rice varieties and includes Garlic Powder",
+    "AboutPreview mentions sourcing from Andhra Pradesh and Telangana",
+    "CtaBanner has at least 4 distinct CTA buttons",
+    "All components maintain the navy+gold color scheme",
+    "npm run build completes without errors"
+  ],
+  "verification": [
+    "Run cd /projects/sandbox/deekshi-global-exim && npm run build to confirm no TypeScript or build errors"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

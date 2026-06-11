@@ -1,5 +1,36 @@
 import Link from 'next/link'
-import { ArrowRight, Phone } from 'lucide-react'
+import { ArrowRight, FileText, Phone, Users, Package } from 'lucide-react'
+
+const ctaItems = [
+  {
+    label: 'Request Quotation',
+    href: '/contact',
+    icon: ArrowRight,
+    description: 'Get competitive pricing for bulk orders',
+    primary: true,
+  },
+  {
+    label: 'Request Product Catalog',
+    href: '/contact',
+    icon: FileText,
+    description: 'Download our full export product catalog',
+    primary: false,
+  },
+  {
+    label: 'Contact Export Team',
+    href: '/contact',
+    icon: Users,
+    description: 'Speak with our export specialists',
+    primary: false,
+  },
+  {
+    label: 'Bulk Order Inquiry',
+    href: '/contact',
+    icon: Package,
+    description: 'Custom solutions for large volume buyers',
+    primary: false,
+  },
+]
 
 export default function CtaBanner() {
   return (
@@ -11,29 +42,38 @@ export default function CtaBanner() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-1 bg-gradient-to-r from-transparent via-gold-500/50 to-transparent" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-1 bg-gradient-to-r from-transparent via-gold-500/50 to-transparent" />
 
-      <div className="relative max-w-4xl mx-auto px-6 text-center">
+      <div className="relative max-w-5xl mx-auto px-6 text-center">
         <h2 className="font-display font-bold text-4xl md:text-5xl xl:text-6xl text-white mb-6 leading-tight">
-          Ready to Source Premium <span className="gold-text">Indian Products?</span>
+          Source Premium <span className="gold-text">Indian Rice</span> &amp; Agricultural Products
         </h2>
-        <p className="text-gray-300 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
-          Get in touch with our export team today. We&apos;ll provide you with product samples, pricing, and full compliance documentation.
+        <p className="text-gray-300 text-lg mb-14 max-w-2xl mx-auto leading-relaxed">
+          Partner with us for Sona Masoori Rice, Basmati Rice, spices, and fresh produce. Get product samples, competitive pricing, and full compliance documentation.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
-          <Link href="/contact"
-            className="inline-flex items-center justify-center gap-2 px-10 py-5 btn-premium shimmer-btn text-navy-950 font-bold text-base rounded-xl shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1 relative z-10">
-            Get Export Quote
-            <ArrowRight size={20} />
-          </Link>
-          <a href="tel:+919493928088"
-            className="inline-flex items-center justify-center gap-2 px-10 py-5 border-2 border-gold-500/60 text-gold-300 font-bold text-base rounded-xl hover:bg-gold-500/15 hover:border-gold-400 transition-all duration-300 hover:shadow-gold-glow relative z-10">
-            <Phone size={20} />
-            Call Us Now
-          </a>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          {ctaItems.map(({ label, href, icon: Icon, description, primary }) => (
+            <Link
+              key={label}
+              href={href}
+              className={`group relative flex flex-col items-center gap-3 px-6 py-6 rounded-2xl border transition-all duration-300 hover:scale-105 hover:-translate-y-1 ${
+                primary
+                  ? 'btn-premium shimmer-btn text-navy-950 font-bold shadow-gold-glow hover:shadow-gold-glow-lg border-transparent'
+                  : 'border-gold-500/40 bg-navy-900/50 hover:bg-gold-500/15 hover:border-gold-400 hover:shadow-gold-glow'
+              }`}
+            >
+              <Icon size={24} className={primary ? 'text-navy-950' : 'text-gold-500'} />
+              <span className={`font-bold text-base ${primary ? 'text-navy-950' : 'text-white'}`}>
+                {label}
+              </span>
+              <span className={`text-xs ${primary ? 'text-navy-800' : 'text-gray-400'}`}>
+                {description}
+              </span>
+            </Link>
+          ))}
         </div>
 
-        <p className="text-gray-500 text-sm mt-10 tracking-wide">
-          Monday–Friday: 9 AM–6 PM · Saturday: 9 AM–2 PM · Warangal, Telangana, India
+        <p className="text-gray-500 text-sm mt-12 tracking-wide">
+          Monday-Friday: 9 AM-6 PM &middot; Saturday: 9 AM-2 PM &middot; Warangal, Telangana, India
         </p>
       </div>
     </section>

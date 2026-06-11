@@ -12,13 +12,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-gold-500">
+            <Link href="/" className="flex items-center gap-4 mb-5">
+              <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-gold-500 shadow-lg shadow-gold-500/30">
                 <Image src="/logo.png" alt="Deekshi Global Exim" fill className="object-cover" />
               </div>
               <div>
-                <div className="font-display font-bold text-lg">DEEKSHI <span className="gold-text">GLOBAL</span></div>
-                <div className="text-gold-500 text-xs tracking-widest">EXIM</div>
+                <div className="font-display font-bold text-xl">DEEKSHI <span className="gold-text">GLOBAL</span></div>
+                <div className="text-gold-500 text-xs tracking-[0.3em] font-semibold">EXIM</div>
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
@@ -63,7 +63,7 @@ export default function Footer() {
           <div>
             <h4 className="font-display font-semibold text-gold-500 mb-4 text-lg">Our Products</h4>
             <ul className="space-y-2">
-              {['Fresh Fruits', 'Fresh Vegetables', 'Basmati Rice', 'Non-Basmati Rice', 'Indian Spices', 'Red Chilli', 'Turmeric', 'Black Pepper'].map(p => (
+              {['Sona Masoori Rice', 'Basmati Rice', 'Non-Basmati Rice', 'Fresh Fruits', 'Fresh Vegetables', 'Red Chilli', 'Turmeric', 'Black Pepper', 'Garlic Powder'].map(p => (
                 <li key={p}>
                   <Link href="/products" className="text-gray-400 hover:text-gold-400 text-sm flex items-center gap-2 group transition-colors">
                     <ArrowRight size={12} className="text-gold-500 group-hover:translate-x-1 transition-transform" />
