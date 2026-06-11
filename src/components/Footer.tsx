@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, ArrowRight } from 'lucide-react'
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, ArrowRight, FileText } from 'lucide-react'
 
 const certBadges = ['GST', 'IEC', 'APEDA', 'FSSAI', 'ICEGATE']
 
@@ -21,9 +21,25 @@ export default function Footer() {
                 <div className="text-gold-500 text-xs tracking-[0.3em] font-semibold">EXIM</div>
               </div>
             </Link>
-            <p className="text-gray-400 text-sm leading-relaxed mb-5">
-              Connecting Indian agricultural excellence to global markets. Premium quality, certified compliance, reliable delivery.
+
+            {/* Company Tagline */}
+            <p className="text-gold-400 font-display font-semibold text-sm leading-relaxed mb-4">
+              Connecting Quality Indian Agricultural Products with Global Markets
             </p>
+
+            <p className="text-gray-400 text-sm leading-relaxed mb-5">
+              Premium quality, certified compliance, reliable delivery. Your trusted partner for international agricultural trade.
+            </p>
+
+            {/* Request Quotation CTA */}
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-500 text-navy-950 rounded-lg font-bold text-sm hover:bg-gold-400 transition-all duration-300 hover:-translate-y-0.5 shadow-md mb-5"
+            >
+              <FileText size={14} />
+              Request Quotation
+            </Link>
+
             <div className="flex gap-3">
               {[
                 { icon: Facebook, href: '#', label: 'Facebook' },
@@ -40,7 +56,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-semibold text-gold-500 mb-4 text-lg">Quick Links</h4>
+            <h4 className="font-display font-bold text-gold-500 mb-5 text-lg tracking-wide uppercase text-sm">Quick Links</h4>
             <ul className="space-y-2">
               {[
                 { href: '/', label: 'Home' },
@@ -61,7 +77,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="font-display font-semibold text-gold-500 mb-4 text-lg">Our Products</h4>
+            <h4 className="font-display font-bold text-gold-500 mb-5 text-lg tracking-wide uppercase text-sm">Our Products</h4>
             <ul className="space-y-2">
               {['Sona Masoori Rice', 'Basmati Rice', 'Non-Basmati Rice', 'Fresh Fruits', 'Fresh Vegetables', 'Spices', 'Dehydrated Products'].map(p => (
                 <li key={p}>
@@ -76,11 +92,11 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display font-semibold text-gold-500 mb-4 text-lg">Contact Us</h4>
+            <h4 className="font-display font-bold text-gold-500 mb-5 text-lg tracking-wide uppercase text-sm">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-gold-500 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">Warangal, Telangana, India — 506001</span>
+                <span className="text-gray-400 text-sm">Warangal, Telangana, India - 506001</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-gold-500 flex-shrink-0" />
@@ -94,7 +110,7 @@ export default function Footer() {
 
             {/* Cert Badges */}
             <div className="mt-6">
-              <p className="text-xs text-gray-500 mb-3 uppercase tracking-wider">Certifications</p>
+              <p className="text-xs text-gray-500 mb-3 uppercase tracking-wider font-semibold">Certifications</p>
               <div className="flex flex-wrap gap-2">
                 {certBadges.map(cert => (
                   <span key={cert} className="px-2 py-1 border border-gold-500/40 text-gold-500 text-xs rounded font-medium">

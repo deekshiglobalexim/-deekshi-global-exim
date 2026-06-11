@@ -1,372 +1,376 @@
-import type { Metadata } from 'next'
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  ArrowRight,
-  Award,
-  CheckCircle2,
-  Globe2,
-  PackageCheck,
-  Ship,
-} from 'lucide-react'
+import { ArrowRight, ShieldCheck, Star } from 'lucide-react'
+import { motion } from 'framer-motion'
 
-export const metadata: Metadata = {
-  title: 'Products | Deekshi Global Exim',
-  description:
-    'Premium Indian rice, fresh fruits, vegetables, spices, and dehydrated products for international bulk buyers.',
-}
-
-type Product = {
-  name: string
-  img: string
-  desc: string
-}
-
-type Category = {
-  id: string
-  name: string
-  eyebrow: string
-  desc: string
-  products: Product[]
-}
-
-const categories: Category[] = [
+const categories = [
   {
     id: 'rice',
     name: 'Rice',
-    eyebrow: 'Highest Priority Export Category',
-    desc: 'Premium Indian rice varieties sourced through reliable supply channels and prepared for bulk international trade.',
+    emoji: '🌾',
+    desc: 'Premium Indian rice varieties processed in state-of-the-art facilities and exported to over 30 countries worldwide.',
     products: [
       {
         name: 'Sona Masoori Rice',
+        desc: 'Premium medium-grain rice known for its lightweight texture and excellent cooking quality. Low glycemic index with excellent cooking yield. Available in bulk supply with export-grade packaging.',
         img: '/products/sona-masoori.jpg',
-        desc: 'Lightweight, aromatic Sona Masoori rice supplied in bulk with export quality selection, dependable sourcing, and packaging aligned for global markets.',
       },
       {
         name: 'Basmati Rice',
+        desc: 'Long-grain aromatic rice with exceptional elongation and flavor. Available in 1121, PUSA, and Traditional varieties. Meets international food safety and quality standards.',
         img: '/products/basmati.jpg',
-        desc: 'Long-grain Basmati rice known for aroma, purity, and grain consistency, supplied to international buyers under strict export standards.',
       },
       {
         name: 'Non-Basmati Rice',
+        desc: 'Versatile rice varieties for bulk procurement with consistent grain quality. Available in IR-64, Parboiled, Broken, and Swarna varieties. Competitively priced with phytosanitary certification.',
         img: '/products/non-basmati.jpg',
-        desc: 'Reliable non-Basmati rice supply for wholesale importers, distributors, and food service buyers seeking consistent Indian origin quality.',
       },
     ],
   },
   {
-    id: 'fresh-fruits',
+    id: 'fruits',
     name: 'Fresh Fruits',
-    eyebrow: 'Premium Farm Fresh Supply',
-    desc: 'Carefully selected Indian fruits handled for freshness, shelf life, and international buyer expectations.',
+    emoji: '🥭',
+    desc: 'Premium tropical and seasonal fruits with integrated cold chain logistics ensuring freshness from farm to destination.',
     products: [
       {
         name: 'Mango',
+        desc: 'Premium export-grade mangoes with hot water and vapour heat treatment for phytosanitary compliance. Supplied in bulk to supermarket chains and juice processors worldwide.',
         img: '/products/mango.jpg',
-        desc: 'Export quality Indian mangoes sourced from trusted growing regions and supplied in bulk for retail, wholesale, and global fresh produce markets.',
       },
       {
         name: 'Pomegranate',
+        desc: 'Deep ruby-red pomegranates with high juice content, graded by size and Brix level to meet international supermarket specifications. Year-round availability with cold chain packaging.',
         img: '/products/pomegranate.jpg',
-        desc: 'Premium pomegranates selected for color, firmness, and aril quality, with reliable sourcing for international fresh fruit importers.',
       },
       {
         name: 'Grapes',
+        desc: 'Thompson Seedless and Flame Seedless grapes, pre-cooled and packed in ventilated cartons for maximum shelf life during intercontinental shipping.',
         img: '/products/grapes.jpg',
-        desc: 'Fresh Indian grapes supplied with attention to bunch quality, handling standards, and buyer-ready bulk export requirements.',
       },
       {
         name: 'Banana',
+        desc: 'Export-grade Cavendish bananas harvested at precise maturity for optimal ripening during transit. Uniform sizing with year-round availability.',
         img: '/products/banana.jpg',
-        desc: 'Bulk banana supply from dependable Indian farms, packed for freshness and aligned with international produce trade standards.',
       },
     ],
   },
   {
-    id: 'fresh-vegetables',
+    id: 'vegetables',
     name: 'Fresh Vegetables',
-    eyebrow: 'Reliable Daily Trade Products',
-    desc: 'Fresh vegetables procured through stable grower networks for bulk buyers and overseas distribution channels.',
+    emoji: '🥬',
+    desc: 'Farm-fresh vegetables with rigorous grading and quality inspection to meet international food safety standards.',
     products: [
       {
         name: 'Onion',
+        desc: 'Premium red onions with extended shelf life and consistent sizing. Available in mesh bags, jute bags, or customized packaging for wholesale importers.',
         img: '/products/onion.jpg',
-        desc: 'Export grade onions with strong shelf life, consistent sizing, and dependable bulk supply for international wholesale markets.',
       },
       {
         name: 'Tomato',
+        desc: 'Firm, vine-ripened export tomatoes with vibrant color and excellent Brix levels. Sorted and graded to international size specifications with temperature-controlled logistics.',
         img: '/products/tomato.jpg',
-        desc: 'Fresh tomatoes selected for firmness and quality, sourced for bulk export programs and global food supply chains.',
       },
       {
         name: 'Potato',
+        desc: 'Export-grade potatoes with uniform sizing and minimal defects. Cold-stored for year-round supply with phytosanitary certification for international procurement.',
         img: '/products/potato.jpg',
-        desc: 'Indian potatoes supplied in bulk with quality sorting, reliable sourcing, and packaging support for international buyers.',
       },
       {
         name: 'Green Chilli',
+        desc: 'Fresh green chillies with consistent heat levels and firm texture. Harvested at peak freshness with immediate cold chain handling for export transit.',
         img: '/products/green-chilli.jpg',
-        desc: 'Fresh green chillies selected for heat, color, and freshness, prepared for export markets requiring consistent Indian produce.',
       },
     ],
   },
   {
-    id: 'indian-spices',
-    name: 'Indian Spices',
-    eyebrow: 'Authentic Indian Origin',
-    desc: 'Selected spices from India supplied for processors, distributors, and importers seeking consistent quality and traceable sourcing.',
+    id: 'spices',
+    name: 'Spices',
+    emoji: '🌶️',
+    desc: 'Authentic Indian spices processed in FSSAI, ISO, and HACCP-certified facilities with full lab testing and certificates of analysis.',
     products: [
       {
         name: 'Red Chilli',
+        desc: 'Premium red chillies with intense natural color and ASTA values ranging 80-300. Available in whole dried, crushed flakes, and fine powder forms with aflatoxin compliance.',
         img: '/products/red-chilli.jpg',
-        desc: 'Indian red chilli supplied for global spice buyers with focus on color, pungency, export quality, and bulk shipment readiness.',
       },
       {
         name: 'Turmeric',
+        desc: 'High-curcumin turmeric with curcumin content 3-7%, available in polished fingers and fine powder forms. Each shipment includes a certificate of analysis for curcumin content and residue testing.',
         img: '/products/turmeric.jpg',
-        desc: 'Export quality turmeric with dependable sourcing and quality selection for international spice, food, and ingredient markets.',
       },
       {
         name: 'Black Pepper',
+        desc: 'Premium grade black pepper with piperine content 4-9%. Bold, uniform berries sorted and graded to FAQ/ASTA standards with steam sterilization.',
         img: '/products/black-pepper.jpg',
-        desc: 'Premium black pepper sourced for aroma, bold flavor, and consistent quality, suitable for bulk export and global spice distribution.',
       },
       {
         name: 'Coriander',
+        desc: 'Premium coriander seeds, clean and machine-sorted with low moisture content for extended shelf life. Also available as freshly ground powder for bulk supply.',
         img: '/products/coriander.jpg',
-        desc: 'Coriander supplied for international buyers seeking clean, aromatic Indian spice products with reliable bulk availability.',
       },
     ],
   },
   {
-    id: 'dehydrated-products',
+    id: 'dehydrated',
     name: 'Dehydrated Products',
-    eyebrow: 'Shelf Stable Ingredient Supply',
-    desc: 'Dehydrated ingredients prepared for longer shelf life, convenient logistics, and international food manufacturing requirements.',
+    emoji: '🧄',
+    desc: 'High-quality dehydrated products manufactured to international food processing standards with full traceability.',
     products: [
       {
         name: 'Garlic Powder',
+        desc: 'Premium dehydrated garlic powder with consistent pungency and aroma. Manufactured to international food processing standards with full traceability.',
         img: '/products/garlic-powder.jpg',
-        desc: 'Fine garlic powder supplied for food processors, seasoning brands, and importers requiring export quality, shelf stable bulk ingredients.',
       },
       {
         name: 'Onion Powder',
+        desc: 'High-quality dehydrated onion powder suitable for food processing and seasoning applications. Available in bulk with customized packaging options.',
         img: '/products/onion-powder.jpg',
-        desc: 'Dehydrated onion powder with consistent flavor and texture, sourced for global ingredient markets and bulk industrial supply.',
       },
     ],
   },
 ]
 
-const exportHighlights = [
-  'Export Quality Selection',
-  'Bulk Supply Capability',
-  'International Buyer Support',
-  'Reliable Indian Sourcing',
-]
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.23, 1, 0.32, 1],
+    },
+  },
+}
+
+const headerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.23, 1, 0.32, 1],
+    },
+  },
+}
 
 export default function ProductsPage() {
   return (
-    <main className="bg-off-white">
-      <section className="relative overflow-hidden bg-navy-950">
+    <>
+      {/* Hero Section */}
+      <section className="relative py-24 bg-navy-950 overflow-hidden">
         <div className="absolute inset-0 dots-bg opacity-20" />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-off-white to-transparent" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-24 lg:py-28">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-            <div>
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.32em] text-gold-300">
-                Products Portfolio
-              </p>
+        <div className="relative max-w-7xl mx-auto px-6 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="font-display font-bold text-5xl md:text-6xl text-white mb-6"
+          >
+            Premium <span className="gold-text">Export Products</span>
+          </motion.h1>
 
-              <h1 className="font-display text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-                Premium Indian Products for{' '}
-                <span className="gold-text">Global Importers</span>
-              </h1>
-
-              <p className="mt-6 max-w-3xl text-base leading-8 text-gray-200 sm:text-lg">
-                Deekshi Global Exim supplies rice, fresh produce, spices, and
-                dehydrated products with export-focused sourcing, bulk order
-                coordination, and buyer-ready quality standards for global
-                markets.
-              </p>
-
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                {exportHighlights.map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white backdrop-blur"
-                  >
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-gold-300" />
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-gold-300/30 bg-white/10 p-6 shadow-premium-lg backdrop-blur">
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  ['5', 'Product Categories'],
-                  ['17', 'Export Products'],
-                  ['100%', 'Local Image Paths'],
-                  ['B2B', 'Bulk Supply Focus'],
-                ].map(([value, label]) => (
-                  <div
-                    key={label}
-                    className="rounded-xl border border-white/10 bg-navy-900/70 p-5"
-                  >
-                    <p className="font-display text-3xl font-bold text-gold-300">
-                      {value}
-                    </p>
-                    <p className="mt-2 text-sm text-gray-300">{label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-gray-300 text-lg max-w-2xl mx-auto"
+          >
+            Quality agricultural products sourced, processed, and packaged to international standards for global buyers.
+          </motion.p>
         </div>
       </section>
 
-      <nav className="sticky top-[72px] z-40 border-b border-navy-950/10 bg-white/95 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex gap-3 overflow-x-auto py-4">
+      {/* Sticky Category Navigation */}
+      <div className="sticky top-[72px] bg-white border-b z-40 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex gap-2 overflow-x-auto py-4 scrollbar-hide">
             {categories.map((cat) => (
               <a
                 key={cat.id}
                 href={`#${cat.id}`}
-                className="whitespace-nowrap rounded-full border border-navy-950/10 bg-white px-5 py-2 text-sm font-bold text-navy-950 shadow-sm transition hover:border-gold-500 hover:bg-gold-500 hover:text-white"
+                className="px-5 py-2 rounded-full bg-gray-100 hover:bg-gold-500 hover:text-navy-950 transition-all duration-300 whitespace-nowrap font-medium text-sm"
               >
-                {cat.name}
+                {cat.emoji} {cat.name}
               </a>
             ))}
           </div>
         </div>
-      </nav>
+      </div>
 
+      {/* Product Category Sections */}
       {categories.map((cat, index) => (
         <section
           key={cat.id}
           id={cat.id}
-          className={`scroll-mt-36 py-16 sm:py-20 ${
-            index % 2 === 0 ? 'bg-off-white' : 'bg-white'
-          }`}
+          className={`py-24 ${
+            index % 2 === 0 ? 'bg-gray-50' : 'bg-white'
+          } ${cat.id === 'rice' ? 'border-t-4 border-gold-500' : ''}`}
         >
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="mb-10 flex flex-col justify-between gap-6 lg:mb-12 lg:flex-row lg:items-end">
-              <div className="max-w-3xl">
-                <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-gold-600">
-                  {cat.eyebrow}
-                </p>
-                <h2 className="font-display text-3xl font-bold text-navy-950 sm:text-4xl">
-                  {cat.name}
-                </h2>
-                <div className="gold-divider mt-4" />
-                <p className="mt-5 text-base leading-8 text-gray-600">
-                  {cat.desc}
-                </p>
+          <div className="max-w-7xl mx-auto px-6">
+            {/* Rice Priority Export Badge */}
+            {cat.id === 'rice' && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="mb-6"
+              >
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/10 border border-gold-500/30 text-gold-600 rounded-full text-sm font-semibold">
+                  <Star size={14} className="fill-gold-500 text-gold-500" />
+                  Priority Export Category
+                </span>
+              </motion.div>
+            )}
+
+            {/* Section Header */}
+            <motion.div
+              variants={headerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-50px' }}
+              className="flex flex-col md:flex-row justify-between gap-6 mb-14"
+            >
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className={cat.id === 'rice' ? 'text-5xl' : 'text-4xl'}>{cat.emoji}</span>
+                  <h2 className={`font-display font-bold text-navy-950 ${cat.id === 'rice' ? 'text-4xl md:text-5xl' : 'text-3xl md:text-4xl'}`}>
+                    {cat.name}
+                  </h2>
+                </div>
+                <div className="gold-divider mb-4" />
+                <p className="text-gray-600 max-w-2xl text-base leading-relaxed">{cat.desc}</p>
               </div>
 
               <Link
                 href="/contact"
-                className="inline-flex w-fit items-center justify-center gap-2 rounded-lg bg-navy-950 px-6 py-3 text-sm font-bold text-white shadow-premium transition hover:-translate-y-1 hover:bg-navy-900"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-navy-950 text-white rounded-xl font-semibold hover:bg-navy-900 transition-all duration-300 self-start hover:-translate-y-0.5"
               >
                 Enquire About {cat.name}
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight size={16} />
               </Link>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3">
+            {/* Product Cards Grid */}
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-50px' }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+            >
               {cat.products.map((product) => (
-                <article
+                <motion.div
                   key={product.name}
-                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-navy-950/10 bg-white shadow-premium transition duration-500 hover:-translate-y-2 hover:border-gold-500/50 hover:shadow-premium-lg"
+                  variants={cardVariants}
+                  whileHover={{ y: -6, transition: { duration: 0.3 } }}
+                  className="bg-white rounded-2xl overflow-hidden shadow-premium border border-gray-100 hover:border-gold-500/40 hover:shadow-premium-lg transition-all duration-500 group flex flex-col h-full"
                 >
-                  <div className="relative h-72 overflow-hidden bg-navy-950 sm:h-80">
+                  {/* Image Container */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
                       src={product.img}
                       alt={product.name}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
-                      unoptimized
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      quality={90}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-950/75 via-navy-950/10 to-transparent" />
 
-                    <div className="absolute left-4 top-4 flex flex-wrap gap-2">
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-gold-500 px-3 py-1.5 text-xs font-black uppercase tracking-wide text-white shadow-gold-glow">
-                        <Award className="h-3.5 w-3.5" />
+                    {/* Category Tag */}
+                    <div className="absolute top-4 left-4">
+                      <span className="px-3 py-1.5 bg-white/95 backdrop-blur-sm text-navy-950 rounded-full text-xs font-semibold shadow-sm">
+                        {cat.emoji} {cat.name}
+                      </span>
+                    </div>
+
+                    {/* Export Grade & Bulk Supply Badges */}
+                    <div className="absolute top-3 right-3 flex flex-col gap-1.5">
+                      <span className="px-2.5 py-1 bg-gold-500/95 backdrop-blur-sm text-navy-950 rounded-full text-[10px] font-bold uppercase tracking-wide shadow-md">
                         Export Grade
                       </span>
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-black uppercase tracking-wide text-navy-950 shadow-lg">
-                        <PackageCheck className="h-3.5 w-3.5" />
+                      <span className="px-2.5 py-1 bg-navy-950/90 backdrop-blur-sm text-gold-400 rounded-full text-[10px] font-bold uppercase tracking-wide shadow-md">
                         Bulk Supply
                       </span>
                     </div>
-
-                    <div className="absolute bottom-5 left-5 right-5">
-                      <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold-300">
-                        Deekshi Global Exim
-                      </p>
-                      <h3 className="mt-2 font-display text-3xl font-bold text-white">
-                        {product.name}
-                      </h3>
-                    </div>
                   </div>
 
-                  <div className="flex flex-1 flex-col p-6">
-                    <p className="flex-1 text-sm leading-7 text-gray-600">
+                  {/* Card Content */}
+                  <div className="p-7 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold text-navy-950 mb-3 font-display">
+                      {product.name}
+                    </h3>
+
+                    <p className="text-gray-600 mb-6 text-sm leading-relaxed flex-grow">
                       {product.desc}
                     </p>
 
-                    <div className="mt-6 grid grid-cols-2 gap-3 border-t border-gray-100 pt-5 text-xs font-bold text-navy-950">
-                      <span className="flex items-center gap-2">
-                        <Globe2 className="h-4 w-4 text-gold-600" />
-                        Global Markets
-                      </span>
-                      <span className="flex items-center gap-2">
-                        <Ship className="h-4 w-4 text-gold-600" />
-                        Export Ready
-                      </span>
-                    </div>
-
                     <Link
                       href="/contact"
-                      className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gold-500 px-5 py-3 text-sm font-black text-white shadow-gold-glow transition hover:-translate-y-1 hover:bg-gold-600"
+                      className="flex items-center justify-center gap-2 w-full bg-gold-500 hover:bg-gold-400 text-navy-950 py-3 rounded-xl font-bold transition-all duration-300 hover:shadow-lg"
                     >
                       Request Quote
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight size={16} />
                     </Link>
                   </div>
-                </article>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
       ))}
 
-      <section className="bg-navy-950 py-16 sm:py-20">
-        <div className="mx-auto max-w-5xl px-6 text-center">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-gold-300">
-            International Bulk Enquiries
-          </p>
-          <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
-            Source Indian agricultural products with confidence.
+      {/* Bottom CTA Section */}
+      <section className="py-24 bg-navy-950 relative overflow-hidden">
+        <div className="absolute inset-0 dots-bg opacity-10" />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="relative max-w-4xl mx-auto px-6 text-center"
+        >
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+            Need a <span className="gold-text">Custom Requirement?</span>
           </h2>
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-gray-300">
-            Share your product requirement, destination market, packaging
-            preference, and expected quantity. Our team will coordinate a
-            professional export quotation for your business.
+
+          <p className="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+            Contact us for bulk orders, customized packaging, private labeling, and export inquiries. We supply quality agricultural products to buyers worldwide.
           </p>
 
-          <Link
-            href="/contact"
-            className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-gold-500 px-8 py-4 text-sm font-black uppercase tracking-wide text-white shadow-gold-glow transition hover:-translate-y-1 hover:bg-gold-600"
-          >
-            Get Bulk Export Quote
-            <ArrowRight className="h-5 w-5" />
-          </Link>
-        </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-navy-950 rounded-xl font-bold hover:bg-gold-400 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-gold-glow"
+            >
+              Get Custom Quote
+              <ArrowRight size={18} />
+            </Link>
+            <Link
+              href="/certifications"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-gold-500/30 text-gold-400 rounded-xl font-bold hover:border-gold-500 hover:bg-gold-500/10 transition-all duration-300"
+            >
+              View Certifications
+              <ShieldCheck size={18} />
+            </Link>
+          </div>
+        </motion.div>
       </section>
-    </main>
+    </>
   )
 }

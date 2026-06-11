@@ -2,7 +2,7 @@
   "id": "FEAT-002",
   "type": "feat",
   "description": "Enhance the Products page with better category banners, larger images, equal card heights, Export Grade/Bulk Supply badges, improved spacing, and ensure Rice appears first with largest visual emphasis. Also enhance the Footer with premium export-company styling, company description tagline, and better section organization.",
-  "status": "pending",
+  "status": "in_progress",
   "steps": [
     "Enhance src/app/products/page.tsx: Add 'Export Grade' and 'Bulk Supply' badge overlays on product cards (positioned in top-right corner of image). Ensure Rice category appears first (already does) and give it larger visual emphasis - make the Rice section header more prominent with a special banner/highlight. Improve card heights to be equal using flex-grow pattern (already partially done, ensure consistency). Add better spacing between sections. Improve category section headers with premium banner styling. Make product images slightly larger or use a better aspect ratio for visual impact.",
     "Enhance src/components/Footer.tsx: Add the company description tagline 'Connecting Quality Indian Agricultural Products with Global Markets' prominently. Keep existing structure but enhance: ensure Quick Links, Product Categories, Certifications, Contact Info, and Social Media are all present and well-organized. Add a 'Request Quotation' CTA button in footer. Improve visual hierarchy with better heading styles. Keep existing StaffArc credit section.",
