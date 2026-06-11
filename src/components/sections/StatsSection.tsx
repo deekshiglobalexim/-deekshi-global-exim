@@ -2,10 +2,10 @@
 import { useEffect, useRef, useState } from 'react'
 
 const stats = [
-  { value: 15, suffix: '+', label: 'Countries Served', desc: 'Active buyers across the Middle East, Asia & Africa' },
-  { value: 500, suffix: '+', label: 'Tons Monthly Capacity', desc: 'Reliable bulk supply for container loads' },
-  { value: 25, suffix: '+', label: 'Product Varieties', desc: 'Rice, spices, fruits & vegetables' },
-  { value: 5, suffix: '+', label: 'Active Certifications', desc: 'GST, IEC, APEDA, FSSAI, ICEGATE' },
+  { value: 15, suffix: '+', label: 'Countries Served' },
+  { value: 500, suffix: '+', label: 'Tons Monthly Capacity' },
+  { value: 25, suffix: '+', label: 'Product Varieties' },
+  { value: 5, suffix: '+', label: 'Active Certifications' },
 ]
 
 function CountUp({ target, suffix }: { target: number; suffix: string }) {
@@ -48,13 +48,9 @@ export default function StatsSection() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center group cursor-default transition-premium">
-              {/* Card background on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" style={{ padding: '2rem' }} />
-
               <div className="relative">
                 <CountUp target={stat.value} suffix={stat.suffix} />
-                <div className="text-white font-semibold text-lg mt-3 mb-2 group-hover:text-gold-300 transition-colors tracking-wide">{stat.label}</div>
-                <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors leading-relaxed">{stat.desc}</div>
+                <div className="text-white font-semibold text-lg mt-3 group-hover:text-gold-300 transition-colors tracking-wide">{stat.label}</div>
               </div>
 
               {/* Bottom accent line */}

@@ -1,35 +1,25 @@
-import { Shield, Globe, Wheat, Truck, FileText, DollarSign } from 'lucide-react'
+import { Wheat, Shield, Truck, FileText } from 'lucide-react'
 
 const cards = [
   {
     icon: Wheat,
-    title: 'Rice Expertise & AP/Telangana Sourcing',
-    desc: 'Deep expertise in premium rice varieties with established sourcing networks across Andhra Pradesh and Telangana - India\'s rice heartland. Direct farm partnerships ensure consistent Sona Masoori and Basmati quality.',
-  },
-  {
-    icon: Truck,
-    title: 'Bulk Supply for Container Loads',
-    desc: 'Capable of fulfilling large-volume orders for both Full Container Load (FCL) and Less than Container Load (LCL) shipments. Reliable supply chain for consistent monthly dispatches.',
+    title: 'Direct Farm Sourcing',
+    desc: 'Established partnerships with farmers and cooperatives ensure consistent quality and competitive pricing for all products.',
   },
   {
     icon: Shield,
-    title: 'International Food Safety Compliance',
-    desc: 'FSSAI Central Licensed with HACCP awareness protocols. All exports meet phytosanitary requirements and destination-specific food safety standards for worry-free imports.',
+    title: 'Quality Compliance',
+    desc: 'All exports meet international food safety standards with FSSAI certification and phytosanitary compliance.',
   },
   {
-    icon: DollarSign,
-    title: 'Competitive Direct-Farm Pricing',
-    desc: 'Bypass middlemen with our direct sourcing model from farmers and cooperatives. Pass on significant cost advantages while maintaining premium export-grade quality.',
+    icon: Truck,
+    title: 'Reliable Logistics',
+    desc: 'Efficient supply chain for both FCL and LCL shipments with consistent monthly dispatch schedules.',
   },
   {
     icon: FileText,
-    title: 'Reliable Export Documentation',
-    desc: 'Complete, accurate documentation for seamless customs clearance: Commercial Invoice, Packing List, Bill of Lading, Phytosanitary Certificate, Certificate of Origin, and fumigation reports.',
-  },
-  {
-    icon: Globe,
-    title: 'Multi-Market Experience',
-    desc: 'Active exports to the Middle East, Southeast Asia, and Africa. We understand destination-specific regulations, labeling requirements, and packaging standards for each market.',
+    title: 'Complete Documentation',
+    desc: 'Full export documentation support including Bill of Lading, Certificate of Origin, and phytosanitary certificates.',
   },
 ]
 
@@ -44,13 +34,10 @@ export default function WhyChooseUs() {
           <h2 className="font-display font-bold text-4xl text-navy-950 mb-4">
             The Deekshi Global Exim <span className="gold-text">Advantage</span>
           </h2>
-          <div className="gold-divider mx-auto mb-4" />
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            From rice fields in Andhra Pradesh and Telangana to your warehouse - we deliver premium Indian agricultural products with full compliance, competitive pricing, and reliable logistics.
-          </p>
+          <div className="gold-divider mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card) => (
             <div key={card.title}
               className="relative card-premium shadow-premium-lg p-8 rounded-2xl border border-gray-200 group overflow-hidden transition-premium hover:shadow-gold-glow hover:border-gold-500/30">
@@ -62,7 +49,7 @@ export default function WhyChooseUs() {
               </div>
 
               <h3 className="font-display font-semibold text-xl text-navy-950 mb-3 tracking-wide">{card.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">{card.desc}</p>
+              <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
 
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>

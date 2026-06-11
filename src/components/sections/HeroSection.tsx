@@ -1,21 +1,17 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Globe, Shield, Truck } from 'lucide-react'
+import { ArrowRight, Shield } from 'lucide-react'
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-navy-950">
       {/* Background layers */}
       <div className="absolute inset-0">
-        {/* Base gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-[#0d3560] to-navy-950" />
-        {/* Gold accent blobs */}
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-gold-500/8 rounded-full blur-2xl" />
-        {/* Dot grid */}
         <div className="absolute inset-0 dots-bg opacity-30" />
-        {/* Diagonal line */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -right-20 top-0 w-px h-full bg-gradient-to-b from-transparent via-gold-500/20 to-transparent" style={{ transform: 'rotate(-15deg)', transformOrigin: 'top right' }} />
           <div className="absolute right-32 top-0 w-px h-full bg-gradient-to-b from-transparent via-gold-500/10 to-transparent" style={{ transform: 'rotate(-15deg)', transformOrigin: 'top right' }} />
@@ -25,28 +21,15 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
         <div>
-          {/* Prominent Logo */}
-          <div className="mb-8">
-            <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden bg-white ring-2 ring-gold-500 shadow-xl shadow-gold-500/30 logo-hero-glow">
-              <Image src="/logo-mark.png" alt="Deekshi Global Exim" fill sizes="(max-width: 768px) 112px, 128px" className="object-contain p-1.5 logo-mark" priority quality={100} />
-            </div>
-          </div>
-
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-sm font-medium mb-8">
-            <Globe size={14} />
-            Warangal, India → Global Markets
-          </div>
-
           <h1 className="font-display font-bold text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-6">
             Premium{' '}
-            <span className="gold-text">Indian Rice</span>{' '}
-            &amp; Agricultural{' '}
-            <span className="gold-text">Exports</span>{' '}
-            Worldwide
+            <span className="gold-text">Indian Agricultural</span>{' '}
+            Products for{' '}
+            <span className="gold-text">Global Markets</span>
           </h1>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-xl">
-            India&apos;s trusted export partner for Sona Masoori Rice (AP &amp; Telangana), Basmati Rice, and Non-Basmati Rice. Also exporting premium fruits, vegetables, and spices to global markets.
+            Deekshi Global Exim exports premium rice, fresh fruits, vegetables, spices, and dehydrated products to buyers worldwide with full compliance and reliable logistics.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
@@ -57,49 +40,39 @@ export default function HeroSection() {
             </Link>
             <Link href="/products"
               className="inline-flex items-center gap-2 px-8 py-4 border-2 border-gold-500/60 text-gold-300 font-semibold text-base rounded-xl hover:bg-gold-500/15 hover:border-gold-400 transition-all duration-300 hover:shadow-gold-glow">
-              View Export Products
+              View Products
               <ArrowRight size={18} />
             </Link>
           </div>
 
-          {/* Trust badges */}
+          {/* Trust badges - 3 minimal indicators */}
           <div className="flex flex-wrap gap-6">
             {[
-              { icon: Shield, label: 'APEDA Registered' },
-              { icon: Shield, label: 'FSSAI Licensed' },
-              { icon: Globe, label: 'Global Reach' },
-              { icon: Truck, label: 'Reliable Delivery' },
-            ].map(({ icon: Icon, label }) => (
+              { label: 'IEC Certified' },
+              { label: 'APEDA Registered' },
+              { label: 'FSSAI Licensed' },
+            ].map(({ label }) => (
               <div key={label} className="flex items-center gap-2 text-gray-400 text-sm">
-                <Icon size={16} className="text-gold-500" />
+                <Shield size={16} className="text-gold-500" />
                 {label}
               </div>
             ))}
           </div>
         </div>
 
-        {/* Right — Visual Cards */}
-        <div className="hidden lg:grid grid-cols-2 gap-4">
-          {[
-            { emoji: '🌾', label: 'Premium Rice', desc: 'Sona Masoori, Basmati & Non-Basmati', color: 'from-amber-900/60' },
-            { emoji: '🥭', label: 'Fresh Fruits', desc: 'Mango, Grapes, Pomegranate & more', color: 'from-orange-900/60' },
-            { emoji: '🌶️', label: 'Indian Spices', desc: 'Red Chilli, Turmeric, Cardamom', color: 'from-red-900/60' },
-            { emoji: '🥦', label: 'Fresh Vegetables', desc: 'Onion, Potato, Tomato & more', color: 'from-green-900/60' },
-          ].map((item, i) => (
-            <div key={item.label}
-              className={`relative rounded-2xl border border-gold-500/30 bg-gradient-to-br ${item.color} to-navy-900/90 p-6 card-hover cursor-default transition-premium hover:shadow-gold-glow`}
-              style={{ animationDelay: `${i * 0.2}s` }}>
-              <div className="text-5xl mb-3 transition-transform duration-300 hover:scale-110 inline-block">{item.emoji}</div>
-              <h3 className="text-white font-display font-semibold text-base mb-1 tracking-wide">{item.label}</h3>
-              <p className="text-gray-300 text-xs leading-relaxed">{item.desc}</p>
-              <div className="absolute top-3 right-3">
-                <span className="px-2.5 py-1 bg-gold-500/30 border border-gold-500/50 text-gold-300 text-xs rounded-full font-medium shadow-sm">Export Quality</span>
-              </div>
-              {/* Glow effect on hover */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-500 pointer-events-none" 
-                style={{ boxShadow: 'inset 0 0 40px rgba(212, 175, 55, 0.1)' }} />
-            </div>
-          ))}
+        {/* Right - Clean hero image */}
+        <div className="hidden lg:block">
+          <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-premium-lg border border-gold-500/20">
+            <Image
+              src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=95"
+              alt="Global agricultural trade"
+              fill
+              className="object-cover"
+              quality={95}
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 to-transparent" />
+          </div>
         </div>
       </div>
 

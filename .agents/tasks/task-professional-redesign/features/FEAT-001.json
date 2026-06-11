@@ -1,0 +1,33 @@
+{
+  "id": "FEAT-001",
+  "type": "refactor",
+  "description": "Redesign homepage sections to be clean, professional, and export-focused. Remove all state-specific references (AP, Telangana), excessive badges, priority numbers, and promotional clutter. Simplify hero section, about preview, stats, why choose us, featured products, certifications preview, and CTA banner. Add Dehydrated Products category with Garlic Powder and Onion Powder. Remove PriorityExportProducts section entirely (merge simplified product showcase into FeaturedProducts).",
+  "status": "in_progress",
+  "steps": [
+    "Rewrite src/components/sections/HeroSection.tsx: Remove the logo from hero (already in navbar), remove 'Warangal, India -> Global Markets' badge, simplify headline to focus on premium Indian agricultural exports globally. Remove 'AP & Telangana' text from description. Keep 2 CTA buttons (Request Quotation, View Products). Reduce trust badges to just 3 simple ones (APEDA Registered, FSSAI Licensed, IEC Certified). Remove the emoji-based product cards on the right side and replace with a single clean image or a subtle product grid. Keep it minimal and premium.",
+    "Rewrite src/components/sections/AboutPreview.tsx: Remove the highlights list that mentions AP & Telangana. Replace with 3-4 short, clean bullet points about the company (certified exporter, premium quality, global reach, compliance-focused). Remove excessive marketing language. Keep the image and floating card but update floating card to show something generic like 'Since 2022' or 'Certified Exporter'. Shorten the description paragraphs.",
+    "Rewrite src/components/sections/StatsSection.tsx: Keep 4 stats but simplify descriptions. Remove 'Active buyers across the Middle East, Asia & Africa' type descriptions. Just show clean numbers with simple labels.",
+    "Rewrite src/components/sections/WhyChooseUs.tsx: Remove 'Rice Expertise & AP/Telangana Sourcing' card title. Rename to 'Direct Farm Sourcing' or similar. Remove all state-specific mentions from descriptions. Reduce from 6 cards to 4 clean advantages. Remove excessive marketing copy.",
+    "Rewrite src/components/sections/FeaturedProducts.tsx: Show 5 product categories (Rice, Fruits, Vegetables, Spices, Dehydrated Products) as category cards instead of individual products. Each card shows the category name, emoji/icon, and 1-line description. Remove individual product descriptions, sourcing badges, and 'Export Quality' overlays. Link each to the products page. Clean and minimal.",
+    "Rewrite src/components/sections/CertificationsPreview.tsx: Display 5 certifications (IEC, APEDA, FSSAI, GST, ICEGATE) as clean trust badges. Remove long descriptions and highlight badges from each cert. Just show code, name, and 1-line description max. Clean grid layout.",
+    "Rewrite src/components/sections/CtaBanner.tsx: Simplify to a single clean CTA with heading, 1-line description, and 1-2 buttons. Remove the 4-card grid of different CTA types. Remove 'Monday-Friday' hours text.",
+    "Update src/app/page.tsx: Remove PriorityExportProducts import and usage. Remove Testimonials section (or keep if clean). Reorder sections to: HeroSection, AboutPreview, StatsSection, FeaturedProducts (categories), CertificationsPreview, WhyChooseUs, CtaBanner. Remove TradeProcess from homepage (keep it on certifications page).",
+    "Delete or empty src/components/sections/PriorityExportProducts.tsx since it is no longer used on the homepage."
+  ],
+  "acceptance_criteria": [
+    "No mention of 'Andhra Pradesh', 'Telangana', 'AP', or state-specific sourcing anywhere in homepage sections",
+    "Hero section has a clean headline, short description, 2 CTA buttons, and minimal trust indicators",
+    "FeaturedProducts shows 5 category cards (Rice, Fruits, Vegetables, Spices, Dehydrated Products)",
+    "No priority numbers (#1, #2 etc.) on any products",
+    "No 'AP & Telangana Sourcing' badges anywhere",
+    "CertificationsPreview shows IEC, APEDA, FSSAI, GST, ICEGATE as clean badges",
+    "WhyChooseUs has no state-specific references",
+    "npm run build succeeds without errors"
+  ],
+  "verification": [
+    "Run npm run build in /projects/sandbox/deekshi-global-exim and confirm it compiles successfully",
+    "Run grep -r 'Andhra Pradesh\\|Telangana\\|AP &' src/components/sections/ to confirm no state references remain in homepage sections"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

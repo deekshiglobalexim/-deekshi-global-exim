@@ -3,13 +3,10 @@ import Image from 'next/image'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 
 const highlights = [
-  'APEDA & IEC Certified export business',
-  'Sona Masoori Rice sourced directly from AP & Telangana farmers',
-  'Strong sourcing networks across Andhra Pradesh and Telangana',
-  'Specializing in premium Indian rice, fruits, vegetables & spices',
-  'Supplying to global markets across continents',
-  'Strict quality control at every stage',
-  'Full export documentation support',
+  'Certified Exporter (IEC, APEDA, FSSAI)',
+  'Premium Quality Products',
+  'Global Market Reach',
+  'Full Compliance & Documentation',
 ]
 
 export default function AboutPreview() {
@@ -23,7 +20,7 @@ export default function AboutPreview() {
               <Image
                 src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=95"
                 alt="Global trade and exports"
-                fill 
+                fill
                 className="object-cover premium-image group-hover:scale-105"
                 quality={95}
               />
@@ -31,12 +28,11 @@ export default function AboutPreview() {
             </div>
             {/* Floating card */}
             <div className="absolute -bottom-6 -right-6 bg-navy-950 rounded-2xl p-6 shadow-gold-glow-lg border border-gold-500/40 hidden sm:block card-premium">
-              <div className="text-gold-500 font-display font-bold text-4xl">5+</div>
-              <div className="text-white text-sm font-medium mt-1">Certifications</div>
-              <div className="text-gray-400 text-xs mt-2 leading-relaxed">GST · IEC · APEDA · FSSAI · ICEGATE</div>
+              <div className="text-gold-500 font-display font-bold text-3xl">Since 2022</div>
+              <div className="text-white text-sm font-medium mt-1">Certified Exporter</div>
             </div>
             {/* Gold corner accent */}
-            <div className="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-gold-500 rounded-tl-3xl shadow-lg shadow-gold-500/30 transition-all duration-500 group-hover:scale-110 group-hover:shadow-gold-500/50" />
+            <div className="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-gold-500 rounded-tl-3xl shadow-lg shadow-gold-500/30" />
           </div>
 
           {/* Text side */}
@@ -51,10 +47,10 @@ export default function AboutPreview() {
             </h2>
 
             <p className="text-gray-600 leading-relaxed mb-4">
-              Deekshi Global Exim is a certified Import &amp; Export company headquartered in Warangal, Telangana, India. We specialize in supplying the finest Indian agricultural products -- premium Sona Masoori Rice, Basmati Rice, Non-Basmati Rice, fresh fruits, vegetables, and spices -- to international buyers across the globe.
+              Deekshi Global Exim is a certified import and export company specializing in premium Indian agricultural products. We supply rice, fresh fruits, vegetables, spices, and dehydrated products to international buyers worldwide.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Our strong sourcing networks across Andhra Pradesh and Telangana give us direct access to the finest rice-producing regions in India. We work closely with farmers and millers to ensure every grain of Sona Masoori Rice meets the highest quality standards. Our foundation is built on trust, transparency, and an unwavering commitment to quality.
+              Our foundation is built on trust, transparency, and an unwavering commitment to quality. Every shipment meets international food safety standards with complete export documentation.
             </p>
 
             <ul className="space-y-3 mb-10">
