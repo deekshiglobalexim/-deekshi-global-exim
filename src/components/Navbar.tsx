@@ -40,7 +40,7 @@ export default function Navbar() {
             </a>
           </div>
           <div className="text-gold-500 font-medium tracking-wider text-xs">
-            APEDA CERTIFIED · IEC REGISTERED · FSSAI LICENSED
+            IEC REGISTERED · APEDA CERTIFIED · FSSAI LICENSED
           </div>
         </div>
       </div>

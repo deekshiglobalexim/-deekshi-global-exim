@@ -57,7 +57,7 @@ export default function HeroSection() {
           {/* Trust badges */}
           <div className="flex flex-wrap gap-6">
             {[
-              { icon: Shield, label: 'APEDA Certified' },
+              { icon: Shield, label: 'IEC Registered' },
               { icon: Globe, label: 'Global Reach' },
               { icon: Truck, label: 'Reliable Delivery' },
             ].map(({ icon: Icon, label }) => (

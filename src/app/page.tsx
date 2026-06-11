@@ -11,7 +11,7 @@ import StatsSection from '@/components/sections/StatsSection'
 
 export const metadata: Metadata = {
   title: 'Deekshi Global Exim | Trusted Agricultural Exporter from India',
-  description: 'Premium exporter of fruits, vegetables, rice & spices from India. APEDA certified, IEC registered. Contact us for export enquiries.',
+  description: 'Premium exporter of fruits, vegetables, rice & spices from India. IEC registered and APEDA certified for international trade. Contact us for export enquiries.',
 }
 
 export default function HomePage() {
