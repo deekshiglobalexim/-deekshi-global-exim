@@ -1,27 +1,27 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CheckCircle2, ArrowRight, Target, Eye, Heart } from 'lucide-react'
+import { CheckCircle2, ArrowRight, Target, Eye, Wheat } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Deekshi Global Exim — our mission, vision, values, and commitment to delivering premium Indian agricultural exports to global markets.',
+  description: 'Learn about Deekshi Global Exim — India\'s premium rice-first agricultural exporter with deep sourcing networks across Andhra Pradesh and Telangana.',
 }
 
 const values = [
-  { icon: '🤝', title: 'Integrity', desc: 'We conduct business with honesty, ethical standards, and full transparency in all our dealings.' },
-  { icon: '✅', title: 'Reliability', desc: 'Consistent quality, documentation accuracy, and on-time deliveries you can depend on.' },
-  { icon: '🔍', title: 'Transparency', desc: 'Open communication at every stage — from pricing to shipment updates — with no hidden costs.' },
-  { icon: '🌿', title: 'Sustainability', desc: 'We partner with environmentally responsible farms and promote sustainable agricultural practices.' },
-  { icon: '⭐', title: 'Customer Satisfaction', desc: 'Understanding buyer needs and exceeding expectations is at the core of everything we do.' },
+  { icon: '\u{1F91D}', title: 'Integrity', desc: 'We conduct business with honesty, ethical standards, and full transparency in all our dealings.' },
+  { icon: '\u2705', title: 'Reliability', desc: 'Consistent quality, documentation accuracy, and on-time deliveries you can depend on.' },
+  { icon: '\u{1F50D}', title: 'Transparency', desc: 'Open communication at every stage - from pricing to shipment updates - with no hidden costs.' },
+  { icon: '\u{1F33F}', title: 'Sustainability', desc: 'We partner with environmentally responsible farms and promote sustainable agricultural practices.' },
+  { icon: '\u2B50', title: 'Customer Satisfaction', desc: 'Understanding buyer needs and exceeding expectations is at the core of everything we do.' },
 ]
 
 const timeline = [
-  { year: '2022', title: 'Company Founded', desc: 'Deekshi Global Exim was established in Warangal, Telangana with a vision to connect Indian agriculture to the world.' },
-  { year: '2023', title: 'Key Certifications Obtained', desc: 'Successfully registered under IEC, APEDA, GST, FSSAI Central License and ICEGATE for full export compliance.' },
-  { year: '2024', title: 'First International Shipments', desc: 'Initiated export operations for rice, spices, and fresh produce to international markets.' },
-  { year: '2025', title: 'Product Range Expansion', desc: 'Expanded to full range including fruits, vegetables, rice varieties and diverse spice categories.' },
-  { year: '2026', title: 'Growing Global Network', desc: 'Strengthening partnerships with buyers across the Middle East, Southeast Asia and Africa.' },
+  { year: '2022', title: 'Company Founded', desc: 'Deekshi Global Exim was established in Warangal, Telangana with a vision to export premium Indian rice and agricultural products to the world.' },
+  { year: '2023', title: 'Export Certifications Secured', desc: 'Obtained IEC, APEDA, GST, FSSAI Central License, and ICEGATE registrations - establishing full export compliance for rice and food products.' },
+  { year: '2024', title: 'Rice Export Operations Launched', desc: 'Began exporting Sona Masoori Rice and Basmati varieties to the Middle East and Asia, with direct sourcing from AP and Telangana farmers.' },
+  { year: '2025', title: 'Bulk Supply Capability Achieved', desc: 'Scaled to 500+ tons monthly capacity with established FCL shipping to 15+ countries. Expanded to include spices, fruits, and vegetables.' },
+  { year: '2026', title: 'Growing as India\'s Trusted Rice Exporter', desc: 'Strengthening buyer partnerships across the Middle East, Southeast Asia, and Africa with a reputation for premium rice quality and reliable supply.' },
 ]
 
 export default function AboutPage() {
@@ -35,10 +35,10 @@ export default function AboutPage() {
           <div className="max-w-2xl">
             <p className="text-gold-500 text-sm font-medium tracking-widest uppercase mb-4">About Us</p>
             <h1 className="font-display font-bold text-5xl text-white mb-6 leading-tight">
-              Our Story, Mission &amp; <span className="gold-text">Values</span>
+              Premium Rice-First <span className="gold-text">Agricultural Exporter</span>
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed">
-              Deekshi Global Exim was born from a passion for bringing India&apos;s finest agricultural produce to international tables with uncompromising quality and integrity.
+              Deekshi Global Exim connects India&apos;s finest rice and agricultural produce - sourced directly from the fertile fields of Andhra Pradesh and Telangana - to international markets with uncompromising quality.
             </p>
           </div>
         </div>
@@ -54,19 +54,19 @@ export default function AboutPage() {
               </h2>
               <div className="gold-divider mb-6" />
               <p className="text-gray-600 leading-relaxed mb-5">
-                Deekshi Global Exim is a certified Import &amp; Export company headquartered in Warangal, Telangana, India. We are dedicated to bridging the gap between India&apos;s rich agricultural heritage and the growing global demand for premium, authentic Indian food products.
+                Deekshi Global Exim is a certified Import &amp; Export company headquartered in Warangal, Telangana, India. We specialize in premium rice exports - particularly Sona Masoori Rice sourced from the heartland of Andhra Pradesh and Telangana - alongside spices, fresh fruits, and vegetables.
               </p>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Our expertise spans fresh fruits, vegetables, premium rice varieties, and a comprehensive range of Indian spices. We work directly with farmers and agricultural cooperatives across India to source the freshest, highest-quality produce for international markets.
+                Our deep sourcing networks across Andhra Pradesh and Telangana give us direct access to India&apos;s finest rice-growing regions. We work closely with farmers and cooperatives to secure the best Sona Masoori, Basmati, and specialty rice varieties at competitive prices while maintaining strict quality standards.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
-                With all mandatory certifications including APEDA, IEC, FSSAI Central License, GST, and ICEGATE registration, we ensure every export is fully compliant with Indian and international trade regulations.
+                With all mandatory certifications including APEDA, IEC, FSSAI Central License, GST, and ICEGATE registration, we ensure every export is fully compliant with Indian and international trade regulations - giving buyers complete confidence in their sourcing.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { label: 'Established', value: '2022' },
                   { label: 'Location', value: 'Warangal, India' },
-                  { label: 'Products', value: '25+ Varieties' },
+                  { label: 'Monthly Capacity', value: '500+ Tons' },
                   { label: 'Certifications', value: '5 Active' },
                 ].map(item => (
                   <div key={item.label} className="p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
@@ -85,16 +85,60 @@ export default function AboutPage() {
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-gold-500 rounded-2xl p-5 shadow-xl">
-                <div className="text-navy-950 font-display font-bold text-2xl">100%</div>
-                <div className="text-navy-950/80 text-sm font-medium">Quality Assured</div>
+                <div className="text-navy-950 font-display font-bold text-2xl">500+</div>
+                <div className="text-navy-950/80 text-sm font-medium">Tons/Month</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Rice Export Excellence */}
       <section className="section-pad bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { title: 'Sona Masoori Rice', desc: 'Premium medium-grain rice from AP and Telangana, known for its lightweight texture and aromatic quality.' },
+                  { title: 'Basmati Rice', desc: 'Long-grain aromatic rice with exceptional flavor, sourced from India\'s finest growing regions.' },
+                  { title: 'Direct Farm Sourcing', desc: 'Established partnerships with rice farmers and cooperatives across Andhra Pradesh and Telangana.' },
+                  { title: 'Quality Assurance', desc: 'Multi-stage inspection for grain length, moisture content, broken percentage, and foreign matter.' },
+                ].map(item => (
+                  <div key={item.title} className="p-5 rounded-2xl border border-gray-100 bg-off-white shadow-sm group hover:border-gold-500/30 hover:shadow-premium transition-all">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CheckCircle2 size={16} className="text-gold-500" />
+                      <h4 className="font-display font-semibold text-navy-950 text-sm">{item.title}</h4>
+                    </div>
+                    <p className="text-gray-600 text-xs leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/10 border border-gold-500/30 rounded-full text-gold-600 text-sm font-medium mb-4">
+                <Wheat size={14} /> Core Expertise
+              </div>
+              <h2 className="font-display font-bold text-4xl text-navy-950 mb-6">
+                Rice Export <span className="gold-text">Excellence</span>
+              </h2>
+              <div className="gold-divider mb-6" />
+              <p className="text-gray-600 leading-relaxed mb-5">
+                Rice is at the heart of our export business. With Andhra Pradesh and Telangana being two of India&apos;s largest rice-producing states, our location in Warangal gives us a strategic advantage in sourcing the finest Sona Masoori and other premium rice varieties.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-5">
+                Our team has deep knowledge of rice grading, processing standards, and international packaging requirements. Whether you need 20-ton container loads of Sona Masoori for the Middle East or specialty Basmati for premium retail markets, we deliver consistent quality with full traceability.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Every rice shipment is backed by APEDA certification, phytosanitary compliance, and comprehensive documentation - ensuring hassle-free customs clearance at your destination port.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="section-pad bg-off-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-8 rounded-2xl bg-navy-950 border border-gold-500/20">
@@ -104,17 +148,17 @@ export default function AboutPage() {
               <h3 className="font-display font-bold text-2xl text-white mb-4">Our Mission</h3>
               <div className="gold-divider mb-5" />
               <p className="text-gray-400 leading-relaxed">
-                To connect India&apos;s finest agricultural producers with global buyers by delivering premium quality products with full regulatory compliance, transparent business practices, and exceptional service — making Indian agricultural exports synonymous with trust and excellence.
+                To be India&apos;s most reliable rice and agricultural export partner - connecting the fertile farmlands of Andhra Pradesh and Telangana with international buyers through premium quality products, full regulatory compliance, and transparent business practices.
               </p>
             </div>
-            <div className="p-8 rounded-2xl bg-off-white border border-gold-500/20">
+            <div className="p-8 rounded-2xl bg-white border border-gold-500/20">
               <div className="w-12 h-12 rounded-xl bg-navy-950 flex items-center justify-center mb-5">
                 <Eye size={24} className="text-gold-500" />
               </div>
               <h3 className="font-display font-bold text-2xl text-navy-950 mb-4">Our Vision</h3>
               <div className="gold-divider mb-5" />
               <p className="text-gray-600 leading-relaxed">
-                To become India&apos;s most trusted and recognized agricultural export brand — known globally for quality, reliability, and deep agricultural expertise — while contributing to farmer prosperity and sustainable agricultural development in India.
+                To become India&apos;s most trusted rice export brand - known globally for Sona Masoori quality, reliable bulk supply, and deep agricultural expertise - while contributing to farmer prosperity in Andhra Pradesh and Telangana.
               </p>
             </div>
           </div>
@@ -122,7 +166,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="section-pad bg-off-white">
+      <section className="section-pad bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="font-display font-bold text-4xl text-navy-950 mb-4">
@@ -132,7 +176,7 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {values.map(v => (
-              <div key={v.title} className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm card-hover text-center group">
+              <div key={v.title} className="p-6 bg-off-white rounded-2xl border border-gray-100 shadow-sm card-hover text-center group">
                 <div className="text-4xl mb-4">{v.icon}</div>
                 <h3 className="font-display font-semibold text-lg text-navy-950 mb-3 group-hover:text-gold-600 transition-colors">{v.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{v.desc}</p>
@@ -182,7 +226,7 @@ export default function AboutPage() {
             Let&apos;s Build a Partnership
           </h2>
           <p className="text-navy-900/80 text-lg mb-8">
-            Reach out to our team and let&apos;s discuss how we can serve your import needs.
+            Whether you need premium Sona Masoori Rice or a full range of Indian agricultural products, our team is ready to serve your import needs.
           </p>
           <Link href="/contact" className="inline-flex items-center gap-2 px-9 py-4 bg-navy-950 text-white font-bold rounded-xl hover:bg-navy-900 transition-colors group">
             Contact Us Today
