@@ -23,6 +23,15 @@ export const metadata: Metadata = {
     'Indian Basmati Rice Exporter',
     'Indian Spices Export',
   ],
+  icons: {
+    icon: [
+      { url: '/logo.png', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/logo.png', sizes: '180x180' },
+    ],
+    shortcut: '/logo.png',
+  },
   authors: [{ name: 'Deekshi Global Exim' }],
   creator: 'Deekshi Global Exim',
   openGraph: {

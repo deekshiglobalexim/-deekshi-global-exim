@@ -112,6 +112,37 @@ img {
   image-rendering: high-quality;
 }
 
+/* Logo gold glow hover effect */
+.logo-glow {
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.logo-glow:hover {
+  box-shadow:
+    0 0 16px rgba(212, 175, 55, 0.4),
+    0 0 32px rgba(212, 175, 55, 0.2),
+    0 0 48px rgba(212, 175, 55, 0.1);
+  transform: scale(1.04);
+}
+
+/* Hero logo pulse glow animation */
+@keyframes logo-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(212, 175, 55, 0.3),
+      0 0 40px rgba(212, 175, 55, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 28px rgba(212, 175, 55, 0.45),
+      0 0 56px rgba(212, 175, 55, 0.2);
+  }
+}
+
+.logo-hero-glow {
+  animation: logo-pulse 3s ease-in-out infinite;
+}
+
 .premium-image {
   filter: contrast(1.08) brightness(1.02) saturate(1.15);
   border-radius: 12px;

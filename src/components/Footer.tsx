@@ -13,8 +13,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-4 mb-5">
-              <div className="relative w-16 h-16 rounded-full overflow-hidden bg-white ring-2 ring-gold-500 shadow-lg shadow-gold-500/30">
-                <Image src="/logo-mark.png" alt="Deekshi Global Exim" fill sizes="64px" className="object-contain p-1 logo-mark" quality={100} />
+              <div className="relative w-20 h-20 rounded-full overflow-hidden bg-white ring-2 ring-gold-500 shadow-lg shadow-gold-500/30 logo-glow">
+                <Image src="/logo-mark.png" alt="Deekshi Global Exim" fill sizes="80px" className="object-contain p-1 logo-mark" quality={100} />
               </div>
               <div>
                 <div className="font-display font-bold text-xl">DEEKSHI <span className="gold-text">GLOBAL</span></div>

@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, Globe, Shield, Truck } from 'lucide-react'
 
 export default function HeroSection() {
@@ -24,6 +25,13 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
         <div>
+          {/* Prominent Logo */}
+          <div className="mb-8">
+            <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden bg-white ring-2 ring-gold-500 shadow-xl shadow-gold-500/30 logo-hero-glow">
+              <Image src="/logo-mark.png" alt="Deekshi Global Exim" fill sizes="(max-width: 768px) 112px, 128px" className="object-contain p-1.5 logo-mark" priority quality={100} />
+            </div>
+          </div>
+
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-sm font-medium mb-8">
             <Globe size={14} />
             Warangal, India → Global Markets
