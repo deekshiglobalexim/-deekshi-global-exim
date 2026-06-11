@@ -14,17 +14,17 @@ const categories = [
     products: [
       {
         name: 'Sona Masoori Rice',
-        desc: 'Premium medium-grain rice known for its lightweight texture and excellent cooking quality. Available in bulk supply with export-grade packaging for international buyers.',
+        desc: 'Premium medium-grain rice known for its lightweight texture and excellent cooking quality. Low glycemic index with excellent cooking yield. Available in bulk supply with export-grade packaging.',
         img: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=90',
       },
       {
         name: 'Basmati Rice',
-        desc: 'Long-grain aromatic rice with exceptional elongation and flavor. Meets international food safety and quality standards.',
+        desc: 'Long-grain aromatic rice with exceptional elongation and flavor. Available in 1121, PUSA, and Traditional varieties. Meets international food safety and quality standards.',
         img: 'https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?w=800&q=90',
       },
       {
         name: 'Non-Basmati Rice',
-        desc: 'Versatile rice varieties including IR-64, Parboiled, and Swarna. Competitively priced for bulk procurement with consistent grain quality and phytosanitary certification.',
+        desc: 'Versatile rice varieties for bulk procurement with consistent grain quality. Available in IR-64, Parboiled, Broken, and Swarna varieties. Competitively priced with phytosanitary certification.',
         img: 'https://images.unsplash.com/photo-1550358864-518f202c02ba?w=800&q=90',
       },
     ],
@@ -93,17 +93,17 @@ const categories = [
     products: [
       {
         name: 'Red Chilli',
-        desc: 'Premium red chillies with intense natural color and high ASTA values. Available in whole dried, crushed flakes, and fine powder forms with aflatoxin compliance.',
+        desc: 'Premium red chillies with intense natural color and ASTA values ranging 80-300. Available in whole dried, crushed flakes, and fine powder forms with aflatoxin compliance.',
         img: 'https://images.unsplash.com/photo-1596547609652-9cf5d8c10616?w=800&q=90',
       },
       {
         name: 'Turmeric',
-        desc: 'High-curcumin turmeric available in polished fingers and fine powder forms. Each shipment includes a certificate of analysis for curcumin content and residue testing.',
+        desc: 'High-curcumin turmeric with curcumin content 3-7%, available in polished fingers and fine powder forms. Each shipment includes a certificate of analysis for curcumin content and residue testing.',
         img: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=800&q=90',
       },
       {
         name: 'Black Pepper',
-        desc: 'Premium grade black pepper with high piperine content. Bold, uniform berries sorted and graded to FAQ/ASTA standards with steam sterilization.',
+        desc: 'Premium grade black pepper with piperine content 4-9%. Bold, uniform berries sorted and graded to FAQ/ASTA standards with steam sterilization.',
         img: 'https://images.unsplash.com/photo-1599909533601-aa539e4e2a7e?w=800&q=90',
       },
       {

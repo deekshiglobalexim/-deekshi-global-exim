@@ -26,7 +26,7 @@ const categories = [
   {
     name: 'Dehydrated Products',
     desc: 'Garlic powder, onion powder, and other dehydrated ingredients',
-    img: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&q=90',
+    img: 'https://images.unsplash.com/photo-1540148426945-6cf22a6b2571?w=600&q=90',
   },
 ]
 
