@@ -1,0 +1,37 @@
+{
+  "id": "FEAT-001",
+  "type": "feat",
+  "description": "Overhaul the color palette to a richer, more global and premium feel. Update both tailwind.config.ts color scales and globals.css CSS custom properties and utility classes. The new palette should use deeper, more sophisticated navy tones inspired by the logo (#0F2D4A, #1B3A5C), warmer and more luxurious gold/amber tones inspired by the logo arc (#C68A2E to #D4A032), and introduce a platinum/silver accent as a tertiary color for subtle highlights. Update all gradient definitions, shadow colors, glow effects, and decorative utilities to use the new richer palette.",
+  "status": "in_progress",
+  "steps": [
+    "Step 1 - Update tailwind.config.ts navy color scale: Replace the current navy scale with a deeper, more sophisticated range anchored on the logo's navy tones. New anchors: 950 should be ~#091E33 (very deep midnight), 900 should be ~#0F2D4A (logo dark navy outline), 800 should be ~#153D5E, 700 should be ~#1B4D72, 600 should be ~#1B3A5C (logo text navy), 500 should be ~#2A5F8F, lighter shades adjusted proportionally. The scale should feel richer and more luxurious than the current one.",
+    "Step 2 - Update tailwind.config.ts gold color scale: Replace the current gold with a warmer amber/champagne range. New anchors: 700 should be ~#8B5E14 (deep amber), 600 should be ~#A67321 (rich amber), 500 should be ~#C68A2E (logo gold - primary), 400 should be ~#D4A032 (logo lighter gold), 300 should be ~#E8C66A (champagne), add 200 at ~#F2DDA0 (pale champagne), add 100 at ~#FAF0D4 (cream). This makes the gold feel warmer and more luxurious.",
+    "Step 3 - Add a platinum/silver accent color scale to tailwind.config.ts for tertiary highlights: platinum: { 100: '#F8F9FA', 200: '#E9ECEF', 300: '#DEE2E6', 400: '#CED4DA', 500: '#ADB5BD', 600: '#6C757D' }. This adds a cool metallic accent that complements the warm gold.",
+    "Step 4 - Update tailwind.config.ts backgroundImage gradients: Change 'gold-gradient' to use the new warmer gold values (#C68A2E, #E8C66A, #A67321). Change 'navy-gradient' to use the deeper navy values (#091E33, #0F2D4A). Change 'hero-gradient' to use the new deep navy with subtle blue undertones for more depth.",
+    "Step 5 - Update tailwind.config.ts boxShadow values: Update 'premium', 'premium-lg', 'gold-glow', 'gold-glow-lg' shadow definitions to use the new navy and gold hex values for a richer shadow feel.",
+    "Step 6 - Update tailwind.config.ts keyframes: Update all rgba(212,175,55,...) references in pulseGold, glowPulse keyframes to use the new gold primary color rgba(198,138,46,...) for consistency.",
+    "Step 7 - Update globals.css :root CSS custom properties: Change --navy to #0F2D4A, --navy-dark to #091E33, --navy-light to #1B4D72, --gold to #C68A2E, --gold-dark to #A67321, --gold-light to #E8C66A. Add --platinum: #ADB5BD and --cream: #FAF0D4.",
+    "Step 8 - Update globals.css .gold-text gradient: Change to use new gold values: linear-gradient(135deg, #C68A2E 0%, #E8C66A 50%, #A67321 100%).",
+    "Step 9 - Update globals.css .gold-divider gradient: Change to linear-gradient(90deg, #C68A2E, #E8C66A, #A67321).",
+    "Step 10 - Update globals.css .shimmer-btn: Change to use new gold (#C68A2E, #D4A032, #C68A2E).",
+    "Step 11 - Update globals.css .dots-bg: Change rgba(212,175,55,...) to rgba(198,138,46,0.12) for subtler dots.",
+    "Step 12 - Update globals.css all box-shadow and rgba references that use the old navy (11, 46, 79) to the new navy values (15, 45, 74) and old gold (212, 175, 55) to new gold (198, 138, 46) throughout all utility classes (.premium-image, .shadow-premium, .card-premium, .btn-premium, .logo-glow, .logo-hero-glow, etc.).",
+    "Step 13 - Update globals.css .gradient-text-premium and .responsive-image-container and .divider-premium to use new gold hex values.",
+    "Step 14 - Update globals.css .product-card-image background gradient to use new gold values."
+  ],
+  "acceptance_criteria": [
+    "tailwind.config.ts has updated navy scale with deeper values anchored on #0F2D4A and #091E33",
+    "tailwind.config.ts has updated gold scale with warmer amber values anchored on #C68A2E",
+    "tailwind.config.ts has a new platinum color scale",
+    "globals.css :root variables use the new color values",
+    "All gradient, shadow, and glow utility classes in globals.css use the new color values consistently",
+    "No references to the old #D4AF37 or #0B2E4F remain in tailwind.config.ts or globals.css",
+    "npm run build completes successfully with zero errors"
+  ],
+  "verification": [
+    "Run `npm run build` in /projects/sandbox/deekshi-global-exim and confirm it completes with exit code 0",
+    "Grep for old color values #D4AF37 and #0B2E4F in tailwind.config.ts and globals.css to confirm they are fully replaced"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

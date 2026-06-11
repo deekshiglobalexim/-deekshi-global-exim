@@ -1,0 +1,26 @@
+{
+  "project_type": "Next.js 16 website with Tailwind CSS 3.4, Framer Motion 11.3",
+  "language": "TypeScript/TSX",
+  "build_system": "npm with next build",
+  "test_framework": "No test framework configured",
+  "build_command": "npm run build",
+  "test_command": null,
+  "verification_instructions": "Run npm run build from /projects/sandbox/deekshi-global-exim and confirm zero errors",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "cd /projects/sandbox/deekshi-global-exim && npm install",
+  "environment_constraints": "OPEN_INTERNET - full network access available",
+  "contribution_requirements": "Commit on main branch, do not push",
+  "key_patterns": "Colors are defined in two places: tailwind.config.ts (navy 50-950 scale and gold 300-700 scale) and src/app/globals.css (CSS custom properties --navy, --gold, etc. plus utility classes like .gold-text, .gold-divider, .shimmer-btn). Many components reference these colors directly via Tailwind classes (navy-950, gold-500, gold-300, etc.) and via CSS custom properties in globals.css. The current palette is navy (#0B2E4F) + gold (#D4AF37). The logo colors are: deep navy ~#1B3A5C, rich gold/amber gradient ~#C68A2E to ~#D4A032, dark navy outline ~#0F2D4A.",
+  "relevant_files": [
+    "tailwind.config.ts",
+    "src/app/globals.css",
+    "src/components/Navbar.tsx",
+    "src/components/Footer.tsx",
+    "src/components/sections/HeroSection.tsx",
+    "src/components/sections/CtaBanner.tsx",
+    "src/components/sections/WhyChooseUs.tsx",
+    "src/components/sections/AboutPreview.tsx",
+    "src/components/sections/StatsSection.tsx"
+  ],
+  "directory_structure": "src/app/ contains pages (page.tsx, about/page.tsx, products/page.tsx, etc.), globals.css, layout.tsx. src/components/ contains Navbar.tsx, Footer.tsx, ContactForm.tsx, ScrollToTop.tsx. src/components/sections/ contains all homepage sections (HeroSection, FeaturedProducts, etc.). public/ has logo.png and logo-mark.png. tailwind.config.ts at root."
+}

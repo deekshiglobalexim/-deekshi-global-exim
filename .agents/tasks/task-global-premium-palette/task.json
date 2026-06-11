@@ -1,0 +1,7 @@
+{
+  "task_id": "task-global-premium-palette",
+  "task_description": "Overhaul the website color palette to look more global and premium, using richer navy tones, warmer gold/amber tones inspired by the logo, and adding a platinum tertiary accent. Update both tailwind.config.ts and globals.css comprehensively.",
+  "status": "in_progress",
+  "feature_order": ["FEAT-001"],
+  "blocked_reason": null
+}
