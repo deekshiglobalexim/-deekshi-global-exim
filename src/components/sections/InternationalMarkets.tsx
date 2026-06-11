@@ -60,13 +60,13 @@ export default function InternationalMarkets() {
             <motion.div
               key={market.name}
               variants={itemVariants}
-              className="relative card-premium shadow-premium-lg p-7 border border-gold-500/25 bg-gradient-to-br from-white/10 to-white/5 text-center group hover:border-gold-500/50 hover:shadow-gold-glow transition-all duration-300"
+              className="relative rounded-2xl p-7 border border-gold-500/30 bg-navy-900/80 backdrop-blur-sm text-center group hover:border-gold-500/60 hover:bg-navy-800/90 transition-all duration-300 shadow-lg"
             >
               <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-gold-500/20 to-gold-500/10 border border-gold-500/40 flex items-center justify-center group-hover:from-gold-500/30 group-hover:to-gold-500/20 transition-all duration-300 shadow-lg shadow-gold-500/10">
                 <MapPin size={22} className="text-gold-400" />
               </div>
-              <h3 className="text-white font-display font-semibold text-lg mb-2 tracking-wide">{market.name}</h3>
-              <p className="text-gray-400 text-sm">{market.region}</p>
+              <h3 className="text-white font-display font-bold text-xl mb-2">{market.name}</h3>
+              <p className="text-gold-300 text-sm font-medium">{market.region}</p>
 
               {/* Bottom glow */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-gold-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
