@@ -11,6 +11,9 @@ const markets = [
   { name: 'Bahrain', region: 'Middle East' },
   { name: 'Singapore', region: 'Southeast Asia' },
   { name: 'Malaysia', region: 'Southeast Asia' },
+  { name: 'Vietnam', region: 'Southeast Asia' },
+  { name: 'UK', region: 'Europe' },
+  { name: 'USA', region: 'North America' },
   { name: 'Europe', region: 'European Union' },
 ]
 
@@ -45,7 +48,7 @@ export default function InternationalMarkets() {
           </h2>
           <div className="gold-divider mx-auto" />
           <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
-            Deekshi Global Exim delivers premium Indian agricultural products to buyers across the Middle East, Southeast Asia, and Europe with reliable logistics and full compliance.
+            Deekshi Global Exim delivers premium Indian agricultural products to buyers across the Middle East, Southeast Asia, Europe, UK, USA, and Vietnam with reliable logistics and full compliance.
           </p>
         </div>
 
