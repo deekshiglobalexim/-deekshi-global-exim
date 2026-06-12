@@ -1,38 +1,79 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const categories = [
   {
-    name: 'Rice',
-    desc: 'Premium Basmati and Non-Basmati varieties for international markets',
-    img: '/products/sona-masoori.jpg',
+    num: '01',
+    name: 'Basmati Rice',
+    color: 'bg-blue-600',
+    desc: 'Highly preferred for aroma, long grains and taste. Widely used in biryani, mandi and daily meals.',
+    img: '/products/basmati.jpg',
+    href: '/products#rice',
   },
   {
-    name: 'Fruits',
-    desc: 'Fresh seasonal fruits including mangoes, grapes, and pomegranates',
+    num: '02',
+    name: 'Indian Spices',
+    color: 'bg-orange-500',
+    desc: 'High demand for spices like turmeric, cumin, chilli, coriander, cardamom, black pepper and more.',
+    img: '/products/turmeric.jpg',
+    href: '/products#spices',
+  },
+  {
+    num: '03',
+    name: 'Fresh Fruits',
+    color: 'bg-pink-500',
+    desc: 'Popular fruits include mango, pomegranate, grapes, banana, and more for international markets.',
     img: '/products/mango.jpg',
+    href: '/products#fruits',
   },
   {
-    name: 'Vegetables',
-    desc: 'Export-grade onions, potatoes, and other fresh vegetables',
-    img: '/products/onion.jpg',
+    num: '04',
+    name: 'Fresh Vegetables',
+    color: 'bg-green-600',
+    desc: 'High imports of onion, potato, tomato, okra, green chilli, drumstick and other vegetables.',
+    img: '/products/green-chilli.jpg',
+    href: '/products#vegetables',
   },
   {
-    name: 'Spices',
-    desc: 'Red chilli, turmeric, black pepper, and cardamom',
-    img: '/products/coriander.jpg',
+    num: '05',
+    name: 'Maize & Grains',
+    color: 'bg-purple-600',
+    desc: 'Premium quality maize and grain varieties sourced from Indian farms for bulk export worldwide.',
+    img: 'https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&q=90',
+    href: '/products#rice',
   },
   {
+    num: '06',
     name: 'Dehydrated Products',
-    desc: 'Garlic powder, onion powder, and other dehydrated ingredients',
+    color: 'bg-amber-600',
+    desc: 'Garlic powder, onion powder, and other dehydrated ingredients for food processing and seasoning.',
     img: '/products/garlic-powder.jpg',
+    href: '/products#dehydrated',
   },
 ]
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.1 },
+  },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] },
+  },
+}
+
 export default function FeaturedProducts() {
   return (
-    <section className="section-pad bg-off-white">
+    <section className="section-pad bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/10 border border-gold-500/30 rounded-full text-gold-600 text-sm font-medium mb-4">
@@ -47,37 +88,51 @@ export default function FeaturedProducts() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {categories.map(category => (
-            <Link key={category.name} href="/products" className="card-premium shadow-premium-lg group border border-gray-100 overflow-hidden hover:border-gold-500/40 hover:-translate-y-1 transition-all duration-500">
-              {/* Image */}
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src={category.img}
-                  alt={category.name}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  quality={90}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <h3 className="font-display font-bold text-2xl text-white">{category.name}</h3>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-10"
+        >
+          {categories.map((category) => (
+            <motion.div key={category.name} variants={cardVariants}>
+              <Link
+                href={category.href}
+                className="block bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group h-full"
+              >
+                {/* Header with number and name */}
+                <div className={`${category.color} px-4 py-3 flex items-center gap-3`}>
+                  <span className="text-white font-bold text-lg">{category.num}</span>
+                  <h3 className="text-white font-display font-bold text-sm uppercase tracking-wide">
+                    {category.name}
+                  </h3>
                 </div>
-              </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{category.desc}</p>
-                <span className="inline-flex items-center gap-1 text-gold-600 text-sm font-semibold group-hover:gap-2 transition-all">
-                  View Products <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                </span>
-              </div>
-            </Link>
+                {/* Image */}
+                <div className="relative aspect-square overflow-hidden bg-gray-50">
+                  <Image
+                    src={category.img}
+                    alt={category.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    quality={85}
+                  />
+                </div>
+
+                {/* Description */}
+                <div className="p-4">
+                  <p className="text-gray-600 text-sm leading-relaxed text-center">
+                    {category.desc}
+                  </p>
+                </div>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <div className="text-center">
-          <Link href="/products" className="inline-flex items-center gap-2 px-8 py-4 btn-premium bg-navy-950 text-white font-bold text-base rounded-xl hover:text-gold-400 transition-all duration-300 relative z-10">
+          <Link href="/products" className="inline-flex items-center gap-2 px-8 py-4 bg-navy-950 text-white font-bold text-base rounded-xl hover:bg-navy-900 transition-all duration-300 shadow-lg">
             View All Products
             <ArrowRight size={18} />
           </Link>
