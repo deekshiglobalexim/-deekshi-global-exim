@@ -2,48 +2,78 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Shield } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from 'react'
+
+const heroImages = [
+  { src: '/products/sona-masoori.jpg', label: 'Premium Sona Masoori Rice' },
+  { src: '/products/mango.jpg', label: 'Export Grade Mangoes' },
+  { src: '/products/pomegranate.jpg', label: 'Fresh Pomegranates' },
+  { src: '/products/basmati.jpg', label: 'Aromatic Basmati Rice' },
+  { src: '/products/onion.jpg', label: 'Red Onions - Bulk Supply' },
+  { src: '/products/turmeric.jpg', label: 'High-Curcumin Turmeric' },
+  { src: '/products/green-chilli.jpg', label: 'Fresh Green Chillies' },
+  { src: '/products/grapes.jpg', label: 'Seedless Grapes' },
+  { src: '/products/black-pepper.jpg', label: 'Black Pepper' },
+  { src: '/products/red-chilli.jpg', label: 'Red Chilli - ASTA Grade' },
+]
 
 export default function HeroSection() {
+  const [currentImage, setCurrentImage] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-navy-950">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <Image
-          src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=85"
-          alt="Global trade background"
-          fill
-          className="object-cover"
-          priority
-          quality={85}
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source
+            src="https://videos.pexels.com/video-files/2519660/2519660-uhd_2560_1440_25fps.mp4"
+            type="video/mp4"
+          />
+        </video>
         {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-navy-950/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/70 to-navy-950/40" />
-        {/* Subtle gold accent glow */}
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-gold-500/8 rounded-full blur-2xl" />
+        <div className="absolute inset-0 bg-navy-950/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/60 to-navy-950/30" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-4">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/10 border border-gold-500/30 rounded-full text-gold-400 text-sm font-medium mb-6"
+          >
+            <span className="w-2 h-2 bg-gold-500 rounded-full animate-pulse" />
+            India&apos;s Trusted Export Partner Since 2022
+          </motion.div>
+
+          <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
             Trusted{' '}
             <span className="gold-text">Global Export</span>{' '}
             Partner
           </h1>
 
-          <p className="text-gold-300 text-xl lg:text-2xl font-display font-medium mb-6 max-w-xl">
-            Premium Indian Agricultural Products for International Markets
-          </p>
-
-          <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-xl">
-            Deekshi Global Exim exports premium rice, fresh fruits, vegetables, spices, and dehydrated products to buyers worldwide with full compliance and reliable logistics.
+          <p className="text-gray-300 text-lg lg:text-xl leading-relaxed mb-10 max-w-xl">
+            Premium Indian rice, fresh fruits, vegetables, spices & dehydrated products — exported worldwide with full compliance and reliable logistics.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-12">
@@ -74,31 +104,92 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Right - Hero image card */}
+        {/* Right - Auto-rotating product showcase */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="hidden lg:block"
         >
-          <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl border border-gold-500/20">
-            <Image
-              src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=90"
-              alt="Global agricultural trade and exports"
-              fill
-              className="object-cover"
-              quality={90}
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent" />
-            {/* Overlay badge */}
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-                <p className="text-white font-semibold text-sm">
-                  🌍 Exporting to <span className="text-gold-400">15+ Countries</span> Worldwide
-                </p>
+          <div className="relative">
+            {/* Main rotating image */}
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl border-2 border-gold-500/30">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentImage}
+                  initial={{ opacity: 0, scale: 1.1 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.7 }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={heroImages[currentImage].src}
+                    alt={heroImages[currentImage].label}
+                    fill
+                    className="object-cover"
+                    quality={90}
+                    priority
+                  />
+                </motion.div>
+              </AnimatePresence>
+              
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+              
+              {/* Product label */}
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentImage}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.4 }}
+                    className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20"
+                  >
+                    <p className="text-white font-bold text-lg">
+                      {heroImages[currentImage].label}
+                    </p>
+                    <p className="text-gold-400 text-sm font-medium">Export Quality · Bulk Supply Available</p>
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </div>
+
+            {/* Image indicators */}
+            <div className="flex justify-center gap-2 mt-4">
+              {heroImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImage(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentImage
+                      ? 'bg-gold-500 w-6'
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Floating stats badge */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              className="absolute -top-4 -right-4 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-gold-500/30 shadow-lg"
+            >
+              <p className="text-gold-500 font-bold text-2xl">15+</p>
+              <p className="text-white/80 text-xs">Countries</p>
+            </motion.div>
+
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+              className="absolute -bottom-2 -left-4 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-gold-500/30 shadow-lg"
+            >
+              <p className="text-gold-500 font-bold text-2xl">500+</p>
+              <p className="text-white/80 text-xs">Tons/Month</p>
+            </motion.div>
           </div>
         </motion.div>
       </div>
