@@ -158,7 +158,7 @@ export default function AboutPage() {
               <h3 className="font-display font-bold text-2xl text-navy-950 mb-4">Our Vision</h3>
               <div className="gold-divider mb-5" />
               <p className="text-gray-600 leading-relaxed">
-                To become India&apos;s most trusted rice export brand - known globally for Sona Masoori quality, reliable bulk supply, and deep agricultural expertise - while contributing to farmer prosperity across India.
+                To become India&apos;s most trusted agriculture products export brand - known globally for Sona Masoori quality, reliable bulk supply, and deep agricultural expertise - while contributing to farmer prosperity across India.
               </p>
             </div>
           </div>
