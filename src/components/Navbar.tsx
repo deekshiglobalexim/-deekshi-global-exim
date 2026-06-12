@@ -51,9 +51,6 @@ export default function Navbar() {
               deekshiglobalexim@gmail.com
             </a>
           </div>
-          <div className="text-gold-500 font-medium tracking-wider text-xs">
-            IEC REGISTERED · APEDA CERTIFIED · FSSAI LICENSED
-          </div>
         </div>
       </div>
 
