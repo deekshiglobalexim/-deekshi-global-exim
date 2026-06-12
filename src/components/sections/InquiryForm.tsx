@@ -149,7 +149,7 @@ export default function InquiryForm() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Phone</p>
-                  <p className="text-white font-medium">+91 98765 43210</p>
+                  <p className="text-white font-medium">+91 9493928088</p>
                 </div>
               </div>
 
@@ -159,7 +159,7 @@ export default function InquiryForm() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Email</p>
-                  <p className="text-white font-medium">export@deekshiglobal.com</p>
+                  <p className="text-white font-medium">deekshiglobalexim@gmail.com</p>
                 </div>
               </div>
 
@@ -169,7 +169,7 @@ export default function InquiryForm() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Address</p>
-                  <p className="text-white font-medium">Hyderabad, Telangana, India</p>
+                  <p className="text-white font-medium">Warangal, Telangana, India</p>
                 </div>
               </div>
             </motion.div>
