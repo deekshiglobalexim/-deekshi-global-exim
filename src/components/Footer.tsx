@@ -12,9 +12,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-4 mb-5">
-              <div className="relative w-20 h-20 rounded-full overflow-hidden bg-white ring-2 ring-gold-500 shadow-lg shadow-gold-500/30 logo-glow">
-                <Image src="/logo-mark.png" alt="Deekshi Global Exim" fill sizes="80px" className="object-contain scale-[1.15]" unoptimized />
+            <Link href="/" className="flex items-center gap-3 mb-5">
+              <div className="relative w-14 h-14">
+                <Image src="/logo-mark.png" alt="Deekshi Global Exim" fill sizes="56px" className="object-contain drop-shadow-lg" unoptimized />
               </div>
               <div>
                 <div className="font-display font-bold text-xl">DEEKSHI <span className="gold-text">GLOBAL</span></div>
