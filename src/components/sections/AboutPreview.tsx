@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 
 const highlights = [
-  'Certified Exporter (IEC, APEDA, FSSAI)',
+  'Certified Exporter (IEC, APEDA, FSSAI, GST)',
   'Premium Quality Products',
   'Global Market Reach',
   'Full Compliance & Documentation',
