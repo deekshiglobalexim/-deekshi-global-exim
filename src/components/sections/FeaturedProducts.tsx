@@ -93,7 +93,7 @@ export default function FeaturedProducts() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-10"
+          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-10"
         >
           {categories.map((category) => (
             <motion.div key={category.name} variants={cardVariants}>
@@ -102,9 +102,9 @@ export default function FeaturedProducts() {
                 className="block bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group h-full"
               >
                 {/* Header with number and name */}
-                <div className={`${category.color} px-4 py-3 flex items-center gap-3`}>
-                  <span className="text-white font-bold text-lg">{category.num}</span>
-                  <h3 className="text-white font-display font-bold text-sm uppercase tracking-wide">
+                <div className={`${category.color} px-3 py-2 sm:px-4 sm:py-3 flex items-center gap-2 sm:gap-3`}>
+                  <span className="text-white font-bold text-base sm:text-lg">{category.num}</span>
+                  <h3 className="text-white font-display font-bold text-xs sm:text-sm uppercase tracking-wide">
                     {category.name}
                   </h3>
                 </div>
@@ -121,8 +121,8 @@ export default function FeaturedProducts() {
                 </div>
 
                 {/* Description */}
-                <div className="p-4">
-                  <p className="text-gray-600 text-sm leading-relaxed text-center">
+                <div className="p-3 sm:p-4">
+                  <p className="text-gray-600 text-xs sm:text-sm leading-relaxed text-center">
                     {category.desc}
                   </p>
                 </div>
