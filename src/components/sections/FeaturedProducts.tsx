@@ -50,7 +50,7 @@ const categories = [
     name: 'Dehydrated Products',
     color: 'bg-amber-600',
     desc: 'Garlic powder, onion powder, and other dehydrated ingredients for food processing and seasoning.',
-    img: 'https://images.unsplash.com/photo-1599909533601-aa23d3ac4845?w=800&q=90',
+    img: 'https://images.unsplash.com/photo-1638274774905-e0b6f7e5e42a?w=800&q=90',
     href: '/products#dehydrated',
   },
 ]
