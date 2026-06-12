@@ -57,20 +57,20 @@ export default function Navbar() {
       {/* Main Navbar */}
       <nav className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-navy-950/98 backdrop-blur-md shadow-premium shadow-navy-950/40'
-          : 'bg-navy-950'
+          ? 'bg-white shadow-lg'
+          : 'bg-white'
       }`}>
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-[52px] h-[52px] rounded-full bg-white p-[3px] shadow-md flex-shrink-0">
-              <img src="/logo-mark.png" alt="Deekshi Global Exim" className="w-full h-full object-contain rounded-full" />
+            <div className="w-[52px] h-[52px] flex-shrink-0">
+              <img src="/logo-mark.png" alt="Deekshi Global Exim" className="w-full h-full object-contain" />
             </div>
             <div className="hidden sm:block">
-              <div className="text-white font-display font-bold text-xl leading-tight group-hover:text-gold-300 transition-colors duration-300">
-                DEEKSHI <span className="gold-text">GLOBAL</span>
+              <div className="text-navy-950 font-display font-bold text-xl leading-tight group-hover:text-gold-600 transition-colors duration-300">
+                DEEKSHI <span className="text-gold-600">GLOBAL</span>
               </div>
-              <div className="text-gold-500 text-xs tracking-[0.3em] font-semibold group-hover:text-gold-300 transition-colors duration-300">EXIM</div>
+              <div className="text-gold-600 text-xs tracking-[0.3em] font-semibold">EXIM</div>
             </div>
           </Link>
 
@@ -83,8 +83,8 @@ export default function Navbar() {
                     href={link.href}
                     className={`px-4 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 flex items-center gap-1 ${
                       pathname === link.href
-                        ? 'text-gold-400 bg-gradient-to-r from-gold-500/10 to-gold-500/5 border border-gold-500/20 shadow-sm shadow-gold-500/10'
-                        : 'text-gray-300 hover:text-gold-300 hover:bg-white/5 hover:shadow-sm'
+                        ? 'text-gold-600 bg-gold-50 border border-gold-200'
+                        : 'text-navy-900 hover:text-gold-600 hover:bg-gray-50'
                     }`}
                   >
                     {link.label}
@@ -113,8 +113,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-4 py-2.5 rounded-lg text-sm font-medium tracking-wide transition-all duration-200 ${
                     pathname === link.href
-                      ? 'text-gold-400 bg-gradient-to-r from-gold-500/10 to-gold-500/5 border border-gold-500/20 shadow-sm shadow-gold-500/10'
-                      : 'text-gray-300 hover:text-gold-300 hover:bg-white/5 hover:shadow-sm'
+                      ? 'text-gold-600 bg-gold-50 border border-gold-200'
+                      : 'text-navy-900 hover:text-gold-600 hover:bg-gray-50'
                   }`}
                 >
                   {link.label}
@@ -123,7 +123,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="ml-4 px-6 py-2.5 btn-premium shimmer-btn text-navy-950 font-bold text-sm rounded-lg shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300"
+              className="ml-4 px-6 py-2.5 bg-navy-950 text-white font-bold text-sm rounded-lg hover:bg-navy-900 transition-all duration-300 shadow-md"
             >
               Request Quotation
             </Link>
@@ -132,7 +132,7 @@ export default function Navbar() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white p-2 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-all duration-200"
+            className="lg:hidden text-navy-950 p-2 hover:text-gold-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
