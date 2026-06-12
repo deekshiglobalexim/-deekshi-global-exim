@@ -2,26 +2,37 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Shield } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-navy-950">
-      {/* Background layers */}
+      {/* Background Image */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-[#0d3560] to-navy-950" />
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-gold-500/8 rounded-full blur-2xl" />
-        <div className="absolute inset-0 dots-bg opacity-30" />
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -right-20 top-0 w-px h-full bg-gradient-to-b from-transparent via-gold-500/20 to-transparent" style={{ transform: 'rotate(-15deg)', transformOrigin: 'top right' }} />
-          <div className="absolute right-32 top-0 w-px h-full bg-gradient-to-b from-transparent via-gold-500/10 to-transparent" style={{ transform: 'rotate(-15deg)', transformOrigin: 'top right' }} />
-        </div>
+        <Image
+          src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=85"
+          alt="Global trade background"
+          fill
+          className="object-cover"
+          priority
+          quality={85}
+        />
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-navy-950/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/70 to-navy-950/40" />
+        {/* Subtle gold accent glow */}
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-gold-500/8 rounded-full blur-2xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
-        <div>
-          <h1 className="font-display font-bold text-6xl lg:text-7xl xl:text-8xl text-white leading-tight mb-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-4">
             Trusted{' '}
             <span className="gold-text">Global Export</span>{' '}
             Partner
@@ -48,35 +59,48 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          {/* Trust badges - 3 minimal indicators */}
+          {/* Trust badges */}
           <div className="flex flex-wrap gap-6">
             {[
               { label: 'IEC Certified' },
               { label: 'APEDA Registered' },
               { label: 'FSSAI Licensed' },
             ].map(({ label }) => (
-              <div key={label} className="flex items-center gap-2 text-gray-400 text-sm">
+              <div key={label} className="flex items-center gap-2 text-gray-300 text-sm">
                 <Shield size={16} className="text-gold-500" />
                 {label}
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        {/* Right - Clean hero image */}
-        <div className="hidden lg:block">
-          <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-premium-lg border border-gold-500/20">
+        {/* Right - Hero image card */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="hidden lg:block"
+        >
+          <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl border border-gold-500/20">
             <Image
-              src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=95"
-              alt="Global agricultural trade"
+              src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=90"
+              alt="Global agricultural trade and exports"
               fill
               className="object-cover"
-              quality={95}
+              quality={90}
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent" />
+            {/* Overlay badge */}
+            <div className="absolute bottom-6 left-6 right-6">
+              <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
+                <p className="text-white font-semibold text-sm">
+                  🌍 Exporting to <span className="text-gold-400">15+ Countries</span> Worldwide
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom wave */}
