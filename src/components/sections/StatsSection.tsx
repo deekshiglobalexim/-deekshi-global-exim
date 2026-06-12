@@ -28,7 +28,7 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
           else setCount(Math.floor(cur))
         }, duration / steps)
       }
-    }, { threshold: 0.5 })
+    }, { threshold: 0.1 })
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [target])
