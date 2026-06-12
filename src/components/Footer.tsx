@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5">
               <div className="relative w-14 h-14">
-                <Image src="/logo-mark.png" alt="Deekshi Global Exim" fill sizes="56px" className="object-contain drop-shadow-lg" unoptimized />
+                <img src="/logo-mark.png" alt="Deekshi Global Exim" className="w-full h-full object-contain drop-shadow-lg" />
               </div>
               <div>
                 <div className="font-display font-bold text-xl">DEEKSHI <span className="gold-text">GLOBAL</span></div>
