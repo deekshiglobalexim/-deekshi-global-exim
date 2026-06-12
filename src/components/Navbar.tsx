@@ -63,8 +63,8 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-[56px] h-[56px] rounded-full bg-white p-1 shadow-md">
-              <img src="/logo-mark.png" alt="Deekshi Global Exim" className="w-full h-full object-contain" />
+            <div className="w-[52px] h-[52px] rounded-full bg-white p-[3px] shadow-md flex-shrink-0">
+              <img src="/logo-mark.png" alt="Deekshi Global Exim" className="w-full h-full object-contain rounded-full" />
             </div>
             <div className="hidden sm:block">
               <div className="text-white font-display font-bold text-xl leading-tight group-hover:text-gold-300 transition-colors duration-300">
