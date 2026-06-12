@@ -14,7 +14,7 @@ const countries = [
 const products = [
   'Fresh Mangoes', 'Fresh Bananas', 'Fresh Papaya', 'Fresh Grapes', 'Fresh Pomegranate',
   'Onion', 'Potato', 'Tomato', 'Green Chilli', 'Okra',
-  'Basmati Rice', 'Non-Basmati Rice',
+  'Basmati Rice', 'Non-Basmati Rice', 'Maize (Corn)',
   'Red Chilli', 'Turmeric', 'Black Pepper', 'Coriander', 'Cumin', 'Cardamom',
   'Mixed Products', 'Other',
 ]

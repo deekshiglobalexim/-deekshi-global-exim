@@ -8,9 +8,9 @@ import { motion } from 'framer-motion'
 const categories = [
   {
     id: 'rice',
-    name: 'Rice',
+    name: 'Rice & Grains',
     emoji: '🌾',
-    desc: 'Premium Indian rice varieties processed in state-of-the-art facilities and exported to over 30 countries worldwide.',
+    desc: 'Premium Indian rice varieties and grains processed in state-of-the-art facilities and exported to over 30 countries worldwide.',
     products: [
       {
         name: 'Sona Masoori Rice',
@@ -26,6 +26,11 @@ const categories = [
         name: 'Non-Basmati Rice',
         desc: 'Versatile rice varieties for bulk procurement with consistent grain quality. Available in IR-64, Parboiled, Broken, and Swarna varieties. Competitively priced with phytosanitary certification.',
         img: '/products/non-basmati.jpg',
+      },
+      {
+        name: 'Maize (Corn)',
+        desc: 'Premium quality Indian maize with high starch content, available in yellow and white varieties. Sourced directly from farms with strong supply networks for bulk export to feed, food processing, and industrial markets.',
+        img: 'https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=800&q=90',
       },
     ],
   },
