@@ -10,7 +10,7 @@ const categories = [
     name: 'Basmati Rice',
     color: 'bg-blue-600',
     desc: 'Highly preferred for aroma, long grains and taste. Widely used in biryani, mandi and daily meals.',
-    img: '/products/basmati.jpg',
+    img: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=90',
     href: '/products#rice',
   },
   {
@@ -18,7 +18,7 @@ const categories = [
     name: 'Indian Spices',
     color: 'bg-orange-500',
     desc: 'High demand for spices like turmeric, cumin, chilli, coriander, cardamom, black pepper and more.',
-    img: '/products/turmeric.jpg',
+    img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=90',
     href: '/products#spices',
   },
   {
@@ -26,7 +26,7 @@ const categories = [
     name: 'Fresh Fruits',
     color: 'bg-pink-500',
     desc: 'Popular fruits include mango, pomegranate, grapes, banana, and more for international markets.',
-    img: '/products/mango.jpg',
+    img: 'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=800&q=90',
     href: '/products#fruits',
   },
   {
@@ -34,7 +34,7 @@ const categories = [
     name: 'Fresh Vegetables',
     color: 'bg-green-600',
     desc: 'High imports of onion, potato, tomato, okra, green chilli, drumstick and other vegetables.',
-    img: '/products/green-chilli.jpg',
+    img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=800&q=90',
     href: '/products#vegetables',
   },
   {
@@ -50,7 +50,7 @@ const categories = [
     name: 'Dehydrated Products',
     color: 'bg-amber-600',
     desc: 'Garlic powder, onion powder, and other dehydrated ingredients for food processing and seasoning.',
-    img: '/products/garlic-powder.jpg',
+    img: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=800&q=90',
     href: '/products#dehydrated',
   },
 ]
