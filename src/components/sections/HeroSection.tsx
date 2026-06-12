@@ -5,201 +5,140 @@ import { ArrowRight, Shield } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
-const heroImages = [
-  { src: '/products/sona-masoori.jpg', label: 'Premium Sona Masoori Rice' },
-  { src: '/products/mango.jpg', label: 'Export Grade Mangoes' },
-  { src: '/products/pomegranate.jpg', label: 'Fresh Pomegranates' },
-  { src: '/products/basmati.jpg', label: 'Aromatic Basmati Rice' },
-  { src: '/products/onion.jpg', label: 'Red Onions - Bulk Supply' },
-  { src: '/products/turmeric.jpg', label: 'High-Curcumin Turmeric' },
-  { src: '/products/green-chilli.jpg', label: 'Fresh Green Chillies' },
-  { src: '/products/grapes.jpg', label: 'Seedless Grapes' },
-  { src: '/products/black-pepper.jpg', label: 'Black Pepper' },
-  { src: '/products/red-chilli.jpg', label: 'Red Chilli - ASTA Grade' },
+const heroSlides = [
+  {
+    img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=85',
+    alt: 'Container ship at port - global trade',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=85',
+    alt: 'Rice paddy fields in India',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1920&q=85',
+    alt: 'Fresh agricultural produce',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&q=85',
+    alt: 'Global shipping and logistics',
+  },
 ]
 
 export default function HeroSection() {
-  const [currentImage, setCurrentImage] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % heroImages.length)
-    }, 3000)
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
+    }, 5000)
     return () => clearInterval(interval)
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-navy-950">
-      {/* Background Video */}
-      <div className="absolute inset-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source
-            src="https://videos.pexels.com/video-files/2519660/2519660-uhd_2560_1440_25fps.mp4"
-            type="video/mp4"
-          />
-        </video>
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-navy-950/75" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/60 to-navy-950/30" />
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Full-screen background slideshow with Ken Burns effect */}
+      <AnimatePresence mode="sync">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          key={currentSlide}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1.15 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            opacity: { duration: 1.5 },
+            scale: { duration: 8, ease: 'linear' },
+          }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={heroSlides[currentSlide].img}
+            alt={heroSlides[currentSlide].alt}
+            fill
+            className="object-cover"
+            priority
+            quality={85}
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Dark gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/70 to-navy-950/50 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-navy-950/40 z-[1]" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="max-w-3xl"
         >
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/10 border border-gold-500/30 rounded-full text-gold-400 text-sm font-medium mb-6"
+            transition={{ delay: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gold-500/15 border border-gold-500/40 rounded-full text-gold-400 text-sm font-medium mb-8 backdrop-blur-sm"
           >
             <span className="w-2 h-2 bg-gold-500 rounded-full animate-pulse" />
-            India&apos;s Trusted Export Partner Since 2022
+            India&apos;s Trusted Agricultural Export Partner
           </motion.div>
 
-          <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
-            Trusted{' '}
-            <span className="gold-text">Global Export</span>{' '}
-            Partner
+          <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white leading-[1.1] mb-8">
+            Premium Indian{' '}
+            <span className="gold-text">Agricultural</span>{' '}
+            Exporter
           </h1>
 
-          <p className="text-gray-300 text-lg lg:text-xl leading-relaxed mb-10 max-w-xl">
-            Premium Indian rice, fresh fruits, vegetables, spices & dehydrated products — exported worldwide with full compliance and reliable logistics.
+          <p className="text-gray-200 text-lg lg:text-xl leading-relaxed mb-12 max-w-2xl">
+            Deekshi Global Exim connects the finest agricultural products from India to discerning buyers in the USA, UK, Middle East, Europe, and Asia.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-12">
-            <Link href="/contact"
+          <div className="flex flex-wrap gap-4 mb-14">
+            <Link href="/products"
               className="inline-flex items-center gap-2 px-8 py-4 btn-premium shimmer-btn text-navy-950 font-bold text-base rounded-xl shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1">
-              Request Quotation
+              Explore Our Products
               <ArrowRight size={18} />
             </Link>
-            <Link href="/products"
-              className="inline-flex items-center gap-2 px-8 py-4 border-2 border-gold-500/60 text-gold-300 font-semibold text-base rounded-xl hover:bg-gold-500/15 hover:border-gold-400 transition-all duration-300 hover:shadow-gold-glow">
-              Explore Products
+            <Link href="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-semibold text-base rounded-xl hover:bg-white/20 hover:border-white/50 transition-all duration-300">
+              Request Quotation
               <ArrowRight size={18} />
             </Link>
           </div>
 
           {/* Trust badges */}
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-8">
             {[
               { label: 'IEC Certified' },
               { label: 'APEDA Registered' },
               { label: 'FSSAI Licensed' },
+              { label: 'GST Registered' },
             ].map(({ label }) => (
-              <div key={label} className="flex items-center gap-2 text-gray-300 text-sm">
-                <Shield size={16} className="text-gold-500" />
+              <div key={label} className="flex items-center gap-2 text-white/80 text-sm">
+                <Shield size={15} className="text-gold-500" />
                 {label}
               </div>
             ))}
           </div>
         </motion.div>
-
-        {/* Right - Auto-rotating product showcase */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="hidden lg:block"
-        >
-          <div className="relative">
-            {/* Main rotating image */}
-            <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl border-2 border-gold-500/30">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentImage}
-                  initial={{ opacity: 0, scale: 1.1 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.7 }}
-                  className="absolute inset-0"
-                >
-                  <Image
-                    src={heroImages[currentImage].src}
-                    alt={heroImages[currentImage].label}
-                    fill
-                    className="object-cover"
-                    quality={90}
-                    priority
-                  />
-                </motion.div>
-              </AnimatePresence>
-              
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
-              
-              {/* Product label */}
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentImage}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.4 }}
-                    className="bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20"
-                  >
-                    <p className="text-white font-bold text-lg">
-                      {heroImages[currentImage].label}
-                    </p>
-                    <p className="text-gold-400 text-sm font-medium">Export Quality · Bulk Supply Available</p>
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-            </div>
-
-            {/* Image indicators */}
-            <div className="flex justify-center gap-2 mt-4">
-              {heroImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentImage(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentImage
-                      ? 'bg-gold-500 w-6'
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
-
-            {/* Floating stats badge */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-4 -right-4 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-gold-500/30 shadow-lg"
-            >
-              <p className="text-gold-500 font-bold text-2xl">15+</p>
-              <p className="text-white/80 text-xs">Countries</p>
-            </motion.div>
-
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -bottom-2 -left-4 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-gold-500/30 shadow-lg"
-            >
-              <p className="text-gold-500 font-bold text-2xl">500+</p>
-              <p className="text-white/80 text-xs">Tons/Month</p>
-            </motion.div>
-          </div>
-        </motion.div>
       </div>
 
-      {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 60L1440 60L1440 20C1200 50 960 60 720 50C480 40 240 10 0 20L0 60Z" fill="#F8FAFC" />
-        </svg>
+      {/* Slide indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-3">
+        {heroSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`h-1.5 rounded-full transition-all duration-500 ${
+              index === currentSlide
+                ? 'bg-gold-500 w-10'
+                : 'bg-white/40 w-4 hover:bg-white/60'
+            }`}
+          />
+        ))}
       </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-50 to-transparent z-[2]" />
     </section>
   )
 }
