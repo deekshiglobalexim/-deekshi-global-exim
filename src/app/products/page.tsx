@@ -71,7 +71,7 @@ const categories = [
       {
         name: 'Onion',
         desc: 'Premium red onions with extended shelf life and consistent sizing. Available in mesh bags, jute bags, or customized packaging for wholesale importers.',
-        img: '/products/onion.jpg',
+        img: 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?w=800&q=90',
       },
       {
         name: 'Tomato',
