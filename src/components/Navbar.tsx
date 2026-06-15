@@ -63,7 +63,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-[80px] h-[80px] flex-shrink-0">
+            <div className="w-[100px] h-[100px] flex-shrink-0">
               <img src="/logo-mark.png" alt="DG Icon" className="w-full h-full object-contain" />
             </div>
             <div>
