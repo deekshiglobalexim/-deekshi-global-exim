@@ -62,12 +62,15 @@ export default function Navbar() {
       }`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-[55px] h-[55px] flex-shrink-0">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="w-[48px] h-[48px] flex-shrink-0">
               <img src="/logo-mark.png" alt="DG Icon" className="w-full h-full object-contain" />
             </div>
-            <div className="h-[45px] flex-shrink-0">
-              <img src="/logo.png" alt="Deekshi Global Exim" className="h-full w-auto object-contain" />
+            <div>
+              <div className="text-navy-950 font-display font-bold text-2xl leading-tight">
+                DEEKSHI <span className="text-gold-500">GLOBAL</span>
+              </div>
+              <div className="text-navy-950 text-xs tracking-[0.4em] font-semibold">EXIM</div>
             </div>
           </Link>
 
