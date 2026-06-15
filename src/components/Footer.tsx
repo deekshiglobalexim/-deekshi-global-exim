@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-4 mb-5">
-              <div className="w-[80px] h-[80px] flex-shrink-0">
+              <div className="w-[80px] h-[80px] flex-shrink-0 rounded-full bg-white p-3">
                 <img src="/logo-mark.png" alt="DG Icon" className="w-full h-full object-contain" />
               </div>
               <div>
