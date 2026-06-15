@@ -241,6 +241,22 @@ export default function Navbar() {
             <div className="pt-3">
               <p className="text-gray-500 text-xs">📍 Warangal, Telangana, India - 506001</p>
             </div>
+
+            {/* Social Media */}
+            <div className="pt-4 border-t border-gold-500/20">
+              <p className="text-gray-500 text-xs uppercase tracking-wider mb-3">Follow Us</p>
+              <div className="flex gap-3">
+                <a href="https://www.facebook.com/profile.php?id=61590369493176" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-white transition-all duration-300">
+                  <Facebook size={18} />
+                </a>
+                <a href="https://www.instagram.com/deekshiglobalexim/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-white transition-all duration-300">
+                  <Instagram size={18} />
+                </a>
+                <a href="https://www.linkedin.com/in/deekshi-global-exim-277502414/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-white transition-all duration-300">
+                  <Linkedin size={18} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
