@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react'
+import { Menu, X, Phone, Mail, ChevronDown, Facebook, Instagram, Linkedin } from 'lucide-react'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -49,6 +49,17 @@ export default function Navbar() {
             <a href="mailto:deekshiglobalexim@gmail.com" className="flex items-center gap-2 hover:text-gold-500 transition-colors">
               <Mail size={14} className="text-gold-500" />
               deekshiglobalexim@gmail.com
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <a href="https://www.facebook.com/profile.php?id=61590369493176" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-500 transition-colors" aria-label="Facebook">
+              <Facebook size={16} />
+            </a>
+            <a href="https://www.instagram.com/deekshiglobalexim/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-500 transition-colors" aria-label="Instagram">
+              <Instagram size={16} />
+            </a>
+            <a href="https://www.linkedin.com/in/deekshi-global-exim-277502414" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-500 transition-colors" aria-label="LinkedIn">
+              <Linkedin size={16} />
             </a>
           </div>
         </div>
