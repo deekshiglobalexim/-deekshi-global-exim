@@ -58,7 +58,7 @@ export default function Navbar() {
             <a href="https://www.instagram.com/deekshiglobalexim/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-500 transition-colors" aria-label="Instagram">
               <Instagram size={16} />
             </a>
-            <a href="https://www.linkedin.com/in/deekshi-global-exim-277502414" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-500 transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/deekshi-global-exim-277502414/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-500 transition-colors" aria-label="LinkedIn">
               <Linkedin size={16} />
             </a>
           </div>

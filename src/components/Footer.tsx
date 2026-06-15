@@ -46,7 +46,7 @@ export default function Footer() {
               {[
                 { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61590369493176', label: 'Facebook' },
                 { icon: Instagram, href: 'https://www.instagram.com/deekshiglobalexim/', label: 'Instagram' },
-                { icon: Linkedin, href: 'https://www.linkedin.com/in/deekshi-global-exim-277502414', label: 'LinkedIn' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/deekshi-global-exim-277502414/', label: 'LinkedIn' },
               ].map(({ icon: Icon, href, label }) => (
                 <a key={label} href={href} aria-label={label}
                   className="w-9 h-9 rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-navy-950 transition-all duration-200">
