@@ -55,7 +55,7 @@ export default function PreLoader() {
             />
 
             {/* Logo */}
-            <div className="w-[120px] h-[120px] rounded-full bg-white p-4 shadow-lg shadow-white/10">
+            <div className="w-[120px] h-[120px] rounded-full bg-gray-900 border border-gray-700 p-5 shadow-2xl">
               <img
                 src="/logo-mark.png"
                 alt="Deekshi Global Exim"
