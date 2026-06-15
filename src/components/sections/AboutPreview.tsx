@@ -53,7 +53,7 @@ export default function AboutPreview() {
               Our foundation is built on trust, transparency, and an unwavering commitment to quality. Every shipment meets international food safety standards with complete export documentation.
             </p>
 
-            <ul className="space-y-3 mb-10">
+            <ul className="space-y-3 mb-8">
               {highlights.map(h => (
                 <li key={h} className="flex items-start gap-3">
                   <CheckCircle2 size={18} className="text-gold-500 mt-0.5 flex-shrink-0" />
@@ -61,6 +61,17 @@ export default function AboutPreview() {
                 </li>
               ))}
             </ul>
+
+            {/* Founder */}
+            <div className="flex items-center gap-3 mb-8 p-4 bg-gray-50 rounded-xl border border-gray-100">
+              <div className="w-12 h-12 rounded-full bg-navy-950 flex items-center justify-center text-white font-display font-bold text-lg">
+                DG
+              </div>
+              <div>
+                <p className="font-display font-bold text-navy-950">Deekshith Gaddam</p>
+                <p className="text-gray-500 text-sm">Founder &amp; Director</p>
+              </div>
+            </div>
 
             <Link href="/about" className="inline-flex items-center gap-2 px-7 py-3.5 bg-navy-950 text-white font-semibold rounded-xl hover:bg-navy-900 transition-colors group">
               Learn More About Us
