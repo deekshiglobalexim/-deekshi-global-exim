@@ -64,6 +64,7 @@ export default function AboutPage() {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
+                  { label: 'Founded By', value: 'Deekshith Gaddam' },
                   { label: 'Established', value: '2022' },
                   { label: 'Location', value: 'Warangal, India' },
                   { label: 'Monthly Capacity', value: '500+ Tons' },

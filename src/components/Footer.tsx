@@ -134,6 +134,9 @@ export default function Footer() {
           <p className="text-gray-600 text-xs">
             Connecting Commerce &amp; Empowering Growth · Warangal, India
           </p>
+          <p className="text-gray-500 text-xs mt-1">
+            Founded by <span className="text-white font-medium">Deekshith Gaddam</span>
+          </p>
         </div>
       </div>
 
