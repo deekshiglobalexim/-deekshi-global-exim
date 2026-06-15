@@ -62,8 +62,11 @@ export default function Navbar() {
       }`}>
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
-            <div className="h-[50px] flex-shrink-0">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="w-[50px] h-[50px] flex-shrink-0">
+              <img src="/logo-mark.png" alt="DG Icon" className="w-full h-full object-contain" />
+            </div>
+            <div className="h-[40px] flex-shrink-0">
               <img src="/logo.png" alt="Deekshi Global Exim" className="h-full w-auto object-contain" />
             </div>
           </Link>
