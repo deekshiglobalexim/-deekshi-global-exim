@@ -141,20 +141,20 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div className={`lg:hidden overflow-hidden transition-all duration-300 ${mobileOpen ? 'max-h-screen' : 'max-h-0'}`}>
-          <div className="bg-gradient-to-b from-navy-900 to-navy-950 border-t border-gold-500/20 px-6 py-4 space-y-1">
+          <div className="bg-gradient-to-b from-navy-900 to-navy-950 border-t border-gold-500/20 px-6 py-6 space-y-2">
             {navLinks.map(link => (
               link.href === '/products' ? (
                 <div key={link.href}>
                   <button
                     onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
-                    className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
                       pathname === link.href
                         ? 'text-gold-400 bg-gradient-to-r from-gold-500/10 to-gold-500/5 border border-gold-500/20'
-                        : 'text-gray-300 hover:text-gold-300 hover:bg-white/5'
+                        : 'text-gray-200 hover:text-gold-300 hover:bg-white/5'
                     }`}
                   >
                     {link.label}
-                    <ChevronDown size={14} className={`transition-transform duration-200 ${mobileProductsOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown size={16} className={`transition-transform duration-200 ${mobileProductsOpen ? 'rotate-180' : ''}`} />
                   </button>
                   <div className={`overflow-hidden transition-all duration-200 ${mobileProductsOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                     <div className="ml-4 mt-1 border-l-2 border-gold-500/40 space-y-0.5">
@@ -176,23 +176,59 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
                     pathname === link.href
                       ? 'text-gold-400 bg-gradient-to-r from-gold-500/10 to-gold-500/5 border border-gold-500/20'
-                      : 'text-gray-300 hover:text-gold-300 hover:bg-white/5'
+                      : 'text-gray-200 hover:text-gold-300 hover:bg-white/5'
                   }`}
                 >
                   {link.label}
                 </Link>
               )
             ))}
+
+            {/* CTA Button */}
+            <div className="pt-4">
+              <Link
+                href="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="block w-full text-center px-6 py-3 bg-gold-500 text-white font-bold rounded-xl hover:bg-gold-600 transition-all duration-300 shadow-lg"
+              >
+                Request Quotation
+              </Link>
+            </div>
+
+            {/* Contact Details */}
             <div className="pt-4 border-t border-gold-500/20 space-y-3">
-              <a href="tel:+919493928088" className="flex items-center gap-2 text-gray-300 text-sm hover:text-gold-400 transition-colors duration-200 font-medium">
-                <Phone size={14} className="text-gold-500" /> +91 9493928088
+              <a href="tel:+919493928088" className="flex items-center gap-3 text-gray-200 text-sm hover:text-gold-400 transition-colors duration-200 font-medium">
+                <div className="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center">
+                  <Phone size={14} className="text-gold-500" />
+                </div>
+                +91 9493928088
               </a>
-              <a href="mailto:deekshiglobalexim@gmail.com" className="flex items-center gap-2 text-gray-300 text-sm hover:text-gold-400 transition-colors duration-200 font-medium">
-                <Mail size={14} className="text-gold-500" /> deekshiglobalexim@gmail.com
+              <a href="mailto:deekshiglobalexim@gmail.com" className="flex items-center gap-3 text-gray-200 text-sm hover:text-gold-400 transition-colors duration-200 font-medium">
+                <div className="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center">
+                  <Mail size={14} className="text-gold-500" />
+                </div>
+                deekshiglobalexim@gmail.com
               </a>
+            </div>
+
+            {/* Certifications strip */}
+            <div className="pt-4 border-t border-gold-500/20">
+              <p className="text-gray-500 text-xs uppercase tracking-wider mb-2">Certifications</p>
+              <div className="flex flex-wrap gap-2">
+                {['IEC', 'APEDA', 'FSSAI', 'GST', 'ICEGATE'].map(cert => (
+                  <span key={cert} className="px-2.5 py-1 bg-gold-500/10 border border-gold-500/20 rounded-md text-gold-400 text-xs font-semibold">
+                    {cert}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Location */}
+            <div className="pt-3">
+              <p className="text-gray-500 text-xs">📍 Warangal, Telangana, India - 506001</p>
             </div>
           </div>
         </div>
