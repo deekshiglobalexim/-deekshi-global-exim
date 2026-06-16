@@ -143,9 +143,6 @@ export default function Footer() {
       {/* Credit Section */}
       <div className="border-t border-gold-500/20">
         <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col items-center justify-center gap-2">
-          <p className="text-gray-400 text-sm font-light tracking-wide">
-            Made with <span className="text-red-500 animate-pulse">❤️</span> by <span className="text-gold-500 font-medium">StaffArc</span>
-          </p>
           <p className="text-gray-500 text-xs">
             © 2026 Deekshi Global Exim. All rights reserved.
           </p>
