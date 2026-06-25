@@ -17,6 +17,7 @@ const certifications = [
     color: 'from-blue-600/20 to-blue-600/5',
     border: 'border-blue-400/30',
     highlights: ['Tax compliance verified', 'GSTIN issued', 'Legal commercial entity', 'Input tax credit eligible'],
+    pdfLink: '/certificates/gst-certificate.pdf',
   },
   {
     code: 'IEC',
@@ -27,6 +28,7 @@ const certifications = [
     color: 'from-emerald-600/20 to-emerald-600/5',
     border: 'border-emerald-400/30',
     highlights: ['DGFT registered', 'Internationally recognized', 'Mandatory for all exports', 'Lifetime validity'],
+    pdfLink: '/certificates/iec-certificate.pdf',
   },
   {
     code: 'APEDA',
@@ -37,6 +39,7 @@ const certifications = [
     color: 'from-gold-500/20 to-gold-500/5',
     border: 'border-gold-400/30',
     highlights: ['Government quality monitoring', 'Agricultural export authority', 'Traceability enabled', 'Quality scheme access'],
+    pdfLink: null,
   },
   {
     code: 'FSSAI',
@@ -47,6 +50,7 @@ const certifications = [
     color: 'from-purple-600/20 to-purple-600/5',
     border: 'border-purple-400/30',
     highlights: ['Food safety certified', 'Central license holder', 'Hygiene standards met', 'Internationally accepted'],
+    pdfLink: null,
   },
   {
     code: 'ICG',
@@ -57,6 +61,7 @@ const certifications = [
     color: 'from-red-600/20 to-red-600/5',
     border: 'border-red-400/30',
     highlights: ['E-customs filing', 'Real-time tracking', 'EDI enabled', 'Seamless clearance'],
+    pdfLink: null,
   },
 ]
 
@@ -160,6 +165,17 @@ export default function CertificationsPage() {
                       </span>
                     ))}
                   </div>
+                  {cert.pdfLink && (
+                    <a
+                      href={cert.pdfLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-navy-950 text-white font-semibold text-sm rounded-lg hover:bg-navy-900 transition-all duration-300 shadow-md"
+                    >
+                      <FileText size={14} />
+                      View Certificate
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
