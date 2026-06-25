@@ -87,5 +87,5 @@ deekshi-global-exim/
 ## 📞 Company Details
 
 - **Phone**: +91 9493928088
-- **Email**: deekshiglobalexim@gmail.com
+- **Email**: info@deekshiglobalexim.com
 - **Location**: Warangal, Telangana, India

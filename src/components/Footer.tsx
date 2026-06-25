@@ -106,7 +106,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-gold-500 flex-shrink-0" />
-                <a href="mailto:deekshiglobalexim@gmail.com" className="text-gray-400 hover:text-gold-400 text-sm transition-colors break-all">deekshiglobalexim@gmail.com</a>
+                <a href="mailto:info@deekshiglobalexim.com" className="text-gray-400 hover:text-gold-400 text-sm transition-colors break-all">info@deekshiglobalexim.com</a>
               </li>
             </ul>
 
@@ -137,6 +137,23 @@ export default function Footer() {
           <p className="text-gray-500 text-xs mt-1">
             Founded by <span className="text-white font-medium">Deekshith Gaddam</span>
           </p>
+        </div>
+      </div>
+
+      {/* Trust Strip */}
+      <div className="border-t border-gold-500/20 bg-navy-900">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-4">
+            <span className="flex items-center gap-1.5 text-gray-300 text-sm">
+              <span className="text-green-400">✔</span> IEC Registered
+            </span>
+            <span className="flex items-center gap-1.5 text-gray-300 text-sm">
+              <span className="text-green-400">✔</span> GST Registered
+            </span>
+          </div>
+          <a href="mailto:info@deekshiglobalexim.com" className="text-gold-400 hover:text-gold-300 text-sm font-medium transition-colors">
+            info@deekshiglobalexim.com
+          </a>
         </div>
       </div>
 

@@ -1,0 +1,8 @@
+
+> deekshi-global-exim@1.0.0 start
+> next start --port 3000
+
+▲ Next.js 16.2.7
+- Local:         http://localhost:3000
+- Network:       http://192.168.29.99:3000
+✓ Ready in 1949ms

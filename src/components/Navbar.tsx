@@ -46,9 +46,9 @@ export default function Navbar() {
               <Phone size={14} className="text-gold-500" />
               +91 9493928088
             </a>
-            <a href="mailto:deekshiglobalexim@gmail.com" className="flex items-center gap-2 hover:text-gold-500 transition-colors">
+            <a href="mailto:info@deekshiglobalexim.com" className="flex items-center gap-2 hover:text-gold-500 transition-colors">
               <Mail size={14} className="text-gold-500" />
-              deekshiglobalexim@gmail.com
+              info@deekshiglobalexim.com
             </a>
           </div>
           <div className="flex items-center gap-3">
@@ -230,11 +230,11 @@ export default function Navbar() {
                 </div>
                 +91 9493928088
               </a>
-              <a href="mailto:deekshiglobalexim@gmail.com" className="flex items-center gap-3 text-gray-200 text-sm hover:text-gold-400 transition-colors duration-200 font-medium">
+              <a href="mailto:info@deekshiglobalexim.com" className="flex items-center gap-3 text-gray-200 text-sm hover:text-gold-400 transition-colors duration-200 font-medium">
                 <div className="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center">
                   <Mail size={14} className="text-gold-500" />
                 </div>
-                deekshiglobalexim@gmail.com
+                info@deekshiglobalexim.com
               </a>
             </div>
 

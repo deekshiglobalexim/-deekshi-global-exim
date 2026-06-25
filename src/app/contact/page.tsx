@@ -4,7 +4,7 @@ import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with Deekshi Global Exim for export enquiries. Call +91 9493928088 or email deekshiglobalexim@gmail.com.',
+  description: 'Get in touch with Deekshi Global Exim for export enquiries. Call +91 9493928088 or email info@deekshiglobalexim.com.',
 }
 
 const faqs = [
@@ -60,7 +60,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-gray-400 text-xs uppercase tracking-wider mb-1">Email</div>
-                      <a href="mailto:deekshiglobalexim@gmail.com" className="text-white hover:text-gold-400 font-medium transition-colors break-all text-sm">deekshiglobalexim@gmail.com</a>
+                      <a href="mailto:info@deekshiglobalexim.com" className="text-white hover:text-gold-400 font-medium transition-colors break-all text-sm">info@deekshiglobalexim.com</a>
                     </div>
                   </div>
 

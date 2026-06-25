@@ -8,6 +8,7 @@ import ExportProcess from '@/components/sections/ExportProcess'
 import ExportValues from '@/components/sections/ExportValues'
 import CertificationsPreview from '@/components/sections/CertificationsPreview'
 import WhyChooseUs from '@/components/sections/WhyChooseUs'
+import GovCertifications from '@/components/sections/GovCertifications'
 import InternationalMarkets from '@/components/sections/InternationalMarkets'
 import InquiryForm from '@/components/sections/InquiryForm'
 import CtaBanner from '@/components/sections/CtaBanner'
@@ -28,6 +29,7 @@ export default function HomePage() {
       <ExportProcess />
       <ExportValues />
       <WhyChooseUs />
+      <GovCertifications />
       <InternationalMarkets />
       <CertificationsPreview />
       <InquiryForm />

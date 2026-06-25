@@ -159,7 +159,7 @@ export default function InquiryForm() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Email</p>
-                  <p className="text-white font-medium">deekshiglobalexim@gmail.com</p>
+                  <p className="text-white font-medium">info@deekshiglobalexim.com</p>
                 </div>
               </div>
 
